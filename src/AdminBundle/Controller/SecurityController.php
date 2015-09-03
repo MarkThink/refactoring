@@ -28,6 +28,7 @@ class SecurityController extends Controller
 
     public $logger;
 
+    //初始化构造器
     public function __construct()
     {
         $this->_mcrypt_exists = (!function_exists('mcrypt_encrypt')) ? false : true;
