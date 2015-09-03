@@ -1,0 +1,82 @@
+SharedModel\TrjTongjiHost:
+    type: entity
+    repositoryClass: SharedModel\TrjTongjiHostRepository
+    table: trj_tongji_host
+    uniqueConstraints:
+        ak_ip_trj_tongji_host:
+            columns:
+                - ip
+        trj_tongji_host_pk:
+            columns:
+                - id
+        ak_homepage_id_trj_tongji_host:
+            columns:
+                - homepage_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        homepageId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 'VIP展厅ID'
+            default: '0'
+            column: homepage_id
+        date:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        page:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        ref:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        agent:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        stayTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 停留时间
+            default: '0'
+            column: stay_time
+        isZjxm:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否项目页
+            default: '0::smallint'
+            column: is_zjxm
+        flag:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '标识数据是否已处理'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

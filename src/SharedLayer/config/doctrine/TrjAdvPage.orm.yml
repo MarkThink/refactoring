@@ -1,0 +1,63 @@
+SharedModel\TrjAdvPage:
+    type: entity
+    repositoryClass: SharedModel\TrjAdvPageRepository
+    table: trj_adv_page
+    uniqueConstraints:
+        ak_code_trj_adv_page:
+            columns:
+                - code
+    id:
+        pid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        pagename:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 页面名称
+        code:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 控制器名称
+        memo:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 备注
+        areaNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 区域数量
+            default: '0'
+            column: area_num
+        placeNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 广告位数量
+            default: '0'
+            column: place_num
+        orders:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 排序
+            default: '0'
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+            default: '0'
+    lifecycleCallbacks: {  }

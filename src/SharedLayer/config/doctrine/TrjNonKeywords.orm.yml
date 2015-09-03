@@ -1,0 +1,81 @@
+SharedModel\TrjNonKeywords:
+    type: entity
+    repositoryClass: SharedModel\TrjNonKeywordsRepository
+    table: trj_non_keywords
+    uniqueConstraints:
+        trj_non_keywords_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ID
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: '非常关键字'
+        forum:
+            type: string
+            nullable: false
+            length: 40
+            fixed: false
+            comment: ''
+        replace:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '屏蔽行为 ''1不可发布'',''2发布后审核'',''3审核后发布'',''4星号隐藏'',''5向前隐藏3位'',''6向后隐藏3位'',''7删除文字'''
+        status:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: 状态
+            default: '1::smallint'
+        editer:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '编辑者'
+        editerId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '编辑者id'
+            column: editer_id
+        edittime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 编辑时间
+        posttime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 提交时间
+        sort:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+        content:
+            type: string
+            nullable: true
+            length: 500
+            fixed: false
+            comment: ''
+        isdel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否删除0:正常 1:删除'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

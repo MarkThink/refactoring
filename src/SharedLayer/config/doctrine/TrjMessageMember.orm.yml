@@ -1,0 +1,59 @@
+SharedModel\TrjMessageMember:
+    type: entity
+    repositoryClass: SharedModel\TrjMessageMemberRepository
+    table: trj_message_member
+    uniqueConstraints:
+        ak_to_uid_trj_message_member:
+            columns:
+                - to_uid
+    id:
+        listId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 私信ID
+            id: true
+            column: list_id
+        memberUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 所属人
+            id: true
+            column: member_uid
+    fields:
+        toUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 对方UID
+            default: '0'
+            column: to_uid
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1商友，2关注'
+            default: '0::smallint'
+        newNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 未读消息数
+            default: '0'
+            column: new_num
+        messageNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 消息总数
+            default: '1'
+            column: message_num
+        isReply:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否已回复
+            default: '0::smallint'
+            column: is_reply
+    lifecycleCallbacks: {  }

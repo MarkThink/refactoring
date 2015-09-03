@@ -1,0 +1,157 @@
+SharedModel\TrjItemFeedback:
+    type: entity
+    repositoryClass: SharedModel\TrjItemFeedbackRepository
+    table: trj_item_feedback
+    uniqueConstraints:
+        ak_item_id_2_trj_item_feedback:
+            columns:
+                - item_id
+        ak_poster_id_trj_item_feedback:
+            columns:
+                - poster_id
+        ak_feed_id_trj_item_feedback:
+            columns:
+                - feed_id
+        ak_homepage_id_trj_item_feedback:
+            columns:
+                - homepage_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        itemId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被回应的项目id
+            default: '0'
+            column: item_id
+        itemTitle:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: ''
+            column: item_title
+        itemType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0信息，1公司'
+            default: '0::smallint'
+            column: item_type
+        feedId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发起回应的项目
+            default: '0'
+            column: feed_id
+        feedTitle:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: ''
+            column: feed_title
+        feedType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: feed_type
+        poster:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 发起回应的用户
+            default: ''
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发起回应的用户id
+            default: '0'
+            column: poster_id
+        posterMobile:
+            type: string
+            nullable: true
+            length: 11
+            fixed: false
+            comment: ''
+            column: poster_mobile
+        homepageId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被回应对像的所属账户
+            default: '0'
+            column: homepage_id
+        flag:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否已查看
+            default: '0::smallint'
+        inboxDel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '收件箱删除'
+            default: '0::smallint'
+            column: inbox_del
+        outboxDel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: outbox_del
+        inboxEvaluate:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 收件箱评价
+            default: '0::smallint'
+            column: inbox_evaluate
+        outboxEvaluate:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 发件箱评价
+            default: '0::smallint'
+            column: outbox_evaluate
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 回应时间
+            default: '0'
+        sort:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        isSms:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_sms
+    lifecycleCallbacks: {  }

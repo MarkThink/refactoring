@@ -1,0 +1,55 @@
+SharedModel\TrjClickLog:
+    type: entity
+    repositoryClass: SharedModel\TrjClickLogRepository
+    table: trj_click_log
+    uniqueConstraints:
+        trj_click_log_pk:
+            columns:
+                - id
+        ak_item_id_trj_click_log:
+            columns:
+                - item_id
+                - poster_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        itemId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: item_id
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: poster_id
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1:项目资金，2资讯，3资讯评论赞，4资讯评论踩 9评价有用数'
+            default: '0::smallint'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

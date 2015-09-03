@@ -1,0 +1,83 @@
+SharedModel\TrjTravelUsers:
+    type: entity
+    repositoryClass: SharedModel\TrjTravelUsersRepository
+    table: trj_travel_users
+    uniqueConstraints:
+        ak_user_id_trj_travel_users:
+            columns:
+                - user_id
+        trj_travel_users_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户id
+            default: '0'
+            column: user_id
+        isRaffle:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否已经抽奖
+            default: '0::smallint'
+            column: is_raffle
+        raffleId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 抽奖信息：0，没中；1，等奖；9，特等奖
+            default: '0'
+            column: raffle_id
+        raffleTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 抽奖时间
+            default: '0'
+            column: raffle_time
+        isInvest:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否已经投资
+            default: '0::smallint'
+            column: is_invest
+        xmId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 已经投资的虚拟项目
+            default: '0'
+            column: xm_id
+        investTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 投资时间
+            default: '0'
+            column: invest_time
+        isTravelReg:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否是QQ旅游页面注册的用户'
+            column: is_travel_reg
+        userType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '用户类型，抽奖表要用 1web 2wap 3老用户'
+            column: user_type
+    lifecycleCallbacks: {  }

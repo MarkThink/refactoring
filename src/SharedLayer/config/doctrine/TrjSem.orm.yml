@@ -1,0 +1,49 @@
+SharedModel\TrjSem:
+    type: entity
+    repositoryClass: SharedModel\TrjSemRepository
+    table: trj_sem
+    uniqueConstraints:
+        ak_isdel_trj_sem:
+            columns:
+                - isdel
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        keywordsName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            column: keywords_name
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        isdel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: poster_id
+        posterName:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: poster_name
+    lifecycleCallbacks: {  }

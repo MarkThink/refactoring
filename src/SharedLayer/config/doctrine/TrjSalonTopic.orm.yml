@@ -1,0 +1,121 @@
+SharedModel\TrjSalonTopic:
+    type: entity
+    repositoryClass: SharedModel\TrjSalonTopicRepository
+    table: trj_salon_topic
+    uniqueConstraints:
+        ak_temp_trj_salon_topic:
+            columns:
+                - temp
+        ak_filename_trj_salon_topic:
+            columns:
+                - filename
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: '标题'
+        temp:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 模版
+            default: '0'
+        banner:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: banner图
+        pageTitle:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: '页面标题'
+            column: page_title
+        pageKeywords:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: '页面关键字'
+            column: page_keywords
+        pageDescription:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: 页面描述
+            column: page_description
+        bmTitle:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: '报名标题'
+            column: bm_title
+        bmUrl:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: 报名url
+            column: bm_url
+        bmAid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 报名id
+            default: '0'
+            column: bm_aid
+        clickNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 点击量
+            default: '0'
+            column: click_num
+        filename:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 生成文件名
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 状态
+            default: '0::smallint'
+        createId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 创建人
+            default: '0'
+            column: create_id
+        createName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 创建人名字
+            column: create_name
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 创建时间
+            default: '0'
+    lifecycleCallbacks: {  }

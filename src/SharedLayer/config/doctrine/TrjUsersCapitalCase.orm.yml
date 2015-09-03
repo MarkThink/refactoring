@@ -1,0 +1,120 @@
+SharedModel\TrjUsersCapitalCase:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersCapitalCaseRepository
+    table: trj_users_capital_case
+    uniqueConstraints:
+        ak_settle_id_trj_users_capital_case:
+            columns:
+                - settle_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户id
+            default: '0'
+            column: user_id
+        settleId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 资金机构id
+            default: '0'
+            column: settle_id
+        tzTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 投资时间
+            default: '0'
+            column: tz_time
+        tzMoney:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 投资金额
+            default: '0'
+            column: tz_money
+        tzOrgName:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 投资企业名称或项目名称
+            default: ''
+            column: tz_org_name
+        tzReason:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 投资l理由
+            default: ''
+            column: tz_reason
+        certFile:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 案列证明文件
+            default: ''
+            column: cert_file
+        isCase:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            comment: '是否处理 0 未处理 1已处理'
+            default: ''
+            column: is_case
+        caseRid:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            comment: ''
+            default: ''
+            column: case_rid
+        caseResult:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            comment: ''
+            default: ''
+            column: case_result
+        submitTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 提交时间
+            column: submit_time
+        verifyTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '审核时间'
+            column: verify_time
+        verifyUserid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '审核人'
+            column: verify_userid
+        verifyUsername:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            comment: '审核人名称'
+            column: verify_username
+    lifecycleCallbacks: {  }

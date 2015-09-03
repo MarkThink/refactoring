@@ -1,0 +1,63 @@
+SharedModel\TrjKeyword:
+    type: entity
+    repositoryClass: SharedModel\TrjKeywordRepository
+    table: trj_keyword
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        uid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '搜索的用户id,0:游客'
+            default: '0'
+        type:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: '类型1:资金 2:项目 3:人脉 4:资讯 5:学院 6:咨询'
+        keyword:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: '关键字'
+        times:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+            default: '0'
+        updatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 更新时间
+            default: '0'
+        useNumber:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 使用次数
+            default: '0'
+            column: use_number
+        status:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+        isdel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否删除0:正常 1:删除'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,93 @@
+SharedModel\TrjHomepageNews:
+    type: entity
+    repositoryClass: SharedModel\TrjHomepageNewsRepository
+    table: trj_homepage_news
+    uniqueConstraints:
+        ak_user_id_trj_homepage_news:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        categoryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 分类
+            default: '0'
+            column: category_id
+        title:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '标题'
+            default: ''
+        content:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '内容'
+        fileurl:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 视频地址
+            default: ''
+        keywords:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '关键字'
+            default: ''
+        hitNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: hit_num
+        collectNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 收藏数
+            default: '0'
+            column: collect_num
+        commentNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 评论数
+            default: '0'
+            column: comment_num
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '审核状态'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

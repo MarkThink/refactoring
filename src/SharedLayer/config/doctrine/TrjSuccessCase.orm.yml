@@ -1,0 +1,156 @@
+SharedModel\TrjSuccessCase:
+    type: entity
+    repositoryClass: SharedModel\TrjSuccessCaseRepository
+    table: trj_success_case
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 项目名称
+        industry:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 行业ID
+            default: '0'
+        product:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 购买过的产品
+            default: '0'
+        intro:
+            type: string
+            nullable: true
+            length: 1000
+            fixed: false
+            comment: 一句话介绍
+        thumb:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: 图片路径
+        url:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: 案例网址
+        postedTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 项目发布时间
+            default: '0'
+            column: posted_time
+        successTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 融资成功时间
+            default: '0'
+            column: success_time
+        info:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: '融资情况'
+        investor:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: 投资人
+        pushTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 刷新时间
+            default: '0'
+            column: push_time
+        shenhe:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核状态'
+            default: '0'
+        isIndex:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 是否推荐
+            default: '0'
+            column: is_index
+        posterUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发布用户
+            default: '0'
+            column: poster_uid
+        shenheUid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '审核用户'
+            default: '0'
+            column: shenhe_uid
+        shenheTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '审核时间'
+            default: '0'
+            column: shenhe_time
+        keywords:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: '标签'
+        isdel:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '是否删除'
+            default: '0'
+        addTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: add_time
+        posterUsername:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+            column: poster_username
+        shenheUsername:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+            column: shenhe_username
+        updateTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: update_time
+    lifecycleCallbacks: {  }

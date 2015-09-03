@@ -1,0 +1,35 @@
+SharedModel\TrjHomepageItem:
+    type: entity
+    repositoryClass: SharedModel\TrjHomepageItemRepository
+    table: trj_homepage_item
+    uniqueConstraints:
+        ak_item_id_trj_homepage_item:
+            columns:
+                - item_id
+    id:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            id: true
+            column: user_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        itemId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 项目ID
+            default: '0'
+            column: item_id
+        cateId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '展厅项目分类ID'
+            default: '0'
+            column: cate_id
+    lifecycleCallbacks: {  }

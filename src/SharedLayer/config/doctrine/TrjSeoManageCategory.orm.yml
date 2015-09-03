@@ -1,0 +1,66 @@
+SharedModel\TrjSeoManageCategory:
+    type: entity
+    repositoryClass: SharedModel\TrjSeoManageCategoryRepository
+    table: trj_seo_manage_category
+    uniqueConstraints:
+        trj_seo_manage_category_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        catName:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: cat_name
+        category:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+        ctime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        isDelete:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: is_delete
+        pId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: p_id
+        rankBd:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: rank_bd
+        rank360:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: rank_360
+        rankIndex:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: rank_index
+    lifecycleCallbacks: {  }

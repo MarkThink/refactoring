@@ -1,0 +1,38 @@
+SharedModel\TrjActivityVshowLog:
+    type: entity
+    repositoryClass: SharedModel\TrjActivityVshowLogRepository
+    table: trj_activity_vshow_log
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: user_id
+        ip:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        addtime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+        toId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: to_id
+    lifecycleCallbacks: {  }

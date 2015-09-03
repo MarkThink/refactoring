@@ -1,0 +1,191 @@
+SharedModel\TrjUsersInteractionStatistics:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersInteractionStatisticsRepository
+    table: trj_users_interaction_statistics
+    id:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: user_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        privateMessage:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 私信
+            default: '0'
+            column: private_message
+        deliver:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 投递
+            default: '0'
+        beDeliver:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被投递
+            default: '0'
+            column: be_deliver
+        message:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 留言
+            default: '0'
+        system:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 系统消息
+            default: '0'
+        postedMessage:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 已发布信息
+            default: '0'
+            column: posted_message
+        postedCheck:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核状态改变-未读数'
+            default: '0'
+            column: posted_check
+        inbox:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 收件箱
+            default: '0'
+        friend:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 商友与联系人
+            default: '0'
+        visited:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 我看过谁
+            default: '0'
+        beVisited:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 谁看过我
+            default: '0'
+            column: be_visited
+        businessCard:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 收到的名片
+            default: '0'
+            column: business_card
+        beCollect:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被收藏
+            default: '0'
+            column: be_collect
+        invite:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 约谈
+            default: '0'
+        beInvite:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被约谈
+            default: '0'
+            column: be_invite
+        allPostedMessage:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '总共已发信息'
+            default: '0'
+            column: all_posted_message
+        allDeliver:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '总共投递次数'
+            default: '0'
+            column: all_deliver
+        allBeDeliver:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '总共被投递次数'
+            default: '0'
+            column: all_be_deliver
+        allMessage:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '总共收到留言'
+            default: '0'
+            column: all_message
+        allBeCollect:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '总共被收藏'
+            default: '0'
+            column: all_be_collect
+        allBeVisited:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '总共被浏览'
+            default: '0'
+            column: all_be_visited
+        allViewContacts:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '总共查看联系方式'
+            default: '0'
+            column: all_view_contacts
+        allInvite:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '总共约谈次数'
+            default: '0'
+            column: all_invite
+        allBeInvite:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '总共被约谈次数'
+            default: '0'
+            column: all_be_invite
+        lastUpdateTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 最后更新的时间
+            default: '0'
+            column: last_update_time
+        loginDaysForWeek:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 一周登陆天数
+            default: '0'
+            column: login_days_for_week
+    lifecycleCallbacks: {  }

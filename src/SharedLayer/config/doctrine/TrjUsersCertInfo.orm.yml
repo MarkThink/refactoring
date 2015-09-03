@@ -1,0 +1,133 @@
+SharedModel\TrjUsersCertInfo:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersCertInfoRepository
+    table: trj_users_cert_info
+    uniqueConstraints:
+        ak_cert_code_trj_users_cert_info:
+            columns:
+                - cert_code
+        ak_username_trj_users_cert_info:
+            columns:
+                - username
+        ak_uid_trj_users_cert_info:
+            columns:
+                - uid
+        ak_shenhe_trj_users_cert_info:
+            columns:
+                - shenhe
+        ak_cert_type_trj_users_cert_info:
+            columns:
+                - cert_type
+    id:
+        certid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键自增
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        uid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '关联users表id'
+            default: '0'
+        username:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 用户账户
+        certType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '认证对象:配置数组'
+            default: '0::smallint'
+            column: cert_type
+        certCode:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '认证编码'
+            default: ''
+            column: cert_code
+        certContent:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '认证内容'
+            column: cert_content
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+            default: '0'
+        updatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 修改时间
+            default: '0'
+        startDatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核通过开始时间'
+            default: '0'
+            column: start_datetime
+        endDatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 认证过期时间
+            default: '0'
+            column: end_datetime
+        isShenhe:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否需要审核'
+            default: '1::smallint'
+            column: is_shenhe
+        shenhe:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '审核状态 0:未审核 1:审核通过 2:审核不通过'
+            default: '0::smallint'
+        shenheAdmin:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '审核人'
+            default: ''
+            column: shenhe_admin
+        isLock:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '锁定1:不可编辑 0:可编辑'
+            default: '0::smallint'
+            column: is_lock
+        isInvalid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否失效 1:失效  0:正常'
+            default: '0::smallint'
+            column: is_invalid
+        isAll:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否资料填写完整1:是'
+            default: '1::smallint'
+            column: is_all
+    lifecycleCallbacks: {  }

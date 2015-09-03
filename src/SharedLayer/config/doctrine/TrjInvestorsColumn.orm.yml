@@ -1,0 +1,47 @@
+SharedModel\TrjInvestorsColumn:
+    type: entity
+    repositoryClass: SharedModel\TrjInvestorsColumnRepository
+    table: trj_investors_column
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        iId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: i_id
+        columnTitle:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: column_title
+        columnContent:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: column_content
+        columnSort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '100'
+            column: column_sort
+        isdel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+    lifecycleCallbacks: {  }

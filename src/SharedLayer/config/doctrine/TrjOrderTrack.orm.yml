@@ -1,0 +1,53 @@
+SharedModel\TrjOrderTrack:
+    type: entity
+    repositoryClass: SharedModel\TrjOrderTrackRepository
+    table: trj_order_track
+    uniqueConstraints:
+        ak_order_id_trj_order_track:
+            columns:
+                - order_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        orderId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: order_id
+        trackid:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+        httpReferer:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: 下单页面
+            column: http_referer
+        httpHref:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: '引入链接'
+            column: http_href
+        sessionId:
+            type: string
+            nullable: true
+            length: 32
+            fixed: true
+            comment: ''
+            column: session_id
+    lifecycleCallbacks: {  }

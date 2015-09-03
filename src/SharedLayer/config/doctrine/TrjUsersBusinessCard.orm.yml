@@ -1,0 +1,91 @@
+SharedModel\TrjUsersBusinessCard:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersBusinessCardRepository
+    table: trj_users_business_card
+    uniqueConstraints:
+        ak_user_id_trj_users_business_card:
+            columns:
+                - user_id
+        ak_friend_id_trj_users_business_card:
+            columns:
+                - friend_id
+        ak_created_trj_users_business_card:
+            columns:
+                - created
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        friendId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: friend_id
+        isInitiative:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0被动,1主动'
+            default: '0::smallint'
+            column: is_initiative
+        noFollow:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1为对方没有关注我'
+            default: '0::smallint'
+            column: no_follow
+        isDel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_del
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0 关注  1商友'
+            default: '0::smallint'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        flag:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否查看0 未查看 1已查看'
+            default: '0::smallint'
+        cutBusinessCard:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否扣除商友名额 0 未扣除 1已扣除'
+            default: '0::smallint'
+            column: cut_business_card
+    lifecycleCallbacks: {  }

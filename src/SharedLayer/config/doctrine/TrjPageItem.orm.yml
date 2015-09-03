@@ -1,0 +1,144 @@
+SharedModel\TrjPageItem:
+    type: entity
+    repositoryClass: SharedModel\TrjPageItemRepository
+    table: trj_page_item
+    uniqueConstraints:
+        trj_page_item_pk:
+            columns:
+                - id
+        ak_qid_trj_page_item:
+            columns:
+                - qid
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        qid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 版块id
+            default: '0'
+        itemId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: item_id
+        itemTitle:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+            column: item_title
+        itemUrl:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: ''
+            default: ''
+            column: item_url
+        itemContent:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: ''
+            default: ''
+            column: item_content
+        itemFile:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: ''
+            default: ''
+            column: item_file
+        itemFileYun:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: item_file_yun
+        itemSpareFile:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 备用图片
+            column: item_spare_file
+        itemType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '类型:1项目，2资金，3资讯'
+            default: '0::smallint'
+            column: item_type
+        itemCid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 分类id
+            default: '0'
+            column: item_cid
+        itemSort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: item_sort
+        itemOther:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: ''
+            default: ''
+            column: item_other
+        clickNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: click_num
+        isLock:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否锁定
+            default: '0::smallint'
+            column: is_lock
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        poster:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: poster_id
+    lifecycleCallbacks: {  }

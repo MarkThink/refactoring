@@ -1,0 +1,49 @@
+SharedModel\TrjTrustContent:
+    type: entity
+    repositoryClass: SharedModel\TrjTrustContentRepository
+    table: trj_trust_content
+    uniqueConstraints:
+        trj_trust_content_pk:
+            columns:
+                - tot_id
+    id:
+        totId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            id: true
+            column: tot_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        totRevenueRule:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: '收益详情'
+            column: tot_revenue_rule
+        totFundUse:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 资金用途
+            column: tot_fund_use
+        totRiskControl:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 风控措施
+            column: tot_risk_control
+        totIntro:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 产品说明
+            column: tot_intro
+    lifecycleCallbacks: {  }

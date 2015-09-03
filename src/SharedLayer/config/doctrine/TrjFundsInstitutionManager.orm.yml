@@ -1,0 +1,53 @@
+SharedModel\TrjFundsInstitutionManager:
+    type: entity
+    repositoryClass: SharedModel\TrjFundsInstitutionManagerRepository
+    table: trj_funds_institution_manager
+    uniqueConstraints:
+        trj_funds_institution_manager_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        institutId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 机构名称
+            default: '0'
+            column: institut_id
+        name:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 姓名
+            default: ''
+        photo:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 头像
+            default: ''
+        job:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 职务
+            default: ''
+        weight:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 权重
+            default: '0'
+    lifecycleCallbacks: {  }

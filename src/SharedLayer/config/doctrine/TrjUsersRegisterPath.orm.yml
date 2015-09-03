@@ -1,0 +1,140 @@
+SharedModel\TrjUsersRegisterPath:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersRegisterPathRepository
+    table: trj_users_register_path
+    uniqueConstraints:
+        ak_poster_id_trj_users_register_path:
+            columns:
+                - poster_id
+        ak_trackid_trj_users_register_path:
+            columns:
+                - trackid
+        ak_mobile_trj_users_register_path:
+            columns:
+                - mobile
+        ak_created_trj_users_register_path:
+            columns:
+                - created
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        httpHref:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: ''
+            default: ''
+            column: http_href
+        referer:
+            type: string
+            nullable: false
+            length: 3000
+            fixed: false
+            comment: '引入链接'
+            default: ''
+        channel:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 推广专题频道代号
+            default: ''
+        trackid:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 注册来源类型
+            default: ''
+        isVip:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_vip
+        mobile:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            default: ''
+        poster:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: poster_id
+        crmRepeat:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 'crm号码重复'
+            default: '0::smallint'
+            column: crm_repeat
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ipAddr:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+            column: ip_addr
+        isDel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '用户是否已删除'
+            default: '0::smallint'
+            column: is_del
+        seoCat:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0seo,1seo品牌'
+            default: '0::smallint'
+            column: seo_cat
+        isFee:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否收过费
+            default: '0::smallint'
+            column: is_fee
+        tjFlag:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1为不计入统计'
+            default: '0::smallint'
+            column: tj_flag
+    lifecycleCallbacks: {  }

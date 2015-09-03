@@ -1,0 +1,55 @@
+SharedModel\TrjUsersInvitee:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersInviteeRepository
+    table: trj_users_invitee
+    uniqueConstraints:
+        ak_from_uid_trj_users_invitee:
+            columns:
+                - parent_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被邀请会员id
+            default: '0'
+            column: user_id
+        userName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 被邀请会员账号
+            default: ''
+            column: user_name
+        registerTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被邀请会员注册时间
+            default: '0'
+            column: register_time
+        parentId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 邀请方会员id
+            default: '0'
+            column: parent_id
+        award:
+            type: string
+            nullable: false
+            length: 30
+            fixed: false
+            comment: 邀请方得到的奖励
+            default: ''
+    lifecycleCallbacks: {  }

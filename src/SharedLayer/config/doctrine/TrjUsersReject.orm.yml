@@ -1,0 +1,37 @@
+SharedModel\TrjUsersReject:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersRejectRepository
+    table: trj_users_reject
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: user_id
+        type:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '1:信息'
+            default: '1'
+        iid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 信息id
+        addtime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '添加时间'
+    lifecycleCallbacks: {  }

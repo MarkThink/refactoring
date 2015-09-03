@@ -1,0 +1,263 @@
+SharedModel\TrjNews:
+    type: entity
+    repositoryClass: SharedModel\TrjNewsRepository
+    table: trj_news
+    uniqueConstraints:
+        ak_addtime_trj_news:
+            columns:
+                - addtime
+        ak_shenhe_trj_news:
+            columns:
+                - shenhe
+        ak_first_catid_trj_news:
+            columns:
+                - first_catid
+        ak_catid_trj_news:
+            columns:
+                - catid
+        ak_updatetime_trj_news:
+            columns:
+                - updatetime
+        ak_catcode_trj_news:
+            columns:
+                - catcode
+        ak_is_caiji_trj_news:
+            columns:
+                - is_caiji
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        firstCatid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 第一级分类id
+            default: '0'
+            column: first_catid
+        catid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 分类ID
+        catcode:
+            type: string
+            nullable: false
+            length: 12
+            fixed: false
+            comment: 分类编号
+        orgId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: org_id
+        industryId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 所属行业
+            default: '0'
+            column: industry_id
+        title:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: '文章标题'
+        title2:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '文章幅标题'
+        styleColor:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: '标题样式'
+            column: style_color
+        summary:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 摘要
+            default: ''
+        thumb:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+        keywords:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: '文章关键词'
+        copyfrom:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '文章来源'
+        copyurl:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 来源链接
+        isHot:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否头条
+            default: '0::smallint'
+            column: is_hot
+        collectNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 收藏数
+            default: '0'
+            column: collect_num
+        commentNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 评论数
+            default: '0'
+            column: comment_num
+        hitsNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 初始浏览量
+            default: '0'
+            column: hits_num
+        clickNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 赞数量
+            default: '0'
+            column: click_num
+        downNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 下载数量
+            default: '0'
+            column: down_num
+        viewNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 真实浏览量
+            default: '0'
+            column: view_num
+        addtime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '添加时间'
+            default: '0'
+        updatetime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 修改时间
+            default: '0'
+        updated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 修改时间
+            default: '0'
+        shenheTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核时间'
+            column: shenhe_time
+        listorder:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 排序
+        isCaiji:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否采集0:否 1:是'
+            default: '0::smallint'
+            column: is_caiji
+        isIndex:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否推首0:否 1:是'
+            default: '0::smallint'
+            column: is_index
+        isdel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否删除0:否 1:是'
+            default: '0::smallint'
+        shenhe:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否审核0:待审核 1:审核通过 2:审核不通过'
+            default: '1::smallint'
+        posterUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发布人id
+            column: poster_uid
+        posterUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 发布人账户名
+            column: poster_username
+        shenheUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核人id'
+            column: shenhe_uid
+        shenheUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '审核人账户名'
+            column: shenhe_username
+        trjFlag:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '投融界讯标志'
+            default: '0::smallint'
+            column: trj_flag
+        qrCodeFlag:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '二维码标志'
+            default: '0::smallint'
+            column: qr_code_flag
+    lifecycleCallbacks: {  }

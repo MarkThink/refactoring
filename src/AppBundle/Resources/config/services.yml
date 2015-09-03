@@ -1,0 +1,6 @@
+services:
+    security.access.post_voter:
+        class: AppBundle\Security\Authorization\Voter\PostVoter
+        public: false
+        tags:
+            - {name scurity.voter }

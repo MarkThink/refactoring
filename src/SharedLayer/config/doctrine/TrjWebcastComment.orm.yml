@@ -1,0 +1,47 @@
+SharedModel\TrjWebcastComment:
+    type: entity
+    repositoryClass: SharedModel\TrjWebcastCommentRepository
+    table: trj_webcast_comment
+    id:
+        showId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 路演ID
+            id: true
+            column: show_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        senderId:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: '发送者ID'
+            column: sender_id
+        username:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: 用户名称
+        content:
+            type: string
+            nullable: true
+            length: 512
+            fixed: false
+            comment: '聊天内容'
+        addTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 评论时间
+            column: add_time
+        isDel:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '是否删除'
+            column: is_del
+    lifecycleCallbacks: {  }

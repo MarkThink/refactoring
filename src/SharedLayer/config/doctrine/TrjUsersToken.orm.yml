@@ -1,0 +1,66 @@
+SharedModel\TrjUsersToken:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersTokenRepository
+    table: trj_users_token
+    uniqueConstraints:
+        trj_users_token_pk:
+            columns:
+                - access_id
+    id:
+        accessId:
+            type: string
+            nullable: false
+            length: 16
+            fixed: false
+            comment: 访问ID
+            id: true
+            column: access_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 用户ID
+            column: user_id
+        accessKey:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+            comment: 签名秘钥
+            column: access_key
+        desKey:
+            type: string
+            nullable: true
+            length: 8
+            fixed: false
+            comment: '参数加密秘钥'
+            column: des_key
+        loginTime:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: 登录时间
+            column: login_time
+        loginResource:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '登录来源：1网站  2WAP  3安卓 4IOS'
+            column: login_resource
+        validStatus:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '状态：0数据库默认 1有效 2无效'
+            column: valid_status
+        remark:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: 备注(浏览器类型、手机型号等)
+    lifecycleCallbacks: {  }

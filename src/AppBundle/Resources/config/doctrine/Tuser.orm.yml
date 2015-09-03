@@ -1,0 +1,38 @@
+AppBundle\Entity\Tuser:
+    type: entity
+    repositoryClass: AppBundle\Entity\TuserRepository
+    table: tuser
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        username:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+            comment: ''
+        password:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+            comment: ''
+        email:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+            comment: ''
+        isActive:
+            type: boolean
+            nullable: true
+            comment: ''
+            column: is_active
+    lifecycleCallbacks: {  }

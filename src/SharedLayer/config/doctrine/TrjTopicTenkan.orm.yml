@@ -1,0 +1,73 @@
+SharedModel\TrjTopicTenkan:
+    type: entity
+    repositoryClass: SharedModel\TrjTopicTenkanRepository
+    table: trj_topic_tenkan
+    uniqueConstraints:
+        ak_topic_id_trj_topic_tenkan:
+            columns:
+                - topic_id
+        ak_tkid_trj_topic_tenkan:
+            columns:
+                - tkid
+    id:
+        topicId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 专题id
+            id: true
+            column: topic_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        tkColumnIdStr:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '合拼专题栏目id串'
+            column: tk_column_id_str
+        tkid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 特刊id
+        tkTemplate:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 特刊所属模板
+            column: tk_template
+        tkTitle2:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '特刊副标题'
+            column: tk_title2
+        tkIndustryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 特刊所属行业
+            column: tk_industry_id
+        tkTopBanner:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: '特刊头部通栏图片'
+            column: tk_top_banner
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+        addUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '添加人账号'
+            column: add_username
+    lifecycleCallbacks: {  }

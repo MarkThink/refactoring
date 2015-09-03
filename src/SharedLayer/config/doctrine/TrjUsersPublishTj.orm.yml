@@ -1,0 +1,127 @@
+SharedModel\TrjUsersPublishTj:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersPublishTjRepository
+    table: trj_users_publish_tj
+    uniqueConstraints:
+        ak_created_trj_users_publish_tj:
+            columns:
+                - created
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 时间
+            default: '0'
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: id
+            default: '0'
+            column: user_id
+        userName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 用户账号
+            column: user_name
+        userNature:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 用户性质1新用户2老用户
+            default: '0::smallint'
+            column: user_nature
+        userType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 用户类型
+            default: '0::smallint'
+            column: user_type
+        registerDatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: register_datetime
+        xmPublishNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 项目数
+            column: xm_publish_num
+        xmPublishTNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '项目审核通过数量'
+            default: '0'
+            column: xm_publish_t_num
+        xmPublishWNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '项目审核未通过数量'
+            default: '0'
+            column: xm_publish_w_num
+        zjPublishNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 资金数
+            column: zj_publish_num
+        zjPublishTNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '资金审核通过数量'
+            default: '0'
+            column: zj_publish_t_num
+        zjPublishWNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '资金审核未通过数量'
+            default: '0'
+            column: zj_publish_w_num
+        historyPublishNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 历史发布数量
+            default: '0'
+            column: history_publish_num
+        loginNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 登录数
+            column: login_num
+        publishNumber:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '发布次数，第几次发布'
+            default: '0'
+            column: publish_number
+        source:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 来源
+    lifecycleCallbacks: {  }

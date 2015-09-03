@@ -1,0 +1,166 @@
+SharedModel\TrjLink:
+    type: entity
+    repositoryClass: SharedModel\TrjLinkRepository
+    table: trj_link
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        siteId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 分站ID
+            default: '0'
+            column: site_id
+        siteName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+            column: site_name
+        siteUrl:
+            type: string
+            nullable: false
+            length: 300
+            fixed: false
+            comment: ''
+            default: ''
+            column: site_url
+        siteLogo:
+            type: string
+            nullable: false
+            length: 300
+            fixed: false
+            comment: ''
+            default: ''
+            column: site_logo
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0:未通过,1:通过'
+            default: '0::smallint'
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 0文字，1图片
+            default: '0::smallint'
+        position:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0站内,1首页'
+            default: '0::smallint'
+        categoryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 分类
+            default: '0'
+            column: category_id
+        sort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        createId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 提交人id
+            column: create_id
+        createName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 提交人名字
+            column: create_name
+        stat:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '审核状态1通过2拒绝'
+            default: '0::smallint'
+        examineId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核人id'
+            column: examine_id
+        examineName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '审核人名字'
+            column: examine_name
+        examineCreated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核时间'
+            default: '0'
+            column: examine_created
+        des:
+            type: string
+            nullable: false
+            length: 256
+            fixed: false
+            comment: 描述
+        company:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '公司'
+        contactName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 联系人
+            column: contact_name
+        contactMobile:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 联系人电话
+            column: contact_mobile
+        qq:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: qq
+        address:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 地址
+        isdel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否删除0:正常 1:删除'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

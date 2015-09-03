@@ -1,0 +1,139 @@
+SharedModel\TrjOrderDelivery:
+    type: entity
+    repositoryClass: SharedModel\TrjOrderDeliveryRepository
+    table: trj_order_delivery
+    uniqueConstraints:
+        ak_order_id_trj_order_delivery:
+            columns:
+                - order_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        orderId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: order_id
+        itemId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被回应的信息id
+            default: '0'
+            column: item_id
+        itemTitle:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: ''
+            column: item_title
+        itemMobile:
+            type: string
+            nullable: false
+            length: 11
+            fixed: false
+            comment: ''
+            column: item_mobile
+        itemCatPid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: item_cat_pid
+        itemType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0信息，1公司'
+            default: '0::smallint'
+            column: item_type
+        itemUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被回应对像的所属账户
+            default: '0'
+            column: item_uid
+        itemUname:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 被投递人姓名
+            column: item_uname
+        itemContactSex:
+            type: string
+            nullable: false
+            length: 10
+            fixed: false
+            comment: ''
+            column: item_contact_sex
+        feedId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发起回应的信息
+            default: '0'
+            column: feed_id
+        feedTitle:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: ''
+            column: feed_title
+        feedType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0:项目资金信息,1:投递信息'
+            default: '0::smallint'
+            column: feed_type
+        feedCatPid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: feed_cat_pid
+        feedUname:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 发起回应的用户
+            default: ''
+            column: feed_uname
+        feedUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发起回应的用户id
+            default: '0'
+            column: feed_uid
+        feedMobile:
+            type: string
+            nullable: false
+            length: 11
+            fixed: false
+            comment: ''
+            column: feed_mobile
+        feedContactSex:
+            type: string
+            nullable: false
+            length: 10
+            fixed: false
+            comment: ''
+            column: feed_contact_sex
+    lifecycleCallbacks: {  }

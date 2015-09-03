@@ -1,0 +1,701 @@
+SharedModel\TrjZjxmList:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmListRepository
+    table: trj_zjxm_list
+    uniqueConstraints:
+        ak_crm_uid_trj_zjxm_list:
+            columns:
+                - crm_uid
+        ak_cat_id_trj_zjxm_list:
+            columns:
+                - cat_id
+        ak_user_id_trj_zjxm_list:
+            columns:
+                - user_id
+        ak_cat_pid_trj_zjxm_list:
+            columns:
+                - cat_pid
+                - status
+        ak_tz_industry_trj_zjxm_list:
+            columns:
+                - tz_industry
+        ak_minfo_id_trj_zjxm_list:
+            columns:
+                - minfo_id
+        ak_province_id_trj_zjxm_list:
+            columns:
+                - province_id
+        ak_created_trj_zjxm_list:
+            columns:
+                - created
+        ak_industry_id_trj_zjxm_list:
+            columns:
+                - industry_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '标题'
+            default: ''
+        verId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 版本id
+            default: '0'
+            column: ver_id
+        catPid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '顶级分类 1000资金 2000项目'
+            default: '0'
+            column: cat_pid
+        catId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 分类id
+            default: '0'
+            column: cat_id
+        typeId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 项目类型(对应trj_settings-item_type)
+            default: '0'
+            column: type_id
+        countryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 所在区域（国家id）
+            default: '0'
+            column: country_id
+        provinceId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 所在区域（省id）
+            default: '0'
+            column: province_id
+        cityId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 所在区域（市id）
+            default: '0'
+            column: city_id
+        areaId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 所在区域（区域id）
+            default: '0'
+            column: area_id
+        lastAreaId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: last_area_id
+        industryId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '公用-所属行业'
+            default: '0'
+            column: industry_id
+        tradeWay:
+            type: string
+            nullable: false
+            length: 512
+            fixed: false
+            comment: 资产交易-交易方式
+            default: ''
+            column: trade_way
+        transferPrice:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: '转让价格'
+            default: '0.0000'
+            column: transfer_price
+        transferDateend:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 转让截止时间
+            default: ''
+            column: transfer_dateend
+        transferType:
+            type: string
+            nullable: false
+            length: 512
+            fixed: false
+            comment: 转让范围
+            default: ''
+            column: transfer_type
+        xmrzType:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 项目融资类型(复选)
+            default: ''
+            column: xmrz_type
+        xmrzBody:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 项目融资主体
+            default: '0'
+            column: xmrz_body
+        xmrzUsage:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 项目用途
+            default: ''
+            column: xmrz_usage
+        xmrzRevenue:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: 去年营业额
+            default: '0.0000'
+            column: xmrz_revenue
+        xmrzAsset:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: 企业当前净资产
+            default: '0.0000'
+            column: xmrz_asset
+        amountIntervalMin:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: 最小项目融资/转让金额/投资金额
+            default: '0.0000'
+            column: amount_interval_min
+        amountIntervalMax:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: 最小项目融资/转让金额/投资金额
+            default: '0.0000'
+            column: amount_interval_max
+        amount:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: 项目总投金额
+            default: '0.0000'
+        fundsBody:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 所属资金主体
+            default: '0'
+            column: funds_body
+        xmrzIntention:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 项目-意向投资方主体
+            default: ''
+            column: xmrz_intention
+        xmzcType:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 资产-交易类别
+            default: '0'
+            column: xmzc_type
+        xmzcAssass:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: 资金-资产估价
+            default: '0.0000'
+            column: xmzc_assass
+        xmlcFxph:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 投资理财-风险偏好
+            default: '0'
+            column: xmlc_fxph
+        xmlcTzmk:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 投资理财-投资门槛
+            default: '0'
+            column: xmlc_tzmk
+        xmlcTzqx:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 投资理财-投资期限
+            default: '0'
+            column: xmlc_tzqx
+        xmgqPeriod:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 股权融资-项目所处阶段
+            default: '0'
+            column: xmgq_period
+        tzlcType:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 理财产品类型
+            default: '0'
+            column: tzlc_type
+        viewNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 浏览量
+            default: '0'
+            column: view_num
+        showNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 真实浏览量
+            default: '0'
+            column: show_num
+        followNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '被关注量'
+            default: '0'
+            column: follow_num
+        clickNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 被赞量
+            default: '0'
+            column: click_num
+        collectNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 被收藏量
+            default: '0'
+            column: collect_num
+        commentNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 评论量
+            default: '0'
+            column: comment_num
+        reportNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 被举报次数
+            default: '0'
+            column: report_num
+        deliveryNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 投递次数
+            default: '0'
+            column: delivery_num
+        receivedDeliveryNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 收到投递次数
+            default: '0'
+            column: received_delivery_num
+        beInviteNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 被约谈次数
+            default: '0'
+            column: be_invite_num
+        beDeliveryNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 收到的投递数量
+            default: '0'
+            column: be_delivery_num
+        shortOverview:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 短简介
+            default: ''
+            column: short_overview
+        ctime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 创建时间
+            default: '0'
+        updated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 更新时间
+            default: '0'
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 前台用户id
+            default: '0'
+            column: user_id
+        userType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 用户身份
+            default: '0::smallint'
+            column: user_type
+        userUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 前台用户账号
+            default: ''
+            column: user_username
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '审核状态,0-等待发布,1-已发布,2-等待审核,3-审核未通过'
+            default: '0::smallint'
+        isEntrustRefresh:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否委托刷新
+            default: '0::smallint'
+            column: is_entrust_refresh
+        isDefault:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否默认信息
+            default: '0::smallint'
+            column: is_default
+        zjxmAuth:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '授权(0对所有人开放,1对所有会员开放,2对认证会员开放,3对商友开放,4完全保密)'
+            default: '0'
+            column: zjxm_auth
+        searchUpdated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 是否更新到搜索表
+            default: '0'
+            column: search_updated
+        iPicFlag:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否有图片
+            default: '0::smallint'
+            column: i_pic_flag
+        source:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1-后台发布, 2-前台用户发布'
+            default: '0::smallint'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '前台用户 信息发布 显示IP'
+            default: '0'
+        infoPercent:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 信息完整度
+            default: '0::smallint'
+            column: info_percent
+        infoPercentSort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 信息完整度排名
+            default: '0'
+            column: info_percent_sort
+        verifyReasonId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 对应shenhe_reason的rid
+            default: '0'
+            column: verify_reason_id
+        verifyId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '该项目审核人的id，对应admins表里的id'
+            default: '0'
+            column: verify_id
+        verifyProcess:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '后台审核进程，0-初审，1-复审,2-失败,3-成功,-1二审'
+            default: '0::smallint'
+            column: verify_process
+        verifyReason:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: ''
+            default: ''
+            column: verify_reason
+        verifyStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '后台审核状态，0-待审核，1-暂不处理，2-二次审核，3-审核通过'
+            default: '0::smallint'
+            column: verify_status
+        verifyNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '第几次审核'
+            default: '1::smallint'
+            column: verify_num
+        verifyTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核时间'
+            default: '0'
+            column: verify_time
+        verifySign:
+            type: string
+            nullable: false
+            length: 1
+            fixed: true
+            comment: '审核标记'
+            default: ''
+            column: verify_sign
+        tgxxQi:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 推荐精编期号
+            default: '0'
+            column: tgxx_qi
+        isPage:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1:推荐首页'
+            default: '0::smallint'
+            column: is_page
+        isDel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否删除'
+            default: '0::smallint'
+            column: is_del
+        infoLevel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 0-低，1-中，2-高
+            default: '0::smallint'
+            column: info_level
+        tzIndustry:
+            type: string
+            nullable: true
+            length: 256
+            fixed: false
+            comment: '投资行业,单个也需以，号分割'
+            default: ''
+            column: tz_industry
+        tzArea:
+            type: string
+            nullable: true
+            length: 256
+            fixed: false
+            comment: '投资地区,规则同上'
+            default: ''
+            column: tz_area
+        zjfTzType:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 股权投资-投资类型
+            column: zjf_tz_type
+        zjfTzType675Extra:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+            column: zjf_tz_type_675_extra
+        zjfTzPeriod:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 股权投资-投资阶段
+            column: zjf_tz_period
+        zjfFkClaim:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 债权投资-风控要求
+            default: ''
+            column: zjf_fk_claim
+        zjfFxLike:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 金融投资-风险偏好
+            default: '0'
+            column: zjf_fx_like
+        zjfTpLike:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 金融投资-产品偏好
+            column: zjf_tp_like
+        zjfPayBack:
+            type: string
+            nullable: false
+            length: 5
+            fixed: false
+            comment: 债权投资-最低回报要求
+            column: zjf_pay_back
+        xmfZsWay:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 政府招商-招商方式
+            column: xmf_zs_way
+        minfoId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: crm客户id
+            default: '0'
+            column: minfo_id
+        crmUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 'crm录入人id'
+            default: '0'
+            column: crm_uid
+        adminUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 编辑人员id
+            default: '0'
+            column: admin_uid
+        isYzzj:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否优质资金方0不是1是2已删除'
+            default: '0::smallint'
+            column: is_yzzj
+        isTj:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否自动推荐首页
+            default: '0::smallint'
+            column: is_tj
+        cityOrder:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 城市分站排序
+            default: '10'
+            column: city_order
+        certScore:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户认证度分值
+            default: '0'
+            column: cert_score
+        updatedDay:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 信息更新天时间
+            default: '0'
+            column: updated_day
+        isQuery:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 金额限定是否查询
+            default: '1::smallint'
+            column: is_query
+        trackFlag:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: track_flag
+    lifecycleCallbacks: {  }

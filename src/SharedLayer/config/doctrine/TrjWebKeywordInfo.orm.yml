@@ -1,0 +1,41 @@
+SharedModel\TrjWebKeywordInfo:
+    type: entity
+    repositoryClass: SharedModel\TrjWebKeywordInfoRepository
+    table: trj_web_keyword_info
+    uniqueConstraints:
+        ak_infoid_trj_web_keyword_info:
+            columns:
+                - infoid
+        ak_listorder_trj_web_keyword_info:
+            columns:
+                - listorder
+    id:
+        kid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '关联关键词表kid'
+            default: '0'
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        infoid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '关联资金项目表'
+            default: '0'
+        infoUpdated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 信息更新时间
+            column: info_updated
+        listorder:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 排序
+            default: '0'
+    lifecycleCallbacks: {  }

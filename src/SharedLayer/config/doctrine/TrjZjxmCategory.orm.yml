@@ -1,0 +1,63 @@
+SharedModel\TrjZjxmCategory:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmCategoryRepository
+    table: trj_zjxm_category
+    id:
+        catId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: cat_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        catName:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            default: ''
+            column: cat_name
+        catPid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: cat_pid
+        catLevel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: cat_level
+        catLock:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: cat_lock
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 创建时间
+            default: '0'
+        updated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 修改时间
+            default: '0'
+    lifecycleCallbacks: {  }

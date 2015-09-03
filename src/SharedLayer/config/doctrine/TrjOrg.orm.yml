@@ -1,0 +1,216 @@
+SharedModel\TrjOrg:
+    type: entity
+    repositoryClass: SharedModel\TrjOrgRepository
+    table: trj_org
+    id:
+        orgId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: org_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        orgType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 1自有数据，0采集
+            default: '0::smallint'
+            column: org_type
+        orgName:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 机构名称
+            default: ''
+            column: org_name
+        orgCname:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 机构简称
+            default: ''
+            column: org_cname
+        orgEnname:
+            type: string
+            nullable: true
+            length: 500
+            fixed: false
+            comment: ''
+            column: org_enname
+        orgLocation:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 机构总部
+            default: ''
+            column: org_location
+        orgReglocation:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: 注册地点
+            column: org_reglocation
+        orgRegcapital:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: 注册资本
+            column: org_regcapital
+        orgCat:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ' 机构分类'
+            default: '0::smallint'
+            column: org_cat
+        orgRegyear:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: 成立时间
+            column: org_regyear
+        orgUrl:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: org_url
+        orgLogo:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            default: ''
+            column: org_logo
+        orgOverview:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: ''
+            default: ''
+            column: org_overview
+        orgSort:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: org_sort
+        orgStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '1::smallint'
+            column: org_status
+        provinceId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: province_id
+        cityId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: city_id
+        isListed:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_listed
+        tzIndustry:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 投资行业
+            default: ''
+            column: tz_industry
+        tzArea:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 投资地区
+            default: ''
+            column: tz_area
+        tzPeriod:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 投资阶段
+            default: ''
+            column: tz_period
+        tzNature:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: '资金标签'
+            default: '0'
+            column: tz_nature
+        commentNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: comment_num
+        ctime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        etime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 更新时间
+            default: '0'
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: poster_id
+        poster:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+        hitnum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        dateStart:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: date_start
+    lifecycleCallbacks: {  }

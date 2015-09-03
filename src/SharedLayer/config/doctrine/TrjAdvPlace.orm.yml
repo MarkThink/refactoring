@@ -1,0 +1,132 @@
+SharedModel\TrjAdvPlace:
+    type: entity
+    repositoryClass: SharedModel\TrjAdvPlaceRepository
+    table: trj_adv_place
+    uniqueConstraints:
+        ak_enname_no_trj_adv_place:
+            columns:
+                - enname_no
+        ak_qid_trj_adv_place:
+            columns:
+                - qid
+        ak_pid_trj_adv_place:
+            columns:
+                - pid
+    id:
+        aid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        pid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 广告页pid
+            default: '0'
+        qid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 广告区域表qid
+            default: '0'
+        ennameNo:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '对应位置:英文附名位数'
+            default: ''
+            column: enname_no
+        pAdvType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '广告位类型 1:图片 2:文字'
+            default: '0::smallint'
+            column: p_adv_type
+        pAdvSize:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '广告位广告规格'
+            default: ''
+            column: p_adv_size
+        placeName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 位置名称
+            column: place_name
+        advPrice:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '广告价格'
+            default: '0'
+            column: adv_price
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '状态 1:使用 2:闲置'
+            default: '0::smallint'
+        initAdvName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 默认广告名称
+            default: ''
+            column: init_adv_name
+        initAdvUrl:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 默认广告url
+            default: ''
+            column: init_adv_url
+        initOid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '关联链接id'
+            default: '0'
+            column: init_oid
+        initAdvImg:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 默认广告图片
+            default: ''
+            column: init_adv_img
+        initAdvMemo:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 默认广告描述
+            default: ''
+            column: init_adv_memo
+        initAdvStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '默认广告状态 1:使用 2:停用'
+            default: '1::smallint'
+            column: init_adv_status
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+            default: '0'
+    lifecycleCallbacks: {  }

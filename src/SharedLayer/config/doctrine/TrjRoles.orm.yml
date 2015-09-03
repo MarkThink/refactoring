@@ -1,0 +1,58 @@
+SharedModel\TrjRoles:
+    type: entity
+    repositoryClass: SharedModel\TrjRolesRepository
+    table: trj_roles
+    id:
+        roleid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        roleName:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            comment: ''
+            column: role_name
+        adminsNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 成员人数
+            default: '0'
+            column: admins_num
+        roleInfo:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+            column: role_info
+        masterid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+        mastername:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            comment: ''
+        createdate:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+        isuse:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否启用 1:启用 2:停用'
+            default: '1::smallint'
+    lifecycleCallbacks: {  }

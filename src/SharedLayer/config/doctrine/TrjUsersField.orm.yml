@@ -1,0 +1,57 @@
+SharedModel\TrjUsersField:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersFieldRepository
+    table: trj_users_field
+    uniqueConstraints:
+        ak_user_id_trj_users_field:
+            columns:
+                - user_id
+    id:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            id: true
+            column: user_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        lastYearRevenue:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: 去年营业额
+            default: '0.0000'
+            column: last_year_revenue
+        netAsset:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: 企业当前净资产
+            default: '0.0000'
+            column: net_asset
+        messageTableIndex:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否消息分表
+            default: '0::smallint'
+            column: message_table_index
+        experience:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 成长经验值
+            default: '0'
+        userLevel:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 会员等级id
+            default: '1'
+            column: user_level
+    lifecycleCallbacks: {  }

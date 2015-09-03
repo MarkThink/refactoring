@@ -1,0 +1,68 @@
+SharedModel\TrjTgxxZjxm:
+    type: entity
+    repositoryClass: SharedModel\TrjTgxxZjxmRepository
+    table: trj_tgxx_zjxm
+    uniqueConstraints:
+        ak_tgxx_id_trj_tgxx_zjxm:
+            columns:
+                - tgxx_id
+                - zjxm_id
+        trj_tgxx_zjxm_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        tgxxId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: tgxx_id
+        zjxmId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: zjxm_id
+        title:
+            type: string
+            nullable: false
+            length: 150
+            fixed: false
+            comment: ''
+        createName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            column: create_name
+        createId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: create_id
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

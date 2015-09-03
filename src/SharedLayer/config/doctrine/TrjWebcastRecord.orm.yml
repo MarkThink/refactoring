@@ -1,0 +1,79 @@
+SharedModel\TrjWebcastRecord:
+    type: entity
+    repositoryClass: SharedModel\TrjWebcastRecordRepository
+    table: trj_webcast_record
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 直播ID
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        webcastId:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: 展示互动直播ID
+            column: webcast_id
+        recordId:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: 点播ID
+            column: record_id
+        recordPwd:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: '点播密码'
+            column: record_pwd
+        recordStartTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 记录开始时间
+            column: record_start_time
+        recordEndTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 记录结束时间
+            column: record_end_time
+        recordSize:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 点播文件大小
+            column: record_size
+        subject:
+            type: string
+            nullable: true
+            length: 25
+            fixed: false
+            comment: '直播标题'
+        url:
+            type: string
+            nullable: true
+            length: 256
+            fixed: false
+            comment: 原始点播URL
+        pushUrl:
+            type: string
+            nullable: true
+            length: 256
+            fixed: false
+            comment: 点播URL
+            column: push_url
+        status:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '0未开启使用 1已开启使用'
+            default: '0'
+    lifecycleCallbacks: {  }

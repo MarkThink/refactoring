@@ -1,0 +1,98 @@
+SharedModel\TrjUsersBusinessCardHistory:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersBusinessCardHistoryRepository
+    table: trj_users_business_card_history
+    uniqueConstraints:
+        ak_created_trj_users_business_card_history:
+            columns:
+                - created
+        ak_user_id_trj_users_business_card_history:
+            columns:
+                - user_id
+                - item_id
+                - type
+                - created
+        ak_item_id_trj_users_business_card_history:
+            columns:
+                - item_id
+        ak_zjxm_id_trj_users_business_card_history:
+            columns:
+                - zjxm_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 1用户查看名片，2未付费会员交换名片
+            default: '0::smallint'
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 查看人
+            default: '0'
+            column: user_id
+        itemId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被查看人
+            default: '0'
+            column: item_id
+        itemType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1:项目,0用户'
+            default: '0::smallint'
+            column: item_type
+        itemName:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: item_name
+        itemCompany:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: item_company
+        zjxmId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 从那个信息点查看的
+            default: '0'
+            column: zjxm_id
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        fromType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: from_type
+    lifecycleCallbacks: {  }

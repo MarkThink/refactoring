@@ -1,0 +1,106 @@
+SharedModel\TrjActivityRedpacket:
+    type: entity
+    repositoryClass: SharedModel\TrjActivityRedpacketRepository
+    table: trj_activity_redpacket
+    uniqueConstraints:
+        ak_mobile_trj_activity_redpacket:
+            columns:
+                - mobile
+        ak_user_id_trj_activity_redpacket:
+            columns:
+                - user_id
+        ak_openid_trj_activity_redpacket:
+            columns:
+                - openid
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: user_id
+        traceId:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+            default: '0'
+            column: trace_id
+        content:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: ''
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+        reward:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        isNew:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: is_new
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        openid:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: ''
+        ip:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+        mobile:
+            type: string
+            nullable: false
+            length: 11
+            fixed: false
+            comment: ''
+        traceUserId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: trace_user_id
+        paySuccess:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: pay_success
+        paySuccessTrace:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: pay_success_trace
+    lifecycleCallbacks: {  }

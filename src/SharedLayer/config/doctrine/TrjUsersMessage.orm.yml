@@ -1,0 +1,103 @@
+SharedModel\TrjUsersMessage:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersMessageRepository
+    table: trj_users_message
+    uniqueConstraints:
+        ak_receiver_id_trj_users_message:
+            columns:
+                - receiver_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ID
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        categoryId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 系统消息分类id
+            default: '0::smallint'
+            column: category_id
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '类型 1-项目 2-资金 3私信 4名片 5咨询 6订单 7审核 8投诉 9申诉 10认证 11评价 12展厅留言 13 项目留言 14资金留言15投融界提醒（特殊：100 整站会员信息）'
+            default: '0::smallint'
+        initialId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发起方id
+            default: '0'
+            column: initial_id
+        initial:
+            type: string
+            nullable: true
+            length: 40
+            fixed: false
+            comment: ''
+        initialType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 发起方会员类型
+            default: '0::smallint'
+            column: initial_type
+        receiverId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '接收者ID'
+            default: '0'
+            column: receiver_id
+        receiver:
+            type: string
+            nullable: true
+            length: 40
+            fixed: false
+            comment: ''
+        message:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '留言内容'
+        infoId:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: 动态信息的来源
+            column: info_id
+        seed:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否已读 0已读 1未读'
+            default: '0::smallint'
+        posttime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 时间
+            default: '0'
+        ipAddress:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ip
+            default: '0'
+            column: ip_address
+        isdel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否删除0:正常 1:删除'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

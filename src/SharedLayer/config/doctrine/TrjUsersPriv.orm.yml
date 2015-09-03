@@ -1,0 +1,97 @@
+SharedModel\TrjUsersPriv:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersPrivRepository
+    table: trj_users_priv
+    uniqueConstraints:
+        ak_user_id_trj_users_priv:
+            columns:
+                - user_id
+    id:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户id
+            default: '0'
+            id: true
+            column: user_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        updated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 更新时间
+            default: '0'
+        acceptMessage:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '接收私信：0对所有人开放， 1对所有会员开放，2对认证会员开放，3对商友开放，-1拒绝所有'
+            default: '0::smallint'
+            column: accept_message
+        personalInfo:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '会员资料查看权限：0对所有人开放， 1对所有会员开放，2对认证会员开放，3对商友开放，-1完全保密'
+            default: '0::smallint'
+            column: personal_info
+        prodauth:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 对应产品权限
+            default: ''
+        totalFeedbackNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '总剩余免费投递次数'
+            default: '0'
+            column: total_feedback_num
+        rewardBusinesscardNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '增加查看名片数'
+            default: '0'
+            column: reward_businesscard_num
+        rewardFeedbackNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '增加投递次数'
+            default: '0'
+            column: reward_feedback_num
+        rewardBusinessNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '加大商友圈'
+            default: '0'
+            column: reward_business_num
+        rewardCompanyAuth:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '展厅权限'
+            default: '0::smallint'
+            column: reward_company_auth
+        rewardRefreshNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 刷新
+            default: '0'
+            column: reward_refresh_num
+        rewardEntrustRefreshNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 委托刷新
+            default: '0'
+            column: reward_entrust_refresh_num
+    lifecycleCallbacks: {  }

@@ -1,0 +1,77 @@
+SharedModel\TrjHomepagePic:
+    type: entity
+    repositoryClass: SharedModel\TrjHomepagePicRepository
+    table: trj_homepage_pic
+    uniqueConstraints:
+        ak_user_id_trj_homepage_pic:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            default: ''
+        pic:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: ''
+        sort:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        certid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '关联认证表certid'
+            default: '0'
+        isDel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_del
+        aid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 附件ID
+            default: '0'
+        isVerify:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否验证 0未验证 1已验证'
+            default: '0::smallint'
+            column: is_verify
+    lifecycleCallbacks: {  }

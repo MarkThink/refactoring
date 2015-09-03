@@ -1,0 +1,33 @@
+SharedModel\TrjCwnUsers:
+    type: entity
+    repositoryClass: SharedModel\TrjCwnUsersRepository
+    table: trj_cwn_users
+    uniqueConstraints:
+        ak_user_id_trj_cwn_users:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户id
+            default: '0'
+            column: user_id
+        isFeedback:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否已经赠送50元投递 0没给，1给了'
+            default: '0::smallint'
+            column: is_feedback
+    lifecycleCallbacks: {  }

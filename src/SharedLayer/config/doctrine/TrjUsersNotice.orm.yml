@@ -1,0 +1,76 @@
+SharedModel\TrjUsersNotice:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersNoticeRepository
+    table: trj_users_notice
+    uniqueConstraints:
+        ak_to_uid_trj_users_notice:
+            columns:
+                - to_uid
+                - from_uid
+                - type
+                - item_id
+                - created
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ID
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 类型
+            default: '0::smallint'
+        fromUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: from_uid
+        fromUname:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            default: ''
+            column: from_uname
+        toUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '接收者ID'
+            default: '0'
+            column: to_uid
+        itemId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: item_id
+        message:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: '内容'
+        view:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否已读
+            default: '0::smallint'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 时间
+            default: '0'
+    lifecycleCallbacks: {  }

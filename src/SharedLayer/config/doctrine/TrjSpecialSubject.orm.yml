@@ -1,0 +1,97 @@
+SharedModel\TrjSpecialSubject:
+    type: entity
+    repositoryClass: SharedModel\TrjSpecialSubjectRepository
+    table: trj_special_subject
+    id:
+        sid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        subjectName:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 专题名称
+            column: subject_name
+        seoTitle:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+            column: seo_title
+        seoKeywords:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: ''
+            column: seo_keywords
+        seoDescription:
+            type: string
+            nullable: false
+            length: 300
+            fixed: false
+            comment: ''
+            column: seo_description
+        fileName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 存储名称
+            default: ''
+            column: file_name
+        posterUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发布人uid
+            column: poster_uid
+        posterUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 发布人账户名
+            column: poster_username
+        templetText:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '模板内容'
+            column: templet_text
+        disable:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1可用 2不可用'
+            default: '1::smallint'
+        addTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: add_time
+        thumb:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 主题图片
+        isOk:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_ok
+    lifecycleCallbacks: {  }

@@ -1,0 +1,203 @@
+SharedModel\TrjInfoComment:
+    type: entity
+    repositoryClass: SharedModel\TrjInfoCommentRepository
+    table: trj_info_comment
+    uniqueConstraints:
+        ak_info_type_trj_info_comment:
+            columns:
+                - info_type
+        ak_comment_uid_trj_info_comment:
+            columns:
+                - comment_uid
+        trj_info_comment_pk:
+            columns:
+                - id
+        ak_info_id_trj_info_comment:
+            columns:
+                - info_id
+        ak_info_uid_trj_info_comment:
+            columns:
+                - info_uid
+        ak_comment_time_trj_info_comment:
+            columns:
+                - comment_time
+        ak_shenhe_trj_info_comment:
+            columns:
+                - shenhe
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        infoId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 评论信息id
+            column: info_id
+        infoTitle:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '评论信息标题'
+            column: info_title
+        infoType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '评论信息类型 1:文章 2:项目 3:智库 4展厅 5:资金6:优质项目'
+            default: '0::smallint'
+            column: info_type
+        infoUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 信息发布人ID
+            column: info_uid
+        infoUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 信息发布人账号
+            column: info_username
+        commentUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 评论人ID
+            column: comment_uid
+        commentUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 评论人账号
+            column: comment_username
+        commentContent:
+            type: string
+            nullable: false
+            length: 600
+            fixed: false
+            comment: '评论内容'
+            column: comment_content
+        commentIp:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '评论者ip'
+            default: '0'
+            column: comment_ip
+        commentTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 评论时间
+            default: '0'
+            column: comment_time
+        shenhe:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '评论审核状态 0:未审核 1:已审核（对应 non-keywords -> replace）'
+            default: '0::smallint'
+        shenheReason:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: '审核不通过原因'
+            column: shenhe_reason
+        shenheTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '评论审核时间'
+            column: shenhe_time
+        shenheUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核人ID'
+            column: shenhe_uid
+        shenheUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '审核人账户'
+            column: shenhe_username
+        replyShenhe:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '评论审核状态 0:未审核 1:已审核'
+            default: '0::smallint'
+            column: reply_shenhe
+        replyContent:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: '回复内容'
+            column: reply_content
+        replyShenheUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '评论回复内容审核人'
+            column: reply_shenhe_username
+        replyTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 回复时间
+            column: reply_time
+        replyShenheTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '评论回复审核时间'
+            column: reply_shenhe_time
+        emailRemind:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 有回复时是否邮件提醒
+            default: '0::smallint'
+            column: email_remind
+        dNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 顶数量
+            default: '0'
+            column: d_num
+        cNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 踩数量
+            default: '0'
+            column: c_num
+        viewAuth:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0公开，1仅对方可见，2会员可见'
+            default: '0::smallint'
+            column: view_auth
+        isdel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否删除0正常 1已删除'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

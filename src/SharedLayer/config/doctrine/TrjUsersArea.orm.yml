@@ -1,0 +1,40 @@
+SharedModel\TrjUsersArea:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersAreaRepository
+    table: trj_users_area
+    uniqueConstraints:
+        ak_area_id_trj_users_area:
+            columns:
+                - area_id
+    id:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            id: true
+            column: user_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        username:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+        areaId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '城市展厅ID'
+            default: '0'
+            column: area_id
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

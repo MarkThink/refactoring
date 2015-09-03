@@ -1,0 +1,95 @@
+SharedModel\TrjJob:
+    type: entity
+    repositoryClass: SharedModel\TrjJobRepository
+    table: trj_job
+    uniqueConstraints:
+        trj_job_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ID
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        jobName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 岗位名称
+            default: ''
+            column: job_name
+        jobDuty:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 岗位职责
+            column: job_duty
+        jobZg:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '任职资格'
+            column: job_zg
+        editorId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '编辑者id'
+            default: '0'
+            column: editor_id
+        editor:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '编辑者'
+            default: ''
+        edittime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 编辑时间
+            default: '0'
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '创建者id'
+            default: '0'
+            column: poster_id
+        poster:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '创建者'
+            default: ''
+        posttime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 创建时间
+            default: '0'
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 状态
+            default: '1::smallint'
+        ipAddress:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ip
+            default: ''
+            column: ip_address
+    lifecycleCallbacks: {  }

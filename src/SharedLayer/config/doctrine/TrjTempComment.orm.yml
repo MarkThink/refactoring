@@ -1,0 +1,71 @@
+SharedModel\TrjTempComment:
+    type: entity
+    repositoryClass: SharedModel\TrjTempCommentRepository
+    table: trj_temp_comment
+    uniqueConstraints:
+        ak_item_id_trj_temp_comment:
+            columns:
+                - item_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        siteId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 分站ID
+            default: '0'
+            column: site_id
+        title:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+        itemId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被评论对象
+            default: '0'
+            column: item_id
+        content:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 留言
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '评论者'
+            default: '0'
+            column: poster_id
+        poster:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '评论者'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,95 @@
+SharedModel\TrjBlueBookZhengding:
+    type: entity
+    repositoryClass: SharedModel\TrjBlueBookZhengdingRepository
+    table: trj_blue_book_zhengding
+    uniqueConstraints:
+        trj_blue_book_zhengding_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        buleBookNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: bule_book_num
+        shangHuiDaQuanNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: shang_hui_da_quan_num
+        company:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: ''
+            default: ''
+        contact:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+        phone:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+        mobile:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+        address:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: ''
+            default: ''
+        postalCode:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+            column: postal_code
+        poster:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,285 @@
+SharedModel\TrjTopic:
+    type: entity
+    repositoryClass: SharedModel\TrjTopicRepository
+    table: trj_topic
+    uniqueConstraints:
+        ak_status_trj_topic:
+            columns:
+                - status
+        ak_template_trj_topic:
+            columns:
+                - template
+    id:
+        topicId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 专题id
+            id: true
+            column: topic_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '标题'
+        template:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 模版
+        templateUrl:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 模板地址
+            column: template_url
+        columnMaxnum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '栏目最大数'
+            column: column_maxnum
+        topBackgroundColor:
+            type: string
+            nullable: false
+            length: 10
+            fixed: false
+            comment: 顶部图背景颜色值
+            column: top_background_color
+        shareTopPx:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 分享离上面值
+            column: share_top_px
+        shareLeftPx:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 分享离左边值
+            column: share_left_px
+        shareFontColor:
+            type: string
+            nullable: false
+            length: 10
+            fixed: false
+            comment: 分享文字颜色值
+            column: share_font_color
+        thumb:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 缩略图
+        thumbAid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: thumb_aid
+        topBanner:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 顶部图片
+            column: top_banner
+        topBannerHeight:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: logo图片高度
+            default: '0'
+            column: top_banner_height
+        topBannerAid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 附件表编号
+            default: '0'
+            column: top_banner_aid
+        topBannerYun:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: top_banner_yun
+        attachment:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: '上传附件'
+        industryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 行业
+            default: '0'
+            column: industry_id
+        seoTitle:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 'seo标题'
+            column: seo_title
+        seoKeywords:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: 'seo关键词'
+            column: seo_keywords
+        seoDescription:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: seo描述
+            column: seo_description
+        queryType:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 查询类型
+            column: query_type
+        queryValue:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 读取值
+            column: query_value
+        topicUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 专题对应账户
+            column: topic_username
+        topicUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 对应用户表id
+            default: '0'
+            column: topic_uid
+        linkman:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 联系人
+        sex:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 性别
+            default: '0::smallint'
+        duty:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 职务
+        companyname:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: '公词名称'
+        companyAddr:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: '公司地址'
+            column: company_addr
+        isColumn:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否有栏目 1:是 2:否'
+            default: '0::smallint'
+            column: is_column
+        isTenkan:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否同步特刊,1是,2否'
+            default: '1::smallint'
+            column: is_tenkan
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '使用状态  1:启用 2:停用'
+            default: '0::smallint'
+        commentStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '评论状态  1:启用 2:停用'
+            default: '0::smallint'
+            column: comment_status
+        isBaidu:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否百度收录
+            default: '1::smallint'
+            column: is_baidu
+        isGoodZjxm:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否推送优质项目
+            default: '0::smallint'
+            column: is_good_zjxm
+        goodTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 推送时间
+            default: '0'
+            column: good_time
+        viewNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 查看数
+            default: '0'
+            column: view_num
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+        updatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 更新时间
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发布人id
+            column: poster_id
+        posterName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 发布人用户名
+            column: poster_name
+    lifecycleCallbacks: {  }

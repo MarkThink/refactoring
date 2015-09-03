@@ -1,0 +1,53 @@
+SharedModel\TrjMessageContentJoin:
+    type: entity
+    repositoryClass: SharedModel\TrjMessageContentJoinRepository
+    table: trj_message_content_join
+    uniqueConstraints:
+        ak_list_id_trj_message_content_join:
+            columns:
+                - list_id
+                - member_uid
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        listId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 私信ID
+            column: list_id
+        memberUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 参与私信的用户UID
+            column: member_uid
+        messageId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '私信内对话ID'
+            default: '0'
+            column: message_id
+        isRead:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否以读
+            default: '0::smallint'
+            column: is_read
+        isDel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_del
+    lifecycleCallbacks: {  }

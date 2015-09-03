@@ -1,0 +1,36 @@
+SharedModel\TrjTagRelevance:
+    type: entity
+    repositoryClass: SharedModel\TrjTagRelevanceRepository
+    table: trj_tag_relevance
+    uniqueConstraints:
+        ak_tid_trj_tag_relevance:
+            columns:
+                - tid
+        ak_info_id_trj_tag_relevance:
+            columns:
+                - info_id
+    id:
+        tid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: tag_id
+            default: '0'
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        type:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        infoId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: info_id
+    lifecycleCallbacks: {  }

@@ -1,0 +1,224 @@
+SharedModel\TrjAdv:
+    type: entity
+    repositoryClass: SharedModel\TrjAdvRepository
+    table: trj_adv
+    uniqueConstraints:
+        ak_status_trj_adv:
+            columns:
+                - status
+        ak_aid_trj_adv:
+            columns:
+                - aid
+        ak_qid_trj_adv:
+            columns:
+                - qid
+        trj_adv_pk:
+            columns:
+                - adid
+        ak_pid_trj_adv:
+            columns:
+                - pid
+        ak_source_trj_adv:
+            columns:
+                - source
+    id:
+        adid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        pid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 广告页面pid
+        qid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 广告区域qid
+        aid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 广告位aid
+        advType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '广告类型:1:图片 2:文字'
+            column: adv_type
+        advname:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 广告名称
+        daynum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 天数
+            default: '0'
+        starttime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 开始时间
+        endtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 结束时间
+        advUrl:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 链接地址
+            column: adv_url
+        oid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '链接的关联id'
+            default: '0'
+        advPath:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 图片路径
+            column: adv_path
+        advYun:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: adv_yun
+        advContent:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '广告内容'
+            column: adv_content
+        advAsk:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 广告要求
+            column: adv_ask
+        advMemo:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 广告描述
+            column: adv_memo
+        orderno:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 订单编号
+        orderType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '订单类型1:购买 2:赠送'
+            default: '1::smallint'
+            column: order_type
+        ordertime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 订单时间
+        orderPrice:
+            type: decimal
+            nullable: false
+            precision: 10
+            scale: 2
+            comment: 订单金额
+            column: order_price
+        username:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 会员账号
+        linkname:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 客户姓名
+        linktel:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 联系电话
+        account:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '后台录入账号'
+        source:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '广告来源:1:网站订单 2:电话营销 3:外部来源'
+            default: '0::smallint'
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '状态 0:未支付 1:未上架 2:上架 '
+            default: '0::smallint'
+        clickNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 点击数
+            default: '0'
+            column: click_num
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+        updatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 修改时间
+        isPassShen:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否通过广告流程审核 1通过'
+            default: '0::smallint'
+            column: is_pass_shen
+        fromSid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '关联广告申请表sid'
+            default: '0'
+            column: from_sid
+        editShow:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '编辑部上架状态1:上架2:下架'
+            default: '1::smallint'
+            column: edit_show
+    lifecycleCallbacks: {  }

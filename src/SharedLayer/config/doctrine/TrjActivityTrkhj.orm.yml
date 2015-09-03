@@ -1,0 +1,46 @@
+SharedModel\TrjActivityTrkhj:
+    type: entity
+    repositoryClass: SharedModel\TrjActivityTrkhjRepository
+    table: trj_activity_trkhj
+    uniqueConstraints:
+        ak_user_id_trj_activity_trkhj:
+            columns:
+                - user_id
+        ak_is_win_trj_activity_trkhj:
+            columns:
+                - is_win
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: user_id
+        isWin:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: is_win
+        addTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: add_time
+        area:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

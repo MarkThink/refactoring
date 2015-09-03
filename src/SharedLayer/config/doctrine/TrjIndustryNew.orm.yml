@@ -1,0 +1,40 @@
+SharedModel\TrjIndustryNew:
+    type: entity
+    repositoryClass: SharedModel\TrjIndustryNewRepository
+    table: trj_industry_new
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        parentId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: parent_id
+        name:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+            comment: ''
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 状态（0表示屏蔽，1表示正常）
+            default: '1::smallint'
+        sort:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 排序号
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

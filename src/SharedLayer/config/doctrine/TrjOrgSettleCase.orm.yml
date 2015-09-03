@@ -1,0 +1,56 @@
+SharedModel\TrjOrgSettleCase:
+    type: entity
+    repositoryClass: SharedModel\TrjOrgSettleCaseRepository
+    table: trj_org_settle_case
+    uniqueConstraints:
+        ak_settle_id_trj_org_settle_case:
+            columns:
+                - settle_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        settleId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '入驻的公司id'
+            default: '0'
+            column: settle_id
+        tzTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 投资时间
+            default: '0'
+            column: tz_time
+        tzMoney:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 投资金额
+            default: '0'
+            column: tz_money
+        tzOrgName:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 投资企业名称或项目名称
+            default: ''
+            column: tz_org_name
+        equityInvestorName:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+            comment: 投资人股权登记名称
+            default: ''
+            column: equity_investor_name
+    lifecycleCallbacks: {  }

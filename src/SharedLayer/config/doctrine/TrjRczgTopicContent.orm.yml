@@ -1,0 +1,50 @@
+SharedModel\TrjRczgTopicContent:
+    type: entity
+    repositoryClass: SharedModel\TrjRczgTopicContentRepository
+    table: trj_rczg_topic_content
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        content:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '内容'
+        zhuanlan:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: ''
+            default: ''
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+            default: '0'
+        seoKeywords:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+            default: ''
+            column: seo_keywords
+        seoDescription:
+            type: string
+            nullable: true
+            length: 1000
+            fixed: false
+            comment: ''
+            default: ''
+            column: seo_description
+    lifecycleCallbacks: {  }

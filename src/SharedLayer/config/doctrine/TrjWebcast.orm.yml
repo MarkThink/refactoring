@@ -1,0 +1,311 @@
+SharedModel\TrjWebcast:
+    type: entity
+    repositoryClass: SharedModel\TrjWebcastRepository
+    table: trj_webcast
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 自动编号
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 用户ID
+            column: user_id
+        webcastId:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 直播ID
+            default: ''
+            column: webcast_id
+        recordId:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: 点播ID
+            column: record_id
+        classify:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0分行业集中路演 1重点项目路演'
+            default: '0::smallint'
+        industryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 所属行业
+            default: '0'
+            column: industry_id
+        linkInfo:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: '关联信息'
+            column: link_info
+        tolable:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: '项目标签'
+        subject:
+            type: string
+            nullable: true
+            length: 25
+            fixed: false
+            comment: '路演标题'
+        address:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: 直播地点
+        startTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 开启时间
+            column: start_time
+        endTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 结束时间
+            column: end_time
+        takeTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 持续时间
+            column: take_time
+        deadTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 项目方报名截止时间
+            column: dead_time
+        frontCover:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: '宣传封面'
+            column: front_cover
+        roadShowPpt:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: 路演PPT
+            column: road_show_ppt
+        loginRequired:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 是否要求登录
+            column: login_required
+        opened:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '是否公开'
+        plan:
+            type: string
+            nullable: true
+            length: 512
+            fixed: false
+            comment: 议程安排
+        description:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: '路演详情'
+        speakerInfo:
+            type: string
+            nullable: true
+            length: 512
+            fixed: false
+            comment: '直播演讲者信息'
+            column: speaker_info
+        viewPurview:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 观看权限
+            column: view_purview
+        switchClient:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '是否允许升级到客户端方式'
+            column: switch_client
+        organizerToken:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: '组织者加入直播口令'
+            column: organizer_token
+        panelistToken:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: '嘉宾加入直播口令'
+            column: panelist_token
+        attendeeToken:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: '普通参加者加入直播口令'
+            column: attendee_token
+        realtime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 是否开启实时功能
+        maxAttendees:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: 最大并发点数
+            column: max_attendees
+        status:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 直播状态
+            default: '0'
+        verify:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '审核状态'
+            default: '0'
+        isSuccess:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '融资状态 0未成功 1已成功'
+            column: is_success
+        organizerJoinUrl:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: '组织者加入URL'
+            default: ''
+            column: organizer_join_url
+        panelistJoinUrl:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: '嘉宾加入URL'
+            default: ''
+            column: panelist_join_url
+        attendeeJoinUrl:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: '用户加入URL'
+            default: ''
+            column: attendee_join_url
+        webcastNumber:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: 直播编号
+            default: ''
+            column: webcast_number
+        contactName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 用户姓名
+            default: ''
+            column: contact_name
+        mobile:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '手机号码'
+            default: ''
+        kefu:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+            comment: ''
+        flowNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '关注数'
+            default: '0'
+            column: flow_num
+        viewNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 观看数
+            default: '0'
+            column: view_num
+        viewTotal:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 总访问量
+            default: '0'
+            column: view_total
+        intentionNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 意向投资数
+            default: '0'
+            column: intention_num
+        totalUsers:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: 直播总人数
+            column: total_users
+        shenUsername:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: '审核人'
+            default: ''
+            column: shen_username
+        shenTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '审核时间'
+            column: shen_time
+        created:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 创建时间
+    lifecycleCallbacks: {  }

@@ -1,0 +1,85 @@
+SharedModel\TrjUsersContact:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersContactRepository
+    table: trj_users_contact
+    uniqueConstraints:
+        ak_email_trj_users_contact:
+            columns:
+                - email
+        ak_user_id_trj_users_contact:
+            columns:
+                - user_id
+        trj_users_contact_pk:
+            columns:
+                - id
+        ak_mobile_trj_users_contact:
+            columns:
+                - mobile
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        mobile:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '手机号码'
+            default: ''
+        email:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 用户邮箱
+        contactName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 用户姓名
+            default: ''
+            column: contact_name
+        contactSex:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1男,2女'
+            default: '0::smallint'
+            column: contact_sex
+        contactJob:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 工作职位
+            default: '0::smallint'
+            column: contact_job
+        contactJobName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 职务名称
+            default: ''
+            column: contact_job_name
+        qq:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            default: ''
+    lifecycleCallbacks: {  }

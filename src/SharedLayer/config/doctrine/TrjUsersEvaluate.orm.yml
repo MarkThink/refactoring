@@ -1,0 +1,141 @@
+SharedModel\TrjUsersEvaluate:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersEvaluateRepository
+    table: trj_users_evaluate
+    uniqueConstraints:
+        ak_oid_trj_users_evaluate:
+            columns:
+                - infoid
+        ak_tousername_trj_users_evaluate:
+            columns:
+                - tousername
+        ak_type_trj_users_evaluate:
+            columns:
+                - type
+        trj_users_evaluate_pk:
+            columns:
+                - pid
+        ak_fromusername_trj_users_evaluate:
+            columns:
+                - fromusername
+    id:
+        pid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        fromusername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 评价人用户名
+            default: ''
+        fromuid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 评价人用户id
+            default: '0'
+        tousername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 被评价人
+            default: ''
+        touid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被评价人用户id
+            default: '0'
+        infoid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 评价的信息id
+            default: '0'
+        score:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '评分等级1:好评 2:中评 3:差评'
+            default: '0::smallint'
+        scoreContent:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: '评论内容'
+            default: ''
+            column: score_content
+        sourceTitle:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 评价来源
+            column: source_title
+        validNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 有用数
+            default: '0'
+            column: valid_num
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '类型1:项目 2:会员展厅 3:资金'
+            default: '0::smallint'
+        ishidden:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否匿名0:否 1:是'
+            default: '0::smallint'
+        postip:
+            type: string
+            nullable: false
+            length: 30
+            fixed: false
+            comment: '发布评论者ip'
+            default: ''
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 评价时间
+            default: '0'
+        shenhe:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '审核状态0:未审核 1:已审核'
+            default: '0::smallint'
+        shenheTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核时间'
+            column: shenhe_time
+        shenheUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核人id'
+            column: shenhe_uid
+        shenheUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '审核人账号'
+            column: shenhe_username
+    lifecycleCallbacks: {  }

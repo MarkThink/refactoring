@@ -1,0 +1,46 @@
+SharedModel\TrjNewsClick:
+    type: entity
+    repositoryClass: SharedModel\TrjNewsClickRepository
+    table: trj_news_click
+    uniqueConstraints:
+        ak_news_id_trj_news_click:
+            columns:
+                - news_id
+                - poster_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        newsId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: news_id
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: poster_id
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

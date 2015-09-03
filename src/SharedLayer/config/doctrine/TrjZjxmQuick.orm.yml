@@ -1,0 +1,172 @@
+SharedModel\TrjZjxmQuick:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmQuickRepository
+    table: trj_zjxm_quick
+    uniqueConstraints:
+        ak_cat_trj_zjxm_quick:
+            columns:
+                - cat
+        ak_created_trj_zjxm_quick:
+            columns:
+                - created
+        ak_member_contact_trj_zjxm_quick:
+            columns:
+                - member_contact
+        ak_trackid_trj_zjxm_quick:
+            columns:
+                - trackid
+        trj_zjxm_quick_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 类型1项目2资金
+            default: '0::smallint'
+        cat:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1:交换名片'
+            default: '0::smallint'
+        valid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: cat为1是用，1位有效统计
+            default: '0::smallint'
+        title:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        overview:
+            type: string
+            nullable: true
+            length: 1000
+            fixed: false
+            comment: ''
+        memberId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: member_id
+        memberContact:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 发布人联系方式
+            default: '0'
+            column: member_contact
+        memberAccount:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+            column: member_account
+        memberIp:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: member_ip
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        fromMobile:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否来自手机客户端
+            default: '0::smallint'
+            column: from_mobile
+        isImport:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否已入库crm客服客户库'
+            default: '0::smallint'
+            column: is_import
+        isReg:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 记录下来时就是已存在的手机
+            default: '0::smallint'
+            column: is_reg
+        isCrm:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否CRM重复
+            default: '0::smallint'
+            column: is_crm
+        trackid:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 跟踪代号
+            default: ''
+        isVip:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_vip
+        saleStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 销售是否处理
+            default: '0::smallint'
+            column: sale_status
+        minfoId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: minfo_id
+        domain:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        httpReferer:
+            type: string
+            nullable: true
+            length: 2000
+            fixed: false
+            comment: 来源
+            column: http_referer
+        seoCat:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0seo,1seo品牌'
+            default: '0::smallint'
+            column: seo_cat
+    lifecycleCallbacks: {  }

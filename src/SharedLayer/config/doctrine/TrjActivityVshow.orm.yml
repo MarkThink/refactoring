@@ -1,0 +1,99 @@
+SharedModel\TrjActivityVshow:
+    type: entity
+    repositoryClass: SharedModel\TrjActivityVshowRepository
+    table: trj_activity_vshow
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        content:
+            type: string
+            nullable: true
+            length: 300
+            fixed: false
+            comment: ''
+        addtime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+        thumb:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        userId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: user_id
+        ip:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        status:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        number:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        updateTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: update_time
+        posterUsername:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+            column: poster_username
+        isdel:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        video:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        posterUid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: poster_uid
+        mobile:
+            type: string
+            nullable: true
+            length: 11
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

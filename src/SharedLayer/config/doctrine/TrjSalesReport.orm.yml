@@ -1,0 +1,69 @@
+SharedModel\TrjSalesReport:
+    type: entity
+    repositoryClass: SharedModel\TrjSalesReportRepository
+    table: trj_sales_report
+    uniqueConstraints:
+        ak_member_id_trj_sales_report:
+            columns:
+                - member_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        memberId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: member_id
+        memberAccount:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: '0'
+            column: member_account
+        memberCode:
+            type: string
+            nullable: false
+            length: 5
+            fixed: false
+            comment: 推广代号
+            default: ''
+            column: member_code
+        clickNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 访问量
+            default: '0'
+            column: click_num
+        regNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 注册量
+            default: '0'
+            column: reg_num
+        vipNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 会员量
+            default: '0'
+            column: vip_num
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

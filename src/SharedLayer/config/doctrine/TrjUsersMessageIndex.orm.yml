@@ -1,0 +1,22 @@
+SharedModel\TrjUsersMessageIndex:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersMessageIndexRepository
+    table: trj_users_message_index
+    id:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '接收者ID'
+            id: true
+            column: user_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        mId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '站内信ID  如果有记录则对应user_id已经删除m_id'
+            column: m_id
+    lifecycleCallbacks: {  }

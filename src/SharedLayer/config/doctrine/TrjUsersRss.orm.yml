@@ -1,0 +1,81 @@
+SharedModel\TrjUsersRss:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersRssRepository
+    table: trj_users_rss
+    uniqueConstraints:
+        trj_users_rss_pk:
+            columns:
+                - id
+        ak_item_id_trj_users_rss:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        rssEmail:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: '订阅邮件'
+            column: rss_email
+        cycle:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 周期
+            default: '0'
+        rssRequire:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: rss_require
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        userUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            column: user_username
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '1::smallint'
+        sendDate:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 已发送时间
+            default: '0'
+            column: send_date
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

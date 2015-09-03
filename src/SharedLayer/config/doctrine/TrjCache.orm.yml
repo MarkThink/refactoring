@@ -1,0 +1,44 @@
+SharedModel\TrjCache:
+    type: entity
+    repositoryClass: SharedModel\TrjCacheRepository
+    table: trj_cache
+    uniqueConstraints:
+        ak_name_trj_cache:
+            columns:
+                - name
+    id:
+        uid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户id
+            default: '0'
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '缓存类型1:会员中心搜索'
+            default: '0::smallint'
+        name:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '缓存标志'
+        value:
+            type: string
+            nullable: false
+            length: 3000
+            fixed: false
+            comment: '缓存内容'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

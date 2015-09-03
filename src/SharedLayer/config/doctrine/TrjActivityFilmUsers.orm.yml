@@ -1,0 +1,61 @@
+SharedModel\TrjActivityFilmUsers:
+    type: entity
+    repositoryClass: SharedModel\TrjActivityFilmUsersRepository
+    table: trj_activity_film_users
+    uniqueConstraints:
+        ak_user_id_trj_activity_film_users:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户id
+            default: '0'
+            column: user_id
+        isRaffle:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否已经抽奖
+            default: '0::smallint'
+            column: is_raffle
+        raffleId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '抽奖信息：抽奖号码'
+            default: '0'
+            column: raffle_id
+        raffleTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 抽奖时间
+            default: '0'
+            column: raffle_time
+        itemText:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 项目创意或创业理想
+            column: item_text
+        ticketId:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: ticket_id
+    lifecycleCallbacks: {  }

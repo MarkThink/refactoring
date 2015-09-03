@@ -1,0 +1,69 @@
+SharedModel\TrjTongjiPages:
+    type: entity
+    repositoryClass: SharedModel\TrjTongjiPagesRepository
+    table: trj_tongji_pages
+    uniqueConstraints:
+        ak_homepage_id_trj_tongji_pages:
+            columns:
+                - homepage_id
+        ak_page_md5_trj_tongji_pages:
+            columns:
+                - page_md5
+                - date
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        homepageId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 'VIP展厅ID'
+            default: '0'
+            column: homepage_id
+        pageMd5:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+            comment: ''
+            column: page_md5
+        page:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        date:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 日期
+            default: '0'
+        lastDatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 最后一次受访时间
+            default: '0'
+            column: last_datetime
+        view:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 浏览量
+            default: '0'
+        avgTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 平均时间
+            default: '0'
+            column: avg_time
+    lifecycleCallbacks: {  }

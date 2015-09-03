@@ -1,0 +1,58 @@
+SharedModel\TrjArea:
+    type: entity
+    repositoryClass: SharedModel\TrjAreaRepository
+    table: trj_area
+    uniqueConstraints:
+        ak_cup_trj_area:
+            columns:
+                - cup
+    id:
+        cid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        cup:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+        name:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+            default: ''
+        fchar:
+            type: string
+            nullable: false
+            length: 1
+            fixed: true
+            comment: 首字母
+            default: ''
+        abbreviation:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 缩写
+            default: ''
+        sort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 排序
+            default: '0'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,59 @@
+SharedModel\TrjNewsMail:
+    type: entity
+    repositoryClass: SharedModel\TrjNewsMailRepository
+    table: trj_news_mail
+    uniqueConstraints:
+        trj_news_mail_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 0资讯1活动
+            default: '0::smallint'
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        newsId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: news_id
+        email:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: string
+            nullable: false
+            length: 11
+            fixed: false
+            comment: ''
+            default: ''
+    lifecycleCallbacks: {  }

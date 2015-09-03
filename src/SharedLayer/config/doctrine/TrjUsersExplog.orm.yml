@@ -1,0 +1,92 @@
+SharedModel\TrjUsersExplog:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersExplogRepository
+    table: trj_users_explog
+    uniqueConstraints:
+        ak_user_id_trj_users_explog:
+            columns:
+                - user_id
+                - rule_id
+                - create_date
+        trj_users_explog_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 自增id
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户id
+            column: user_id
+        ruleId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 规则id
+            default: '0'
+            column: rule_id
+        expStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '赠送状态 0 待发放 1 已发放'
+            default: '0::smallint'
+            column: exp_status
+        createId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '创建者'
+            default: '0'
+            column: create_id
+        createTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 创建时间
+            default: '0'
+            column: create_time
+        createDate:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 创建日期
+            column: create_date
+        expTotal:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 得到的总成长值
+            default: '0'
+            column: exp_total
+        expOriginal:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 得到的默认成长值
+            default: '0'
+            column: exp_original
+        expVip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '得到的vip加成成长值'
+            default: '0'
+            column: exp_vip
+        checkCode:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+            comment: '备用字段 用于核对是否存在一样的记录'
+            column: check_code
+    lifecycleCallbacks: {  }

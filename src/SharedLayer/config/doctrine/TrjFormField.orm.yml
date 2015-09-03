@@ -1,0 +1,128 @@
+SharedModel\TrjFormField:
+    type: entity
+    repositoryClass: SharedModel\TrjFormFieldRepository
+    table: trj_form_field
+    uniqueConstraints:
+        ak_cat_id_trj_form_field:
+            columns:
+                - cat_id
+    id:
+        fieldId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: field_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        fieldName:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 属性名称
+            default: ''
+            column: field_name
+        fieldType:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: '属性类型:text,radio,checkbox,select,file'
+            default: ''
+            column: field_type
+        fieldAttrType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '调用属性字典组件'
+            default: '0'
+            column: field_attr_type
+        fieldSort:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 字段排序
+            default: '0'
+            column: field_sort
+        fieldUnits:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 单位
+            default: ''
+            column: field_units
+        fieldValidate:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: '属性规则，约束 '
+            default: '0'
+            column: field_validate
+        fieldMaxlength:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 文本框，文本域
+            default: '0'
+            column: field_maxlength
+        fieldStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '属性状态:是否启用'
+            default: '0::smallint'
+            column: field_status
+        fieldComment:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 备注详细说明属性
+            column: field_comment
+        fieldColumnName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 真实存在的表字段名
+            default: ''
+            column: field_column_name
+        fieldPlug:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: 自定义插件表单
+            column: field_plug
+        relId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '关联属性值'
+            default: '0'
+            column: rel_id
+        catId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 所属类目
+            default: '0'
+            column: cat_id
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 属性创建时间
+            default: '0'
+        updated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 属性修改时间
+            default: '0'
+    lifecycleCallbacks: {  }

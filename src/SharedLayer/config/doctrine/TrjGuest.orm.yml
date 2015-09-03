@@ -1,0 +1,74 @@
+SharedModel\TrjGuest:
+    type: entity
+    repositoryClass: SharedModel\TrjGuestRepository
+    table: trj_guest
+    uniqueConstraints:
+        trj_guest_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        siteId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: site_id
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        username:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: 用户名
+            default: ''
+        content:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 留言
+            default: ''
+        replyContent:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 回复
+            default: ''
+            column: reply_content
+        replyTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: reply_time
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

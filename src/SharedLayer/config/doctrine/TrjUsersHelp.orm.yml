@@ -1,0 +1,35 @@
+SharedModel\TrjUsersHelp:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersHelpRepository
+    table: trj_users_help
+    uniqueConstraints:
+        ak_user_id_trj_users_help:
+            columns:
+                - user_id
+    id:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            id: true
+            column: user_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        serviceView:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 体验服务
+            default: '0::smallint'
+            column: service_view
+        signIn:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 签到奖励
+            default: '0::smallint'
+            column: sign_in
+    lifecycleCallbacks: {  }

@@ -1,0 +1,40 @@
+SharedModel\TrjAdvPriceRule:
+    type: entity
+    repositoryClass: SharedModel\TrjAdvPriceRuleRepository
+    table: trj_adv_price_rule
+    uniqueConstraints:
+        trj_adv_price_rule_pk:
+            columns:
+                - rid
+        ak_aid_trj_adv_price_rule:
+            columns:
+                - aid
+    id:
+        rid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        aid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '关联广告位表aid'
+            default: '0'
+        daynum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 天数
+            default: '0'
+        percent:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '优惠百分比'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,125 @@
+SharedModel\TrjOrgSettle:
+    type: entity
+    repositoryClass: SharedModel\TrjOrgSettleRepository
+    table: trj_org_settle
+    uniqueConstraints:
+        ak_mobile_trj_org_settle:
+            columns:
+                - mobile
+        trj_org_settle_pk:
+            columns:
+                - id
+        ak_org_name_trj_org_settle:
+            columns:
+                - org_name
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        orgName:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '公司名称'
+            column: org_name
+        contactName:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+            comment: 联系人姓名
+            column: contact_name
+        mobile:
+            type: string
+            nullable: false
+            length: 16
+            fixed: false
+            comment: '手机号码'
+        orgSummary:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: '公司简介'
+            default: ''
+            column: org_summary
+        registerAddress:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 注册地址
+            default: ''
+            column: register_address
+        orgType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 企业类型
+            default: '0'
+            column: org_type
+        tzIndustry:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 意向投资行业
+            default: ''
+            column: tz_industry
+        tzArea:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 意向投资地区
+            default: ''
+            column: tz_area
+        manageFunds:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 管理资金金额
+            default: '0'
+            column: manage_funds
+        businessLicense:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '营业执照'
+            default: ''
+            column: business_license
+        updateTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 更新时间
+            default: '0'
+            column: update_time
+        applyTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 申请时间
+            default: '0'
+            column: apply_time
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 创建时间
+        isTransform:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否是其他身份转资本机构（0不是，否则就是，这个数字代表原来身份）'
+            default: '0::smallint'
+            column: is_transform
+    lifecycleCallbacks: {  }

@@ -1,0 +1,68 @@
+SharedModel\TrjInnerWords:
+    type: entity
+    repositoryClass: SharedModel\TrjInnerWordsRepository
+    table: trj_inner_words
+    uniqueConstraints:
+        ak_word_trj_inner_words:
+            columns:
+                - word
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        word:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+        url:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: ''
+            default: ''
+        ueeSum:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: uee_sum
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0 启用 1禁用'
+            default: '0::smallint'
+        sort:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 排序
+        content:
+            type: string
+            nullable: true
+            length: 500
+            fixed: false
+            comment: 备注
+        times:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        isdel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否删除0:正常 1:删除'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

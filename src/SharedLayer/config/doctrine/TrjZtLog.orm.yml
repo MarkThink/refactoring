@@ -1,0 +1,61 @@
+SharedModel\TrjZtLog:
+    type: entity
+    repositoryClass: SharedModel\TrjZtLogRepository
+    table: trj_zt_log
+    uniqueConstraints:
+        ak_unique_id_trj_zt_log:
+            columns:
+                - view_uid
+                - zt_code
+                - ymdh
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        ztCode:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 专题代号
+            default: ''
+            column: zt_code
+        ztTitle:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 专题名称
+            default: ''
+            column: zt_title
+        viewUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '查看者id'
+            default: '0'
+            column: view_uid
+        ymdh:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

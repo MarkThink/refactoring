@@ -1,0 +1,81 @@
+SharedModel\TrjNotice:
+    type: entity
+    repositoryClass: SharedModel\TrjNoticeRepository
+    table: trj_notice
+    uniqueConstraints:
+        trj_notice_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        siteId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: site_id
+        title:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '标题'
+        content:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '内容'
+        keywords:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '关键字'
+        description:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 描述
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: poster_id
+        poster:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+        sort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 排序
+            default: '0'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 时间
+            default: '0'
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '1::smallint'
+    lifecycleCallbacks: {  }

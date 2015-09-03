@@ -1,0 +1,49 @@
+SharedModel\TrjZjxmOrg:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmOrgRepository
+    table: trj_zjxm_org
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 机构名称
+            default: ''
+        desc:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 机构描述
+            default: ''
+        contact:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 机构联系方式
+            default: ''
+        logo:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 机构logo
+            default: ''
+        status:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '机构状态（1有采集／0无采集）'
+            default: '0'
+    lifecycleCallbacks: {  }

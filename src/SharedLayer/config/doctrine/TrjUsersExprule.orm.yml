@@ -1,0 +1,77 @@
+SharedModel\TrjUsersExprule:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersExpruleRepository
+    table: trj_users_exprule
+    uniqueConstraints:
+        trj_users_exprule_pk:
+            columns:
+                - rid
+    id:
+        rid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否有效 1有效 0 无效'
+            default: '1::smallint'
+        rulename:
+            type: string
+            nullable: false
+            length: 20
+            fixed: true
+            comment: 经验值名称
+            default: ''
+        rulekey:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 唯一代号
+            default: ''
+        islimit:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否限制次数：0不限制1限制次数(按天)2限制次数(总数)
+            default: '0::smallint'
+        limittime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 0表示不限制
+            default: '0'
+        exp:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '获得或者减少的成长值'
+            default: '0'
+        vipExp:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否有vip加成'
+            default: '1::smallint'
+            column: vip_exp
+        rewardType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 1立即发放奖励0延时发放
+            default: '1::smallint'
+            column: reward_type
+        detail:
+            type: string
+            nullable: true
+            length: 128
+            fixed: false
+            comment: '奖励详情'
+    lifecycleCallbacks: {  }

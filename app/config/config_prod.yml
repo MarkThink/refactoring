@@ -1,0 +1,40 @@
+imports:
+    - { resource: config.yml }
+
+#framework:
+#    validation:
+#        cache: validator.mapping.cache.apc
+#    serializer:
+#        cache: serializer.mapping.cache.apc
+
+#doctrine:
+#    orm:
+#        metadata_cache_driver: apc
+#        result_cache_driver: apc
+#        query_cache_driver: apc
+
+monolog:
+    channels: ["trjcn_admin"]
+    handlers:
+        main:
+            type:         fingers_crossed
+            action_level: error
+            handler:      nested
+        nested:
+            type:  stream
+            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
+        doctrine:
+            type: stream
+            path: "%kernel.logs_dir%/doctrine_%kernel.environment%.log"
+            level: debug
+            channels: [doctrine]
+        taobao:
+            type: stream
+            path: "%kernel.logs_dir%/trjcn_admin_%kernel.environment%.log"
+            level: debug
+            formatter: trjcn_log_format
+            #processor: taobao_log_processor
+            channels: [trjcn_admin]
+        console:
+            type:  console

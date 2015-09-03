@@ -1,0 +1,46 @@
+SharedModel\TrjUsersLevel:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersLevelRepository
+    table: trj_users_level
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 会员等级自增id
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        levelName:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+            comment: 等级名称
+            column: level_name
+        min:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 等级下限
+            default: '0'
+        max:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 等级上限
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1为有效，0为无效'
+            default: '1::smallint'
+        reduceRule:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 每年减少规则
+            default: '0'
+            column: reduce_rule
+    lifecycleCallbacks: {  }

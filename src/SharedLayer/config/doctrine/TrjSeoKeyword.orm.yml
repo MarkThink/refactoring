@@ -1,0 +1,86 @@
+SharedModel\TrjSeoKeyword:
+    type: entity
+    repositoryClass: SharedModel\TrjSeoKeywordRepository
+    table: trj_seo_keyword
+    uniqueConstraints:
+        ak_keyname_trj_seo_keyword:
+            columns:
+                - keyname
+        ak_first_py_trj_seo_keyword:
+            columns:
+                - first_py
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        keyname:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '关键词名称'
+        firstPy:
+            type: string
+            nullable: false
+            length: 1
+            fixed: true
+            comment: 第一个汉字拼音首字母
+            column: first_py
+        utype:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 链接类型：1为id
+            default: '0::smallint'
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1资金,2项目'
+            default: '0::smallint'
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '状态1:使用 2:停用'
+            default: '1::smallint'
+        keywords:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: 分词
+        seoTitle:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: seo_title
+        seoKeywords:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: seo_keywords
+        seoDescription:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: seo_description
+        ctime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

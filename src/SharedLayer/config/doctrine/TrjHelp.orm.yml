@@ -1,0 +1,78 @@
+SharedModel\TrjHelp:
+    type: entity
+    repositoryClass: SharedModel\TrjHelpRepository
+    table: trj_help
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ID
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        type:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 类型
+            default: '0'
+        title:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '标题'
+            default: ''
+        content:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '内容'
+        keywords:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '关键字'
+        description:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 描述
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '编辑者id'
+            default: '0'
+            column: poster_id
+        poster:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '编辑者'
+            default: ''
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 时间
+            default: '0'
+        sort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 排序
+            default: '0'
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 状态
+            default: '1::smallint'
+    lifecycleCallbacks: {  }

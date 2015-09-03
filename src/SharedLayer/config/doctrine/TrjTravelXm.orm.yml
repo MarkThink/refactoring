@@ -1,0 +1,60 @@
+SharedModel\TrjTravelXm:
+    type: entity
+    repositoryClass: SharedModel\TrjTravelXmRepository
+    table: trj_travel_xm
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '标题'
+            default: ''
+        summary:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 简介
+        amount:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 项目已投金额
+            default: '0'
+        imgUrl:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 图片路径
+            column: img_url
+        isDelete:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否删除'
+            column: is_delete
+        linkUrl:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 链接地址
+            column: link_url
+        sort:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: ''
+            default: '100'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,30 @@
+test:
+    path:     /
+    defaults: { _controller: "AppBundle:Test:index" }
+
+test_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Test:show" }
+
+test_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Test:new" }
+
+test_create:
+    path:     /create
+    defaults: { _controller: "AppBundle:Test:create" }
+    methods:  POST
+
+test_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Test:edit" }
+
+test_update:
+    path:     /{id}/update
+    defaults: { _controller: "AppBundle:Test:update" }
+    methods:  [POST, PUT]
+
+test_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Test:delete" }
+    methods:  [POST, DELETE]

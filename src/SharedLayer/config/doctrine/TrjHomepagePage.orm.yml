@@ -1,0 +1,52 @@
+SharedModel\TrjHomepagePage:
+    type: entity
+    repositoryClass: SharedModel\TrjHomepagePageRepository
+    table: trj_homepage_page
+    uniqueConstraints:
+        ak_navigation_id_trj_homepage_page:
+            columns:
+                - navigation_id
+        ak_user_id_trj_homepage_page:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        navigationId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 导航ID
+            default: '0'
+            column: navigation_id
+        content:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '内容'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        updated:
+            type: date
+            nullable: false
+            comment: ''
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+    lifecycleCallbacks: {  }

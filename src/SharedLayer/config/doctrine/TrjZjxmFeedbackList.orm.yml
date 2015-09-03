@@ -1,0 +1,107 @@
+SharedModel\TrjZjxmFeedbackList:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmFeedbackListRepository
+    table: trj_zjxm_feedback_list
+    uniqueConstraints:
+        ak_session_id_trj_zjxm_feedback_list:
+            columns:
+                - session_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        sessionId:
+            type: string
+            nullable: false
+            length: 32
+            fixed: true
+            comment: ''
+            default: ''
+            column: session_id
+        memberId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: member_id
+        memberMobile:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '手机号码'
+            default: '0'
+            column: member_mobile
+        memberName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 联系人
+            default: ''
+            column: member_name
+        title:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '信息标题'
+            default: ''
+        overview:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 信息简介
+            default: ''
+        attach:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 附件
+            default: ''
+        toid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 对应项目id
+            default: '0'
+        toids:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        totype:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+        ctime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0 可修改信息  1 不可修改（已下单）'
+        ip:
+            type: string
+            nullable: false
+            length: 16
+            fixed: true
+            comment: ''
+            default: ''
+    lifecycleCallbacks: {  }

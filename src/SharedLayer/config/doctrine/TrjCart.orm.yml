@@ -1,0 +1,87 @@
+SharedModel\TrjCart:
+    type: entity
+    repositoryClass: SharedModel\TrjCartRepository
+    table: trj_cart
+    uniqueConstraints:
+        ak_session_id_trj_cart:
+            columns:
+                - session_id
+        trj_cart_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        rowid:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: session字段
+        xmId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被投递项目id
+            column: xm_id
+        xmName:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 被投递项目名称
+            column: xm_name
+        xmUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被投递项目uid
+            column: xm_uid
+        xmMobile:
+            type: string
+            nullable: true
+            length: 11
+            fixed: false
+            comment: ''
+            column: xm_mobile
+        productCode:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 产品id
+            column: product_code
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 投项目人ID
+            column: user_id
+        sessionId:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+            column: session_id
+        feedbackId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: zjxm_feedback_list的id
+            default: '0'
+            column: feedback_id
+        ip:
+            type: string
+            nullable: true
+            length: 12
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

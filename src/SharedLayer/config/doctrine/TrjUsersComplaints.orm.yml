@@ -1,0 +1,248 @@
+SharedModel\TrjUsersComplaints:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersComplaintsRepository
+    table: trj_users_complaints
+    id:
+        tid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        trackno:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 投诉编号
+        fromusername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 投诉人用户账号
+        fromuid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 投诉人用户id
+        fromReason1:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 第1次投诉理由
+            column: from_reason1
+        fromProof1:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 第1次投诉凭证
+            column: from_proof1
+        fromTime1:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 第1次投诉时间
+            column: from_time1
+        fromStatus1:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '第1次投诉状态0:审核中 1:投诉生效'
+            default: '0::smallint'
+            column: from_status1
+        fromReason2:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 第2次投诉理由
+            column: from_reason2
+        fromProof2:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 第2次投诉凭证
+            column: from_proof2
+        fromTime2:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 第2次投诉时间
+            column: from_time2
+        fromStatus2:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '第2次投诉状态0:审核中 1:投诉生效'
+            default: '0::smallint'
+            column: from_status2
+        tousername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 被投诉人用户账号
+        touid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被投诉人用户id
+        toType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '举报类型 1:会员信息 2:资金项目'
+            column: to_type
+        toInfoId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 投诉信息id
+            column: to_info_id
+        toInfoTitle:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '投诉信息标题'
+            column: to_info_title
+        toReason1:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 第1次申诉理由
+            column: to_reason1
+        toProof1:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 第1次申诉凭证
+            column: to_proof1
+        toTime1:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 第1次申诉时间
+            column: to_time1
+        toStatus1:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '第1次申诉审核状态0:未审核 1:申诉生效'
+            default: '0::smallint'
+            column: to_status1
+        toReason2:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 第2次申诉理由
+            column: to_reason2
+        toProof2:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 第2次申诉证据
+            column: to_proof2
+        toTime2:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 第2次申诉时间
+            column: to_time2
+        isView:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否查看0:未查看 1已查看'
+            default: '0::smallint'
+            column: is_view
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+        complaintsNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '投申次数:1投:1,1投1申:2,2投1申:3,2投2申:4'
+            default: '0::smallint'
+            column: complaints_num
+        proofTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 举证时间
+            column: proof_time
+        resultUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 处理人账号名
+            column: result_username
+        resultUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 处理人id
+            column: result_uid
+        resultStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '受理状态0:投诉中1:申诉中2:投诉生效3:申诉生效4:投诉失败5:申诉失败6:申诉成功7:投诉成功'
+            default: '0::smallint'
+            column: result_status
+        resultContent:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 处理结果
+            column: result_content
+        resultShow:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '结果前台是否显示0:否 1:是'
+            default: '0::smallint'
+            column: result_show
+        resultReport:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: '结果举报内容'
+            column: result_report
+        resultFile:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 结果附件
+            column: result_file
+        resultTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 受理时间
+            column: result_time
+        isdel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '删除标记0:正常 1:删除'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

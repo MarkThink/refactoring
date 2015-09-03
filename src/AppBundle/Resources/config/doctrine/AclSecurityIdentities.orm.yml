@@ -1,0 +1,30 @@
+AppBundle\Entity\AclSecurityIdentities:
+    type: entity
+    repositoryClass: AppBundle\Entity\AclSecurityIdentitiesRepository
+    table: acl_security_identities
+    uniqueConstraints:
+        uniq_8835ee78772e836af85e0677:
+            columns:
+                - identifier
+                - username
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        identifier:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: ''
+        username:
+            type: boolean
+            nullable: false
+            comment: ''
+    lifecycleCallbacks: {  }

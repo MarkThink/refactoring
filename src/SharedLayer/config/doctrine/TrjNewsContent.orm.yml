@@ -1,0 +1,72 @@
+SharedModel\TrjNewsContent:
+    type: entity
+    repositoryClass: SharedModel\TrjNewsContentRepository
+    table: trj_news_content
+    uniqueConstraints:
+        trj_news_content_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        newsFile:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '文章附件'
+            column: news_file
+        content:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        seoContent:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 'seo内容'
+            column: seo_content
+        seoUpdated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: seo更新时间
+            default: '0'
+            column: seo_updated
+        shenReasonRid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核不通过原因id,0:其它'
+            column: shen_reason_rid
+        shenReason:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '审核不通过原因'
+            column: shen_reason
+        delReasonRid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '删除原因rid,0:其它'
+            column: del_reason_rid
+        delReason:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '删除原因'
+            column: del_reason
+    lifecycleCallbacks: {  }

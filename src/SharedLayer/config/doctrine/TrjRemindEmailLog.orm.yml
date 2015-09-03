@@ -1,0 +1,98 @@
+SharedModel\TrjRemindEmailLog:
+    type: entity
+    repositoryClass: SharedModel\TrjRemindEmailLogRepository
+    table: trj_remind_email_log
+    uniqueConstraints:
+        ak_from_uid_trj_remind_email_log:
+            columns:
+                - from_uid
+        ak_isdeal_trj_remind_email_log:
+            columns:
+                - isdeal
+        ak_to_uid_trj_remind_email_log:
+            columns:
+                - to_uid
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        fromUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 发起人账户名
+            column: from_username
+        fromUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发起人用户ID
+            default: '0'
+            column: from_uid
+        toUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 接收人账户名
+            column: to_username
+        toUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 接收人用户ID
+            default: '0'
+            column: to_uid
+        infoid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 信息id
+        message:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '信息内容'
+        addTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+            default: '0'
+            column: add_time
+        sendType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '类型 1:服务订单 2:被投递 3:交换名片 4:发送私信 5:认证审核'
+            default: '0::smallint'
+            column: send_type
+        sendEmail:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 发送的email
+            column: send_email
+        sendTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 邮件发送时间
+            default: '0'
+            column: send_time
+        isdeal:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否发送0:未发送1:已发送'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

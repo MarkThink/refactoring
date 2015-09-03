@@ -1,0 +1,330 @@
+SharedModel\TrjUsersDetail:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersDetailRepository
+    table: trj_users_detail
+    id:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            id: true
+            column: user_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        departmentName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+            column: department_name
+        introduceCheck:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否审核'
+            default: '0::smallint'
+            column: introduce_check
+        introduceCtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: introduce_ctime
+        introduce:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '公司简介'
+        tzIndustry:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 投资行业
+            default: ''
+            column: tz_industry
+        tzIndustryParent:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 意向投资行业的父行业（方便前台搜索）
+            default: ''
+            column: tz_industry_parent
+        tzIndustryKeyword:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: '细分行业关键字'
+            default: ''
+            column: tz_industry_keyword
+        tzRound:
+            type: string
+            nullable: true
+            length: 64
+            fixed: false
+            comment: '投资轮次1:不限 2:A轮 3:B轮 4:C轮 5:D轮'
+            default: ''
+            column: tz_round
+        tzCompanyNum:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: '计划投资公司数'
+            default: '0'
+            column: tz_company_num
+        tzArea:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 投资地区
+            default: ''
+            column: tz_area
+        companyType:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 企业类型
+            default: '0'
+            column: company_type
+        companyTypeName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '其他企业类型-名称'
+            default: ''
+            column: company_type_name
+        serviceType:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 服务类型
+            default: '0'
+            column: service_type
+        serviceTypeName:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: '其他服务类型-名称'
+            column: service_type_name
+        serviceIntroduce:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: 服务范围说明
+            column: service_introduce
+        personalIntroduce:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: 个人简介
+            column: personal_introduce
+        mainBusiness:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 主营业务
+            default: ''
+            column: main_business
+        manageFunds:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '管理资金-单位:万'
+            default: '0'
+            column: manage_funds
+        website:
+            type: string
+            nullable: false
+            length: 150
+            fixed: false
+            comment: '公司网址'
+            default: ''
+        weibo:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: ''
+            default: ''
+        companyLogo:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: '公司logo'
+            default: ''
+            column: company_logo
+        companyRegistPlace:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '公司注册地'
+            default: '0'
+            column: company_regist_place
+        companyAddress:
+            type: string
+            nullable: true
+            length: 750
+            fixed: false
+            comment: '公司注册地址'
+            column: company_address
+        companyPostcode:
+            type: string
+            nullable: false
+            length: 6
+            fixed: false
+            comment: '公司邮编'
+            default: ''
+            column: company_postcode
+        groupNature:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 单位性质
+            default: '0::smallint'
+            column: group_nature
+        registeredCapital:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 注册资金
+            default: '0::smallint'
+            column: registered_capital
+        annualSales:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 年销售额
+            default: '0::smallint'
+            column: annual_sales
+        employeNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 员工人数
+            default: '0'
+            column: employe_num
+        yearOld:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '公司成立年份'
+            default: '0'
+            column: year_old
+        companyDate:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 成立日期
+            default: '0'
+            column: company_date
+        honestyDay:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 诚信档案建立天数（天）
+            default: '0'
+            column: honesty_day
+        honestyCreditDay:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 已转化成认证积分的诚信时间（天）
+            default: '0'
+            column: honesty_credit_day
+        serviceUsersDay:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 通宝服务+基本资料（天）
+            default: '0'
+            column: service_users_day
+        serviceUsersCreditDay:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 投融服务转化积分天数（天）
+            default: '0'
+            column: service_users_credit_day
+        pics:
+            type: string
+            nullable: true
+            length: 500
+            fixed: false
+            comment: 会员图片列表
+        isEarnings:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否有营收
+            default: '0::smallint'
+            column: is_earnings
+        lastYearRevenue:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: 去年营业额
+            default: '0.0000'
+            column: last_year_revenue
+        lastYearProfit:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: 去年营业利润
+            default: '0.0000'
+            column: last_year_profit
+        netAsset:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: 企业当前净资产
+            default: '0.0000'
+            column: net_asset
+        yearsRevenue:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: '年营业额 {年份:金额,"unit":"万元"}'
+            column: years_revenue
+        yearsProfit:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: '年利润 {年份:金额,"unit":"万元"}'
+            column: years_profit
+        lastFiscalRevenue:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '去年财政收入'
+            default: '0'
+            column: last_fiscal_revenue
+        businessLicenseCode:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: '营业执照注册号'
+            default: ''
+            column: business_license_code
+    lifecycleCallbacks: {  }

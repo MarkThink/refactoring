@@ -1,0 +1,83 @@
+SharedModel\TrjAdminsOptions:
+    type: entity
+    repositoryClass: SharedModel\TrjAdminsOptionsRepository
+    table: trj_admins_options
+    uniqueConstraints:
+        ak_item_id_trj_admins_options:
+            columns:
+                - item_id
+        ak_type_trj_admins_options:
+            columns:
+                - option
+        trj_admins_options_pk:
+            columns:
+                - id
+        ak_poster_id_trj_admins_options:
+            columns:
+                - poster_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        poster:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: poster_id
+        option:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 操作类型
+            default: ''
+        type:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+        itemId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: item_id
+        content:
+            type: string
+            nullable: false
+            length: 5000
+            fixed: false
+            comment: ''
+            default: ''
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            default: ''
+    lifecycleCallbacks: {  }

@@ -1,0 +1,174 @@
+SharedModel\TrjZjxmContact:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmContactRepository
+    table: trj_zjxm_contact
+    uniqueConstraints:
+        trj_zjxm_contact_pk:
+            columns:
+                - contact_id
+        ak_zjxm_id_trj_zjxm_contact:
+            columns:
+                - zjxm_id
+    id:
+        contactId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: contact_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        zjxmId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 信息对应id
+            default: '0'
+            column: zjxm_id
+        memberId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 后台工作人员id
+            default: '0'
+            column: member_id
+        contactUsername:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            default: ''
+            column: contact_username
+        contactName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 联系人
+            default: ''
+            column: contact_name
+        contactSex:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 联系人性别
+            default: '0::smallint'
+            column: contact_sex
+        contactCompany:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: '联系人公司'
+            default: ''
+            column: contact_company
+        contactJob:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 联系人职务
+            default: ''
+            column: contact_job
+        contactMobile:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 联系人电话
+            default: ''
+            column: contact_mobile
+        contactFax:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '联系人传真'
+            default: ''
+            column: contact_fax
+        contactAreaname:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+            column: contact_areaname
+        contactAddress:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: 联系人地址
+            default: ''
+            column: contact_address
+        contactEmail:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 联系人邮箱
+            default: ''
+            column: contact_email
+        contactQq:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            default: ''
+            column: contact_qq
+        contactPhone:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            default: ''
+            column: contact_phone
+        contactZipcode:
+            type: string
+            nullable: false
+            length: 6
+            fixed: false
+            comment: ''
+            default: ''
+            column: contact_zipcode
+        provinceId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: province_id
+        cityId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: city_id
+        areaId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: area_id
+        userQuality:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: user_quality
+        claim:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否认领操作
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

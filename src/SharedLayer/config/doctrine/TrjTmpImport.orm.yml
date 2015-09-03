@@ -1,0 +1,29 @@
+SharedModel\TrjTmpImport:
+    type: entity
+    repositoryClass: SharedModel\TrjTmpImportRepository
+    table: trj_tmp_import
+    id:
+        importId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: import_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        tableName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            column: table_name
+        isdeal:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

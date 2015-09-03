@@ -1,0 +1,73 @@
+SharedModel\TrjReport:
+    type: entity
+    repositoryClass: SharedModel\TrjReportRepository
+    table: trj_report
+    uniqueConstraints:
+        ak_item_id_trj_report:
+            columns:
+                - item_id
+        trj_report_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1:智库,2站内信,3资金,4项目'
+            default: '0::smallint'
+        itemId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被举报对象
+            default: '0'
+            column: item_id
+        content:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: '举报内容'
+        file:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 投诉资料
+            default: ''
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '举报者'
+            default: '0'
+            column: poster_id
+        poster:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '举报者'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

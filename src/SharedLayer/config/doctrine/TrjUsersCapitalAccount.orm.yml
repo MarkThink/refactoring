@@ -1,0 +1,54 @@
+SharedModel\TrjUsersCapitalAccount:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersCapitalAccountRepository
+    table: trj_users_capital_account
+    uniqueConstraints:
+        ak_captial_id_trj_users_capital_account:
+            columns:
+                - settle_id
+        ak_status_trj_users_capital_account:
+            columns:
+                - status
+    id:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户id
+            id: true
+            column: user_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        settleId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 资金机构id
+            column: settle_id
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '状态（0待审核，1审核通过，2审核不通过）'
+            default: '0::smallint'
+        isAdmin:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否为管理员（0不是，1是）
+            default: '0::smallint'
+            column: is_admin
+        checkTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核时间'
+            default: '0'
+            column: check_time
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+    lifecycleCallbacks: {  }

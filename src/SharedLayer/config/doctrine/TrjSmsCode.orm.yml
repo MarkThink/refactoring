@@ -1,0 +1,121 @@
+SharedModel\TrjSmsCode:
+    type: entity
+    repositoryClass: SharedModel\TrjSmsCodeRepository
+    table: trj_sms_code
+    uniqueConstraints:
+        ak_mobile_trj_sms_code:
+            columns:
+                - mobile
+                - type
+                - id
+        trj_sms_code_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        siteId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 分站ID
+            default: '0'
+            column: site_id
+        type:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+        mobile:
+            type: string
+            nullable: false
+            length: 11
+            fixed: false
+            comment: ''
+        way:
+            type: string
+            nullable: true
+            length: 11
+            fixed: false
+            comment: ''
+        isReg:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '手机号码是号已注册'
+            default: '0::smallint'
+            column: is_reg
+        isProcess:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_process
+        isVoice:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否发送语音
+            default: '0::smallint'
+            column: is_voice
+        voiceNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: voice_num
+        voiceTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: voice_time
+        fromWeb:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: from_web
+        code:
+            type: string
+            nullable: false
+            length: 6
+            fixed: true
+            comment: ''
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        trackid:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        referer:
+            type: string
+            nullable: true
+            length: 2000
+            fixed: false
+            comment: 站外来源
+    lifecycleCallbacks: {  }

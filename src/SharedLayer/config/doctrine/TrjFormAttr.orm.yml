@@ -1,0 +1,70 @@
+SharedModel\TrjFormAttr:
+    type: entity
+    repositoryClass: SharedModel\TrjFormAttrRepository
+    table: trj_form_attr
+    uniqueConstraints:
+        ak_cat_id_trj_form_attr:
+            columns:
+                - cat_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        pid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        name:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            default: ''
+        sort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        word:
+            type: string
+            nullable: false
+            length: 1
+            fixed: true
+            comment: 首字母
+            default: ''
+        catId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: cat_id
+        enabled:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+        readonly:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+        childNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: child_num
+    lifecycleCallbacks: {  }

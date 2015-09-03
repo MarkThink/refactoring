@@ -1,0 +1,31 @@
+SharedModel\TrjLoginLog:
+    type: entity
+    repositoryClass: SharedModel\TrjLoginLogRepository
+    table: trj_login_log
+    uniqueConstraints:
+        ak_ip_trj_login_log:
+            columns:
+                - ip
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

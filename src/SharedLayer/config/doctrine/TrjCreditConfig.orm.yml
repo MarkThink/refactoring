@@ -1,0 +1,85 @@
+SharedModel\TrjCreditConfig:
+    type: entity
+    repositoryClass: SharedModel\TrjCreditConfigRepository
+    table: trj_credit_config
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userType:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 会员类型代号
+            default: '0'
+            column: user_type
+        itemType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0基本,1高级,2增信'
+            default: '0::smallint'
+            column: item_type
+        type:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            default: ''
+        typeName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+            column: type_name
+        typeContent:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+            column: type_content
+        typeCat:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0文本,1附件'
+            default: '0::smallint'
+            column: type_cat
+        typeScore:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: type_score
+        itemScore:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: item_score
+        typeSort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: type_sort
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '1::smallint'
+    lifecycleCallbacks: {  }

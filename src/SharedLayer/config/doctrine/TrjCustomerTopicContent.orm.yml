@@ -1,0 +1,62 @@
+SharedModel\TrjCustomerTopicContent:
+    type: entity
+    repositoryClass: SharedModel\TrjCustomerTopicContentRepository
+    table: trj_customer_topic_content
+    uniqueConstraints:
+        ak_topic_id_trj_customer_topic_content:
+            columns:
+                - topic_id
+    id:
+        cid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        topicId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: topic_id
+        name:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '栏目名称'
+        content:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '内容'
+        img:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 图片
+        imgplace:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '图片位置 1:左边 2:右边'
+            default: '0::smallint'
+        sort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,59 @@
+SharedModel\TrjThinktankStar:
+    type: entity
+    repositoryClass: SharedModel\TrjThinktankStarRepository
+    table: trj_thinktank_star
+    uniqueConstraints:
+        ak_poster_id_trj_thinktank_star:
+            columns:
+                - poster_id
+                - zk_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        zkId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: zk_id
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: poster_id
+        poster:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            default: ''
+        num:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 分数
+            default: '0::smallint'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

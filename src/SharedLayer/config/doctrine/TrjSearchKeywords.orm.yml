@@ -1,0 +1,41 @@
+SharedModel\TrjSearchKeywords:
+    type: entity
+    repositoryClass: SharedModel\TrjSearchKeywordsRepository
+    table: trj_search_keywords
+    uniqueConstraints:
+        ak_keyword_trj_search_keywords:
+            columns:
+                - keyword
+                - type
+        trj_search_keywords_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        keyword:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: '关键字'
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 类型
+            default: '0::smallint'
+        count:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 搜索次数
+            default: '0'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,74 @@
+SharedModel\TrjTravelRaffle:
+    type: entity
+    repositoryClass: SharedModel\TrjTravelRaffleRepository
+    table: trj_travel_raffle
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        raffleName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 奖品名称
+            default: ''
+            column: raffle_name
+        raffleAllCount:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 奖品总数量
+            default: '0'
+            column: raffle_all_count
+        webCount:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 奖品PC数量
+            default: '0'
+            column: web_count
+        wapCount:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 奖品移动端数量
+            default: '0'
+            column: wap_count
+        extractWebCount:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: PC已经抽取的数量
+            default: '0'
+            column: extract_web_count
+        extractWapCount:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: WAP已经抽取的数量
+            default: '0'
+            column: extract_wap_count
+        webRule:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: PC端规则
+            default: ''
+            column: web_rule
+        wapRule:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: wap端规则
+            default: ''
+            column: wap_rule
+    lifecycleCallbacks: {  }

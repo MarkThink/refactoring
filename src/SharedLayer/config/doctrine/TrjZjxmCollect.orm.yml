@@ -1,0 +1,54 @@
+SharedModel\TrjZjxmCollect:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmCollectRepository
+    table: trj_zjxm_collect
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '标题'
+        url:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: url
+        categoryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: category_id
+        categorySubId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: category_sub_id
+        memberId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户ID
+            default: '0'
+            column: member_id
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

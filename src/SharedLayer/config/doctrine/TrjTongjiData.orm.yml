@@ -1,0 +1,75 @@
+SharedModel\TrjTongjiData:
+    type: entity
+    repositoryClass: SharedModel\TrjTongjiDataRepository
+    table: trj_tongji_data
+    uniqueConstraints:
+        ak_homepage_id_trj_tongji_data:
+            columns:
+                - homepage_id
+        trj_tongji_data_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        homepageId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 'VIP展厅ID'
+            default: '0'
+            column: homepage_id
+        date:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '0000-00-00'
+            default: '0'
+        pv:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 浏览量
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 独立IP量
+            default: '0'
+        zjxmIp:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 项目页独立IP量
+            default: '0'
+            column: zjxm_ip
+        avgTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 平均停留时间
+            default: '0'
+            column: avg_time
+        avgView:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 人均流量次数
+            default: '0'
+            column: avg_view
+        backRate:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 回头率
+            default: '0'
+            column: back_rate
+    lifecycleCallbacks: {  }

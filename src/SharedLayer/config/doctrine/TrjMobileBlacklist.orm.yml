@@ -1,0 +1,40 @@
+SharedModel\TrjMobileBlacklist:
+    type: entity
+    repositoryClass: SharedModel\TrjMobileBlacklistRepository
+    table: trj_mobile_blacklist
+    uniqueConstraints:
+        ak_mobile_trj_mobile_blacklist:
+            columns:
+                - mobile
+        trj_mobile_blacklist_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        mobile:
+            type: string
+            nullable: false
+            length: 11
+            fixed: true
+            comment: ''
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,79 @@
+SharedModel\TrjUsersLog:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersLogRepository
+    table: trj_users_log
+    uniqueConstraints:
+        ak_user_id_trj_users_log:
+            columns:
+                - user_id
+        ak_log_time_trj_users_log:
+            columns:
+                - log_time
+        ak_log_type_trj_users_log:
+            columns:
+                - log_action
+    id:
+        logId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: log_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        logAction:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 行为代号
+            default: ''
+            column: log_action
+        logTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: log_time
+        logValue:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: ''
+            default: ''
+            column: log_value
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        logInfo:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            default: ''
+            column: log_info
+        ipAddress:
+            type: string
+            nullable: false
+            length: 15
+            fixed: false
+            comment: ''
+            default: ''
+            column: ip_address
+        isDone:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否处理
+            default: '0::smallint'
+            column: is_done
+    lifecycleCallbacks: {  }

@@ -1,0 +1,137 @@
+SharedModel\TrjMessageIndex:
+    type: entity
+    repositoryClass: SharedModel\TrjMessageIndexRepository
+    table: trj_message_index
+    uniqueConstraints:
+        ak_idx_message_type_trj_message_index:
+            columns:
+                - status
+                - message_type
+                - message_id
+        ak_idx_sender_trj_message_index:
+            columns:
+                - read_status
+                - message_type
+                - receiver_type
+                - sender_uid
+        trj_message_index_pk:
+            columns:
+                - id
+        ak_idx_receiver_trj_message_index:
+            columns:
+                - read_status
+                - message_type
+                - sender_type
+                - receiver_uid
+        ak_idx_created_time_trj_message_index:
+            columns:
+                - created_time
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 消息索引ID
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        senderUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '消息发送者会员id'
+            default: '0'
+            column: sender_uid
+        senderType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 发送方会员类型
+            default: '0::smallint'
+            column: sender_type
+        receiverUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '消息接收者会员id'
+            default: '0'
+            column: receiver_uid
+        receiverType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 接收方会员类型
+            default: '0::smallint'
+            column: receiver_type
+        messageType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '消息类型(1留言,2立即投递,3私信,4系统消息,5订阅消息)'
+            default: '0::smallint'
+            column: message_type
+        readStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '阅读状态(1未读,2已读)'
+            default: '0::smallint'
+            column: read_status
+        messageId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 消息id
+            default: '0'
+            column: message_id
+        sourceType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '来源类型(1项目,2资金,3展厅,4订单,5文章)'
+            default: '0::smallint'
+            column: source_type
+        sourceId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 来源id
+            default: '0'
+            column: source_id
+        sourceName:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 来源名称
+            default: ''
+            column: source_name
+        isReply:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否回复(1未回复,2已回复)'
+            default: '1::smallint'
+            column: is_reply
+        createdTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 消息索引建立时间
+            default: '0'
+            column: created_time
+        lastUpdatedTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 最近更新时间
+            default: '0'
+            column: last_updated_time
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '状态(1收件方删除,2发件方删除,3删除,4审核失败,5待审核,6正常)'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

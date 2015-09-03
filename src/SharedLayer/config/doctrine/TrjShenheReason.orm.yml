@@ -1,0 +1,88 @@
+SharedModel\TrjShenheReason:
+    type: entity
+    repositoryClass: SharedModel\TrjShenheReasonRepository
+    table: trj_shenhe_reason
+    uniqueConstraints:
+        ak_catid_trj_shenhe_reason:
+            columns:
+                - catid
+        ak_use_type_trj_shenhe_reason:
+            columns:
+                - use_type
+    id:
+        rid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        uid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加人id'
+        username:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '添加人账号名'
+        reason:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '原因内容'
+        useType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '使用范围 1:不通过原因 2:删除原因'
+            default: '0::smallint'
+            column: use_type
+        catid:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '所属类型 1:资金/项目 2:文章 3:认证'
+            default: '0'
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '使用状态1:使用 2:停用'
+            default: '1::smallint'
+        useNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 使用次数
+            default: '0'
+            column: use_num
+        listorder:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 排序
+            default: '0'
+        memo:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 备注
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+        updatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 修改时间
+    lifecycleCallbacks: {  }

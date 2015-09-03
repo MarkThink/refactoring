@@ -1,0 +1,129 @@
+SharedModel\TrjSiteBroadcast:
+    type: entity
+    repositoryClass: SharedModel\TrjSiteBroadcastRepository
+    table: trj_site_broadcast
+    uniqueConstraints:
+        ak_listorder_trj_site_broadcast:
+            columns:
+                - listorder
+        ak_zjxm_cat_id_trj_site_broadcast:
+            columns:
+                - zjxm_cat_id
+    id:
+        bid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主鍵
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '广播标题'
+        styleColor:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '标题样式'
+            column: style_color
+        titleUrl:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 链接地址
+            column: title_url
+        zjxmCatId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 广播类型
+            column: zjxm_cat_id
+        zjxmCatName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 分类名称
+            default: ''
+            column: zjxm_cat_name
+        broadType:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '对应类型 1000:资金方 2000:项目方'
+            column: broad_type
+        isDefault:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否默认广播1:是 2:否'
+            default: '2::smallint'
+            column: is_default
+        useStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '使用状态1:启用 2:停用'
+            default: '1::smallint'
+            column: use_status
+        beginTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 广播开始时间
+            column: begin_time
+        endTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 广播结束时间
+            column: end_time
+        listorder:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 排序
+        memo:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 备注
+        hitnum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 浏览量
+            default: '0'
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+        updatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 修改时间
+        createId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '上传人'
+            default: '0'
+            column: create_id
+        createName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            column: create_name
+    lifecycleCallbacks: {  }

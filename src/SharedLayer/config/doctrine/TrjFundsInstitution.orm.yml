@@ -1,0 +1,73 @@
+SharedModel\TrjFundsInstitution:
+    type: entity
+    repositoryClass: SharedModel\TrjFundsInstitutionRepository
+    table: trj_funds_institution
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+            default: ''
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 机构状态
+            default: '0::smallint'
+        logo:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 机构logo
+            default: ''
+        info:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 机构介绍
+            default: ''
+        desc:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 机构概况
+        contact:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 联系方式
+        updated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 修改时间
+            default: '0'
+        uid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 操作人id
+            default: '0'
+        uname:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 操作人姓名
+            default: ''
+    lifecycleCallbacks: {  }

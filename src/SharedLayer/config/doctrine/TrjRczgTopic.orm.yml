@@ -1,0 +1,153 @@
+SharedModel\TrjRczgTopic:
+    type: entity
+    repositoryClass: SharedModel\TrjRczgTopicRepository
+    table: trj_rczg_topic
+    uniqueConstraints:
+        ak_url_name_trj_rczg_topic:
+            columns:
+                - url_name
+        ak_template_trj_rczg_topic:
+            columns:
+                - template
+        ak_status_trj_rczg_topic:
+            columns:
+                - status
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '标题'
+            default: ''
+        subTitle:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '副标题'
+            default: ''
+            column: sub_title
+        daoyu:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 导语
+            default: ''
+        daoyuUrl:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 导语链接
+            default: ''
+            column: daoyu_url
+        template:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '活动类型(1人物，2创业故事)'
+            default: '1::smallint'
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '启用状态（1开启，2关闭）'
+            default: '1::smallint'
+        imageUrl:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 图片地址
+            default: ''
+            column: image_url
+        imageUrlAid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: image_url_aid
+        thumb:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 缩略图
+            default: ''
+        thumbAid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: thumb_aid
+        scale:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '公司规模'
+            default: '1'
+        heat:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 行业热度
+            default: '1'
+        prospect:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 行业前景
+            default: '1'
+        friendUrlOpen:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 是否展示友链（0不展示，1展示）
+            default: '1'
+            column: friend_url_open
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 创建时间
+        updatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 更新时间
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发布人id
+            default: '0'
+            column: poster_id
+        posterName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 发布人用户名
+            default: ''
+            column: poster_name
+        urlName:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            comment: 前台地址名称
+            column: url_name
+    lifecycleCallbacks: {  }

@@ -1,0 +1,41 @@
+SharedModel\TrjAdminsActions:
+    type: entity
+    repositoryClass: SharedModel\TrjAdminsActionsRepository
+    table: trj_admins_actions
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        masterid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '映射到管理员表'
+        actionid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '映射到权限表'
+        masterid2:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+        mastername:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            comment: ''
+        createdate:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+    lifecycleCallbacks: {  }

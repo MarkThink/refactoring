@@ -1,0 +1,325 @@
+SharedModel\TrjUsersCapital:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersCapitalRepository
+    table: trj_users_capital
+    uniqueConstraints:
+        ak_user_id_trj_users_capital:
+            columns:
+                - user_id
+        ak_apply_time_trj_users_capital:
+            columns:
+                - apply_time
+        ak_status_trj_users_capital:
+            columns:
+                - status
+        ak_is_transform_trj_users_capital:
+            columns:
+                - is_transform
+        ak_true_business_lice_trj_users_capital:
+            columns:
+                - status
+                - business_license_code
+        ak_mobile_trj_users_capital:
+            columns:
+                - mobile
+        ak_type_trj_users_capital:
+            columns:
+                - type
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户会员id（如果是资本机构则为有管理权限的会员，如果是投资人就是会员ID）
+            default: '0'
+            column: user_id
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 类型（0资金机构，1投资人）
+            default: '0::smallint'
+        orgName:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '公司名称'
+            default: ''
+            column: org_name
+        contactName:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+            comment: 联系人姓名
+            default: ''
+            column: contact_name
+        mobile:
+            type: string
+            nullable: false
+            length: 16
+            fixed: false
+            comment: '会员账号/手机号码'
+            default: ''
+        orgSummary:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: '公司简介'
+            default: ''
+            column: org_summary
+        registerAddress:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 注册地址
+            default: '0'
+            column: register_address
+        registerAddressDetail:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: 注册详细地址
+            default: ''
+            column: register_address_detail
+        orgType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 企业类型（资金主体）
+            default: '0'
+            column: org_type
+        tzIndustry:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 意向投资行业
+            default: ''
+            column: tz_industry
+        tzIndustryParent:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 意向投资行业的父行业（方便前台搜索）
+            default: ''
+            column: tz_industry_parent
+        tzArea:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 意向投资地区
+            default: ''
+            column: tz_area
+        tzIndustryKeyword:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: '投资细分行业关键字'
+            default: ''
+            column: tz_industry_keyword
+        manageFunds:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 管理资金金额
+            default: '0'
+            column: manage_funds
+        businessLicense:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: '营业执照'
+            default: ''
+            column: business_license
+        businessLicenseCode:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '营业执照注册号'
+            default: ''
+            column: business_license_code
+        warrantPic:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 授权证书
+            default: ''
+            column: warrant_pic
+        tzRound:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+            comment: '1:不限 2:A轮 3:B轮 4:C轮 5:D轮'
+            default: '0'
+            column: tz_round
+        tzCompanyNum:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: '计划投资公司数'
+            default: '0'
+            column: tz_company_num
+        logo:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: 企业logo
+            default: ''
+        banner:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: 机构banner
+            default: ''
+        website:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: 网址
+            default: ''
+        photo:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: '实地认证-合影照片'
+            default: ''
+        agreementImage:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 实地认证-合作协议图片
+            default: ''
+            column: agreement_image
+        agreementFile:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 实地认证-合作协议文件
+            default: ''
+            column: agreement_file
+        legalPerson:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+            comment: 法人代表
+            default: ''
+            column: legal_person
+        bank:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 开户银行
+            default: ''
+        bankAccount:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+            comment: 银行账号
+            default: ''
+            column: bank_account
+        bankCertFile:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 银行开户证明文件
+            default: ''
+            column: bank_cert_file
+        updateTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 更新时间
+            default: '0'
+            column: update_time
+        applyTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 申请时间
+            default: '0'
+            column: apply_time
+        checkTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核时间'
+            default: '0'
+            column: check_time
+        checkAdminUsername:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+            comment: '审核人'
+            default: ''
+            column: check_admin_username
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 创建时间
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '状态（0待申请，1待完善资料，2待实地认证，3待审核，4审核通过，5审核不通过）'
+            default: '0::smallint'
+        previlegeLevel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 权限等级
+            default: '0::smallint'
+            column: previlege_level
+        dayInterview:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 每天约谈可查看联系方式条数
+            default: '0'
+            column: day_interview
+        monthInterview:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 每月约谈可查看联系方式条数
+            default: '0'
+            column: month_interview
+        isTransform:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否是其他身份转资本机构（0不是，否则就是，这个数字代表原来身份）'
+            default: '0::smallint'
+            column: is_transform
+    lifecycleCallbacks: {  }

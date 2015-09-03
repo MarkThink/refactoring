@@ -1,0 +1,90 @@
+SharedModel\TrjActions:
+    type: entity
+    repositoryClass: SharedModel\TrjActionsRepository
+    table: trj_actions
+    id:
+        actionid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        actionname:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        actioninfo:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+        action:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            comment: ''
+        controller:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            comment: ''
+        directory:
+            type: string
+            nullable: false
+            length: 30
+            fixed: false
+            comment: 目录名
+        viewmode:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: 0不可见1可见，默认0
+            default: '0::smallint'
+        parentid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '0表示顶级，主要用来控制左侧菜单树形显示'
+        secondid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 权限所属二级菜单
+            default: '0'
+        linkmode:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: '0表示辅助功能权限，无具体操作，用来js控制树形，1表示实际可操作链接'
+            default: '1::smallint'
+        isopen:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否开放外网
+            default: '0::smallint'
+        masterid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+        mastername:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            comment: ''
+        createdate:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+    lifecycleCallbacks: {  }

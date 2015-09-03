@@ -1,0 +1,122 @@
+SharedModel\TrjCityNews:
+    type: entity
+    repositoryClass: SharedModel\TrjCityNewsRepository
+    table: trj_city_news
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        mId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: m_id
+        provinceId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 省
+            default: '0'
+            column: province_id
+        provinceName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+            column: province_name
+        cityId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 市
+            default: '0'
+            column: city_id
+        cityName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+            column: city_name
+        cityChar:
+            type: string
+            nullable: false
+            length: 1
+            fixed: true
+            comment: 首字母
+            default: ''
+            column: city_char
+        areaId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: area_id
+        areaName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+            column: area_name
+        areaChar:
+            type: string
+            nullable: false
+            length: 1
+            fixed: true
+            comment: ''
+            default: ''
+            column: area_char
+        pcaId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: pca_id
+        title:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '标题'
+            default: ''
+        content:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '内容'
+        file:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: 附件
+            default: ''
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '审核状态'
+            default: '0::smallint'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

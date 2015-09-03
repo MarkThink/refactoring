@@ -1,0 +1,50 @@
+SharedModel\TrjPublicTopicItem:
+    type: entity
+    repositoryClass: SharedModel\TrjPublicTopicItemRepository
+    table: trj_public_topic_item
+    uniqueConstraints:
+        ak_tid_trj_public_topic_item:
+            columns:
+                - tid
+    id:
+        itemId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '栏目id'
+            id: true
+            column: item_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        tid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 专题id
+        itemIdNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '第N个栏目 1-8'
+            column: item_id_num
+        itemStyle:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '栏目风格模版1-7'
+            column: item_style
+        itemValue:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '栏目所有内容序列化串值'
+            column: item_value
+        itemSort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 排序
+            column: item_sort
+    lifecycleCallbacks: {  }

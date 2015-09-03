@@ -1,0 +1,60 @@
+SharedModel\TrjUsersDomain:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersDomainRepository
+    table: trj_users_domain
+    uniqueConstraints:
+        trj_users_domain_pk:
+            columns:
+                - id
+        ak_user_id_trj_users_domain:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        siteId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 分站ID
+            default: '0'
+            column: site_id
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        domain:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+            comment: ''
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

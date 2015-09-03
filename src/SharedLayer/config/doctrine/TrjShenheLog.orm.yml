@@ -1,0 +1,99 @@
+SharedModel\TrjShenheLog:
+    type: entity
+    repositoryClass: SharedModel\TrjShenheLogRepository
+    table: trj_shenhe_log
+    uniqueConstraints:
+        ak_shen_type_trj_shenhe_log:
+            columns:
+                - shen_type
+        ak_shen_uid_trj_shenhe_log:
+            columns:
+                - shen_uid
+        ak_info_table_trj_shenhe_log:
+            columns:
+                - info_id
+                - info_table
+    id:
+        sid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        infoId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核信息id'
+            default: '0'
+            column: info_id
+        infoTable:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '审核信息表名'
+            default: ''
+            column: info_table
+        shenType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '审核信息类型 1:文章审核 2:认证审核 3:资金/项目,4公司简介'
+            default: '0::smallint'
+            column: shen_type
+        shenStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '审核处理状态 1:通过 2:不通过,3:删除'
+            default: '0::smallint'
+            column: shen_status
+        shenReasonId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: trj_shenhe_reason主键
+            default: '0'
+            column: shen_reason_id
+        shenReason:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: '审核原因'
+            default: ''
+            column: shen_reason
+        shenUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核人id'
+            default: '0'
+            column: shen_uid
+        shenUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '审核人账号'
+            default: ''
+            column: shen_username
+        shenTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核时间'
+            default: '0'
+            column: shen_time
+        isLast:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否最后一条
+            default: '0::smallint'
+            column: is_last
+    lifecycleCallbacks: {  }

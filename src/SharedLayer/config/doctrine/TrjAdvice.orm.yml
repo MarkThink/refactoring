@@ -1,0 +1,62 @@
+SharedModel\TrjAdvice:
+    type: entity
+    repositoryClass: SharedModel\TrjAdviceRepository
+    table: trj_advice
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        siteId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 分站ID
+            default: '0'
+            column: site_id
+        title:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+        content:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: '内容'
+            default: ''
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '评论者'
+            default: '0'
+            column: poster_id
+        poster:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '评论者'
+            default: ''
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

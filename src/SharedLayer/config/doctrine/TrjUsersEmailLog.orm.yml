@@ -1,0 +1,37 @@
+SharedModel\TrjUsersEmailLog:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersEmailLogRepository
+    table: trj_users_email_log
+    uniqueConstraints:
+        ak_send_type_trj_users_email_log:
+            columns:
+                - send_type
+    id:
+        uid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        email:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+        sendType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '发送类型1:提醒(1周) 2:唤醒(1个月)'
+            default: '0::smallint'
+            column: send_type
+        sendtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+    lifecycleCallbacks: {  }

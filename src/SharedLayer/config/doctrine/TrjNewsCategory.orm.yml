@@ -1,0 +1,95 @@
+SharedModel\TrjNewsCategory:
+    type: entity
+    repositoryClass: SharedModel\TrjNewsCategoryRepository
+    table: trj_news_category
+    uniqueConstraints:
+        ak_catcode_trj_news_category:
+            columns:
+                - catcode
+        ak_status_trj_news_category:
+            columns:
+                - status
+    id:
+        catid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 分类ID
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        catcode:
+            type: string
+            nullable: false
+            length: 12
+            fixed: false
+            comment: '分类编码'
+        catname:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 分类名称
+        parentid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '上级分类:0表示顶级'
+            default: '0'
+        listorder:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 排序
+        memo:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 描述
+        isLast:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '最底级分类1:是 0:否'
+            column: is_last
+        status:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '1:正常2：隐藏'
+            default: '1'
+        newsNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '文章数量'
+            column: news_num
+        modelid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '对应模块1:资讯2:学院3:案例4:帮助5:公告'
+        pageTitle:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: '页面标题'
+            column: page_title
+        pageKeywords:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: '页面关键字'
+            column: page_keywords
+        pageDescription:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: 页面描述
+            column: page_description
+    lifecycleCallbacks: {  }

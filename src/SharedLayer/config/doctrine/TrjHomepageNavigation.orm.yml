@@ -1,0 +1,74 @@
+SharedModel\TrjHomepageNavigation:
+    type: entity
+    repositoryClass: SharedModel\TrjHomepageNavigationRepository
+    table: trj_homepage_navigation
+    uniqueConstraints:
+        trj_homepage_navigation_pk:
+            columns:
+                - id
+        ak_user_id_trj_homepage_navigation:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        parentId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 上级导航
+            default: '0'
+            column: parent_id
+        name:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 导航名称
+        isShow:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 导航名称
+            default: '0::smallint'
+            column: is_show
+        target:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 1为新窗口打开
+            default: '0::smallint'
+        isSystem:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_system
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        sort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

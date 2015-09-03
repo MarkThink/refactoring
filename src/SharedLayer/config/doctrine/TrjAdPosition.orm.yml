@@ -1,0 +1,53 @@
+SharedModel\TrjAdPosition:
+    type: entity
+    repositoryClass: SharedModel\TrjAdPositionRepository
+    table: trj_ad_position
+    id:
+        positionId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: position_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        positionName:
+            type: string
+            nullable: false
+            length: 60
+            fixed: false
+            comment: ''
+            default: ''
+            column: position_name
+        adWidth:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: ad_width
+        adHeight:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: ad_height
+        positionDesc:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            default: ''
+            column: position_desc
+        positionStyle:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: position_style
+    lifecycleCallbacks: {  }

@@ -1,0 +1,92 @@
+SharedModel\TrjUsersInteractionStatisticsHours:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersInteractionStatisticsHoursRepository
+    table: trj_users_interaction_statistics_hours
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: user_id
+        hours:
+            type: date
+            nullable: false
+            comment: '时间,精确到小时'
+        privateMessage:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 私信
+            default: '0'
+            column: private_message
+        deliver:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 投递
+            default: '0'
+        message:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 留言
+            default: '0'
+        postedMessage:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 已发布信息
+            default: '0'
+            column: posted_message
+        visited:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 我看过谁
+            default: '0'
+        beVisited:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 谁看过我
+            default: '0'
+            column: be_visited
+        businessCard:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 收到的名片
+            default: '0'
+            column: business_card
+        beCollect:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 被收藏
+            default: '0'
+            column: be_collect
+        viewContacts:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 查看联系方式
+            default: '0'
+            column: view_contacts
+        lastUpdateTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 最后更新的时间
+            default: '0'
+            column: last_update_time
+    lifecycleCallbacks: {  }

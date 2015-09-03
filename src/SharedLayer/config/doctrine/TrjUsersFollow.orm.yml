@@ -1,0 +1,86 @@
+SharedModel\TrjUsersFollow:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersFollowRepository
+    table: trj_users_follow
+    uniqueConstraints:
+        ak_type_trj_users_follow:
+            columns:
+                - type
+                - user_id
+                - item_id
+        trj_users_follow_pk:
+            columns:
+                - id
+        ak_item_id_trj_users_follow:
+            columns:
+                - item_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1:会员,2：项目'
+            default: '0::smallint'
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        itemId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '被关注对像'
+            default: '0'
+            column: item_id
+        itemTitle:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '关注标题'
+            column: item_title
+        homepageId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '被关注对像的所属账户'
+            default: '0'
+            column: homepage_id
+        homepageName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            column: homepage_name
+        flag:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否已查看
+            default: '0::smallint'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

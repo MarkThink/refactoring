@@ -1,0 +1,125 @@
+SharedModel\TrjConfigProduct:
+    type: entity
+    repositoryClass: SharedModel\TrjConfigProductRepository
+    table: trj_config_product
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1:打包产品,2:增值产品'
+            default: '0::smallint'
+        code:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 产品代号
+            default: '0'
+        name:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+            default: ''
+        originalPrice:
+            type: decimal
+            nullable: false
+            precision: 8
+            scale: 2
+            comment: 原价
+            default: '0.00'
+            column: original_price
+        price:
+            type: decimal
+            nullable: false
+            precision: 8
+            scale: 2
+            comment: '价格'
+            default: '0.00'
+        unit:
+            type: string
+            nullable: false
+            length: 10
+            fixed: false
+            comment: ''
+            default: ''
+        unitName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 单位名称
+            default: ''
+            column: unit_name
+        pic:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '图片样式名'
+            default: ''
+        isSale:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_sale
+        isDel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_del
+        isSystem:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_system
+        detail:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 详细功能
+        remark:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 备注
+        updated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 更新时间
+            default: '0'
+        canBuy:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否显示购买按钮
+            default: '0::smallint'
+            column: can_buy
+        productType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1:app专用产品'
+            default: '0::smallint'
+            column: product_type
+    lifecycleCallbacks: {  }

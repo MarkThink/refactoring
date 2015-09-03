@@ -1,0 +1,45 @@
+SharedModel\TrjActivityFilmTicket:
+    type: entity
+    repositoryClass: SharedModel\TrjActivityFilmTicketRepository
+    table: trj_activity_film_ticket
+    uniqueConstraints:
+        trj_activity_film_ticket_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        cardSn:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            column: card_sn
+        cardPassword:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+            column: card_password
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: user_id
+        sendTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: send_time
+    lifecycleCallbacks: {  }

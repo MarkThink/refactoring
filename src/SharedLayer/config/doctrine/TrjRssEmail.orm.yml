@@ -1,0 +1,37 @@
+SharedModel\TrjRssEmail:
+    type: entity
+    repositoryClass: SharedModel\TrjRssEmailRepository
+    table: trj_rss_email
+    uniqueConstraints:
+        ak_email_trj_rss_email:
+            columns:
+                - email
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        email:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: ''
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

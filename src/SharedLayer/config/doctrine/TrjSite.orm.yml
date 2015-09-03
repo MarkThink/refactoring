@@ -1,0 +1,40 @@
+SharedModel\TrjSite:
+    type: entity
+    repositoryClass: SharedModel\TrjSiteRepository
+    table: trj_site
+    uniqueConstraints:
+        trj_site_pk:
+            columns:
+                - site_id
+    id:
+        siteId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: site_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        siteName:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 分站名称
+            column: site_name
+        areaIds:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '内容'
+            column: area_ids
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

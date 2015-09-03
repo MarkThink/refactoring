@@ -1,0 +1,66 @@
+SharedModel\TrjAttachImages:
+    type: entity
+    repositoryClass: SharedModel\TrjAttachImagesRepository
+    table: trj_attach_images
+    id:
+        attachId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: attach_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        isVerify:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '图片是否审核'
+            default: '0'
+            column: is_verify
+        verifyResult:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: '审核结果'
+            column: verify_result
+        verifyRid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: verify_rid
+        submitTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: submit_time
+        verifyTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: verify_time
+        verifyUserid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: verify_userid
+        verifyUsername:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: verify_username
+        trackid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '来源 0来自APP 1来自网站'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

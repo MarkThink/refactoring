@@ -1,0 +1,39 @@
+SharedModel\TrjZjxmLog:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmLogRepository
+    table: trj_zjxm_log
+    uniqueConstraints:
+        ak_zjxm_id_trj_zjxm_log:
+            columns:
+                - zjxm_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        zjxmId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: zjxm_id
+        catPid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: cat_pid
+        ctime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

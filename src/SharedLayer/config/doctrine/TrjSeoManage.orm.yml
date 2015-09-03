@@ -1,0 +1,99 @@
+SharedModel\TrjSeoManage:
+    type: entity
+    repositoryClass: SharedModel\TrjSeoManageRepository
+    table: trj_seo_manage
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        keyName:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: key_name
+        catId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: cat_id
+        ctime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        isDelete:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: is_delete
+        rankBd:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: rank_bd
+        rank360:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: rank_360
+        rankIndex:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: rank_index
+        link:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        index:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+        trendBd:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: trend_bd
+        trend360:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: trend_360
+        creator:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        recordBd:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: record_bd
+        record360:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: record_360
+    lifecycleCallbacks: {  }

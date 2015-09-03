@@ -1,0 +1,64 @@
+SharedModel\TrjZjxmSms:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmSmsRepository
+    table: trj_zjxm_sms
+    uniqueConstraints:
+        ak_m_c_trj_zjxm_sms:
+            columns:
+                - mobile
+                - created
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        zjxmId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: zjxm_id
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        mobile:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+        content:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: ''
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+        ip:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

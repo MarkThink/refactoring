@@ -1,0 +1,81 @@
+SharedModel\TrjForum:
+    type: entity
+    repositoryClass: SharedModel\TrjForumRepository
+    table: trj_forum
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        asid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        type:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 1资讯评论
+        poster:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        posterId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: poster_id
+        title:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        content:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        nickname:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        anonymous:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            default: '0'
+        status:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            default: '1'
+        posttime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            default: '0'
+        ipAddress:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            column: ip_address
+    lifecycleCallbacks: {  }

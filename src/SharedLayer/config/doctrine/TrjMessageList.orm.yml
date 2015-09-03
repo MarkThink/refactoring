@@ -1,0 +1,59 @@
+SharedModel\TrjMessageList:
+    type: entity
+    repositoryClass: SharedModel\TrjMessageListRepository
+    table: trj_message_list
+    uniqueConstraints:
+        ak_min_max_trj_message_list:
+            columns:
+                - min_max
+        ak_from_uid_trj_message_list:
+            columns:
+                - from_uid
+                - mtime
+    id:
+        listId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 私信ID
+            id: true
+            column: list_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        fromUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '私信发起者UID'
+            default: '0'
+            column: from_uid
+        minMax:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '参与者UID正序排列，以下划线“_”链接'
+            default: ''
+            column: min_max
+        mtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发起时间戳
+            default: '0'
+        ctime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        lastMessage:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 最后一条私信
+            default: ''
+            column: last_message
+    lifecycleCallbacks: {  }

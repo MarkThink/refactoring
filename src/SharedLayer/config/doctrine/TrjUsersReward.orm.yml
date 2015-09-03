@@ -1,0 +1,41 @@
+SharedModel\TrjUsersReward:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersRewardRepository
+    table: trj_users_reward
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        type:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '1：身份认证2：发布信息3：扩充人脉4：体验服务5：标识完成后去过新手奖励'
+            default: '0'
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        isReward:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否已奖励
+            default: '0::smallint'
+            column: is_reward
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

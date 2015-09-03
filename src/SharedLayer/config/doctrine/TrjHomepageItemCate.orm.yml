@@ -1,0 +1,44 @@
+SharedModel\TrjHomepageItemCate:
+    type: entity
+    repositoryClass: SharedModel\TrjHomepageItemCateRepository
+    table: trj_homepage_item_cate
+    uniqueConstraints:
+        ak_user_id_trj_homepage_item_cate:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 名称
+        sort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

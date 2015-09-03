@@ -1,0 +1,147 @@
+SharedModel\TrjThinktank:
+    type: entity
+    repositoryClass: SharedModel\TrjThinktankRepository
+    table: trj_thinktank
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '标题'
+            default: ''
+        summary:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 简介
+        tags:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: '标签'
+            default: ''
+        cateId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 分类ID
+            default: '0'
+            column: cate_id
+        cateId2:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 子分类ID
+            default: '0'
+            column: cate_id2
+        cateId3:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 3级分类
+            default: '0'
+            column: cate_id3
+        att:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 附件
+        status:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 状态（0.未通过，1通过）
+            default: '0'
+        collectNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 收藏数
+            default: '0'
+            column: collect_num
+        commentNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 评论数
+            default: '0'
+            column: comment_num
+        clickNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 点击量
+            default: '0'
+            column: click_num
+        downNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 下载量
+            default: '0'
+            column: down_num
+        score:
+            type: decimal
+            nullable: false
+            precision: 10
+            scale: 1
+            comment: 评分
+            default: '4.0'
+        createId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发布人id
+            default: '0'
+            column: create_id
+        createName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 发布人姓名
+            default: ''
+            column: create_name
+        trjCreateId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 投融界前台用户id
+            default: '0'
+            column: trj_create_id
+        trjCreateName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 投融界前台用户名
+            default: ''
+            column: trj_create_name
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发布时间
+            default: '0'
+        ipAddress:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 发布人ip
+            default: ''
+            column: ip_address
+    lifecycleCallbacks: {  }

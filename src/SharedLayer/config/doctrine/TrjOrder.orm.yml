@@ -1,0 +1,230 @@
+SharedModel\TrjOrder:
+    type: entity
+    repositoryClass: SharedModel\TrjOrderRepository
+    table: trj_order
+    uniqueConstraints:
+        ak_mobile_trj_order:
+            columns:
+                - mobile
+        ak_order_sn_trj_order:
+            columns:
+                - order_sn
+        trj_order_pk:
+            columns:
+                - id
+        ak_user_id_trj_order:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        username:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 用户名
+        mobile:
+            type: string
+            nullable: true
+            length: 11
+            fixed: false
+            comment: ''
+        orderPayment:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '付款方式:1在线支付,2线下汇款,3支付宝,4财付通,5百度钱包,6微信支付'
+            default: '0::smallint'
+            column: order_payment
+        orderSn:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 订单号
+            column: order_sn
+        orderPrice:
+            type: decimal
+            nullable: false
+            precision: 10
+            scale: 2
+            comment: '订单价格'
+            default: '0.00'
+            column: order_price
+        orderStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '订单状态:0待付款,1已付款,2已成完,3已关闭'
+            default: '0::smallint'
+            column: order_status
+        orderType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 1投递订单
+            default: '0::smallint'
+            column: order_type
+        isConfirm:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否确认
+            default: '0::smallint'
+            column: is_confirm
+        count:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 购买数量
+            default: '1'
+        orderCreate:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 订单生成时间
+            default: '0'
+            column: order_create
+        orderPaytime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 订单付款时间
+            default: '0'
+            column: order_paytime
+        pmodeId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 网银银行代号
+            default: '0'
+            column: pmode_id
+        orderIp:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: IP
+            default: '0'
+            column: order_ip
+        productId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 产品编号
+            default: '0'
+            column: product_id
+        productName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 产品名称
+            column: product_name
+        productCode:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+            column: product_code
+        orderUpdate:
+            type: date
+            nullable: false
+            comment: ''
+            default: now()
+            column: order_update
+        orderFile:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            default: ''
+            column: order_file
+        useDeliveryNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '投递使用的免费次数'
+            default: '0'
+            column: use_delivery_num
+        isDeliveryPackage:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否购买投递打包套餐'
+            default: '0::smallint'
+            column: is_delivery_package
+        payAmount:
+            type: decimal
+            nullable: false
+            precision: 10
+            scale: 2
+            comment: '是否购买投递打包套餐'
+            default: '0.00'
+            column: pay_amount
+        cart:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: 投递箱字段
+        toItemId:
+            type: string
+            nullable: true
+            length: 2000
+            fixed: false
+            comment: ''
+            column: to_item_id
+        fromItemId:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: from_item_id
+        updateCode:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: update_code
+        fromType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1为后台下单,2wap下单,3手机APP下单'
+            default: '0::smallint'
+            column: from_type
+        alipayTradeStatus:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: 支付宝状态
+            column: alipay_trade_status
+        alipayTradeNo:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: 支付宝交易号
+            column: alipay_trade_no
+    lifecycleCallbacks: {  }

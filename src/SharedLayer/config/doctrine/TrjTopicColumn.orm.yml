@@ -1,0 +1,46 @@
+SharedModel\TrjTopicColumn:
+    type: entity
+    repositoryClass: SharedModel\TrjTopicColumnRepository
+    table: trj_topic_column
+    uniqueConstraints:
+        ak_topic_id_trj_topic_column:
+            columns:
+                - topic_id
+    id:
+        columnId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '栏目id'
+            id: true
+            column: column_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        topicId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 专题id
+            column: topic_id
+        columnTitle:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: '栏目名称'
+            column: column_title
+        columnSort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 排序
+            column: column_sort
+        columnJoinTenkan:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否特刊0:否,1:是'
+            default: '0::smallint'
+            column: column_join_tenkan
+    lifecycleCallbacks: {  }

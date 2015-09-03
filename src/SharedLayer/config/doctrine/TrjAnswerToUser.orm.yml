@@ -1,0 +1,40 @@
+SharedModel\TrjAnswerToUser:
+    type: entity
+    repositoryClass: SharedModel\TrjAnswerToUserRepository
+    table: trj_answer_to_user
+    uniqueConstraints:
+        ak_ask_id_trj_answer_to_user:
+            columns:
+                - ask_id
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        askId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被评论对象
+            default: '0'
+            column: ask_id
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '评论者'
+            default: '0'
+            column: user_id
+        updated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

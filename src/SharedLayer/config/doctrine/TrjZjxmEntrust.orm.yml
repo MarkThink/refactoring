@@ -1,0 +1,81 @@
+SharedModel\TrjZjxmEntrust:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmEntrustRepository
+    table: trj_zjxm_entrust
+    uniqueConstraints:
+        ak_zjxm_id_trj_zjxm_entrust:
+            columns:
+                - zjxm_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 所属人
+            default: '0'
+            column: user_id
+        zjxmId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 项目资金
+            default: '0'
+            column: zjxm_id
+        productId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 委托产品
+            default: '0'
+            column: product_id
+        refreshHour:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 刷新时间点，小时
+            default: '0::smallint'
+            column: refresh_hour
+        refreshTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 系统执行真实刷新时间
+            default: '0'
+            column: refresh_time
+        refreshStart:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 刷新开始时间
+            default: '0'
+            column: refresh_start
+        refreshEnd:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 刷新结束时间
+            default: '0'
+            column: refresh_end
+        isDel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_del
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 委托时间
+            default: '0'
+    lifecycleCallbacks: {  }

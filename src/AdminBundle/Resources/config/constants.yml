@@ -1,0 +1,121 @@
+#操作码
+Opcode:
+  #返回常量
+  RETURN_CODE: 'code'
+  RETURN_MSG: 'msg'
+  RETURN_DATA: 'data'
+
+  #短信类型
+  SMS_TYPE_REGISTER: 'register'
+  SMS_TYPE_FORGET_PASSWORD: 'forget'
+  SMS_TYPE_CHANGE_MOBILE: 'changemobile'
+
+  #名片投递状态
+  BUSINESS_CARD_EXCHANGE: 0 #交换名片
+  BUSINESS_CARD_DELIVER: 1 #已递送名片
+  BUSINESS_CARD_PLUS: 2 #加为商友
+  BUSINESS_CARD_ALREADY: 3 #已是商友
+
+  #信息投递类型
+  BUSINESS_CARD_DELIVER: 1 #名片投递
+  ZJXU_INFO_DELIVER: 2 #资金投递
+
+#AJAX返回状态码
+Status:
+  AJAX_200: 200
+  AJAX_201: 201
+  AJAX_202: 202
+  AJAX_203: 203
+  AJAX_204: 204
+  AJAX_205: 205
+
+#返回结果消息
+Constant:
+  SUCCESS: '操作成功'
+  FAILURE: '操作失败'
+
+#  网站后台配置结果
+  SECURITY_CODE: '校验码验证失败'
+  USER_NOT_EXIST: '用户不存在'
+  USER_STATUS_STOP: '对不起，该账号已停止使用'
+  USER_PASSWD_ERROR: '用户名或密码错误'
+  USER_ROLE_STOP: '对不起，该账号所在权限组已停止使用'
+
+  PARAM_ERROR: '参数错误'
+  SIGNATURE_ERROR: '签名错误'
+  ACCESS_RESTRICTED: '访问受限'
+  REQUEST_TIMEOUT: '链接超时'
+  REQUEST_LENGTH_ERROR: '请求长度错误'
+  REQUEST_LENGTH_MAX: '请求长度超出限制'
+  REQUEST_TOKEN_TIMEOUT: '令牌已过期，请重新登录'
+
+  USER_UNLOGIN: '请先登录'
+  USER_LOCKED: '用户被锁定'
+
+  USER_NOT_VERIFIED: '用户未实名认证'
+  USER_PHONE_NULL: '手机号码为空'
+  USER_PHONE_FORMAT_ERROR: '手机号码格式错误'
+  USER_PHONE_EXIST: '手机号码已被注册'
+  USER_PHONE_NOT_EXIST: '手机号码不存在'
+  USER_PHONE_BLACK: '手机号码黑名单'
+  USER_PHONE_LIMIT: '更换手机号超过系统限制'
+  USER_EMAIL_NULL: 'Email为空'
+  USER_EMAIL_FORMAT_ERROR: 'Email格式错误'
+  USER_EMAIL_EXIST: 'Email已存在'
+  USER_USERNAME_NULL: '用户名为空'
+  USER_USERNAME_EXIST: '用户名已存在'
+  USER_VALICODE_NULL: '校验码为空'
+  USER_VALICODE_ERROR: '校验码错误'
+  USER_SMS_SEND_LIMIT: '手机验证码发送超出限制'
+  USER_PHONE_SMS_ERROR: '手机验证码错误'
+  USER_OLDPWD_NULL: '密码为空'
+  USER_OLDPWD_ERROR: '原密码错误'
+  USER_PWD_NULL: '密码为空'
+  USER_PWD_FORMAT_ERROR: '请使用6-20个字母或字符组成的密码'
+  USER_REPWD_NULL: '确认密码为空'
+  USER_PWD_DIFFERENCE: '两次密码输入不一致'
+  USER_PWD_PAYPWD_SAME: '登录密码不能与支付密码一致'
+  USER_PAYPWD_PWD_SAME: '支付密码不能与登录密码一致'
+  USER_EMAIL_USERNAME_ERROR: '用户邮箱或用户名错误'
+  USERNAME_PASSWORD_NO_RIGHT: '用户名或密码错误'
+  USER_NOT_EXIST: '用户信息不存在'
+  USER_FRIEND_NOT_EXIST: '好友信息不存在'
+  USER_FOLLOW_FRIEND: '你已经关注了他'
+  USER_NOT_SELF_CARD: '您不能自己跟自己交换名片'
+  USER_MAX_FOLLOW: '您的关注已经达到上限，开通黄金人脉即可关注更多会员'
+  USER_FRIEND_MAX_FOLLOW: '您交换名片的客户因商友上限限制，暂时不能成为商友，只能互相关注了解对方动态'
+  USER_HAS_CARD: '抱歉，您已经拥有TA的名片'
+  USER_USE_FOLLOW: '您已经关注了TA'
+
+  USER_VIEW_ZJ: '您购买的服务只允许查看项目方名片'
+  USER_VIEW_XM: '您购买的服务只允许查看资金方名片'
+  USER_NOT_VIEW: '您要查看的名片信息不存在'
+  USER_NOT_TYPE: '请先设置您的会员类型'
+
+  INFO_FOLLOW_DONE: '您已经收藏了'
+  INFO_NOT_EXIST: '信息不存在或已被下线'
+  INFO_FOLLOW_SUCCESS: '信息收藏成功'
+  INFO_YOUR_SELF: '这是您自己的信息'
+  INFO_COMMENT_LIMIT: '抱歉，您评论留言次数已达上限'
+  INFO_COMMENT_CONTENT_NULL: '留言内容为空'
+  INFO_AUTH_LIMIT: '没有权限查看此信息'
+  INFO_USER_INFO: '请完善资料在发布信息'
+
+  CONTENT_NULL: '内容不能为空'
+  TITLE_NULL: '标题不能为空'
+
+  BAD_IMAGES: '图片上传失败，没有获取到有效的图片数据'
+  BAD_MORE_IMAGES: '图片上传失败LOGO只能上传一张图片'
+
+  REMIND_TYPE_ERROR: '消息提醒类型不正确'
+
+  BUSINESSCARD_VIEW_DAY_LIMIT: '您今日查看联系方式的次数用完！'
+  BUSINESSCARD_VIEW_TYPEXM_LIMIT: '您购买的服务只允许查看项目方名片'
+  BUSINESSCARD_VIEW_TYPEZJ_LIMIT: '您购买的服务只允许查看资金方名片'
+  BUSINESSCARD_VIEW_BUY: '查看名片次数已不足'
+
+  PRODUCT_NOT_EXIST: '服务产品不存在或已下架'
+  ORDER_NOT_EXIST: '订单不存在或已删除'
+
+  MESSAGE_NOT_NULL: '信息内容不能为空'
+  DELIVER_BUY: '您的投递次数已不足'

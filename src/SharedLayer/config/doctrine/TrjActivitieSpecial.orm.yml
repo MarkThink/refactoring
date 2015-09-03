@@ -1,0 +1,105 @@
+SharedModel\TrjActivitieSpecial:
+    type: entity
+    repositoryClass: SharedModel\TrjActivitieSpecialRepository
+    table: trj_activitie_special
+    uniqueConstraints:
+        ak_aid_trj_activitie_special:
+            columns:
+                - aid
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        aid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 对应活动
+            default: '0'
+        banner:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: 顶部banner
+        bannerColor:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 背景色
+            column: banner_color
+        logo:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: 主办方logo
+        reviewAtt:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 回顾列表
+            column: review_att
+        reviewAttName:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: ''
+            column: review_att_name
+        cooperative:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: 合作媒体
+        contact:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 联系方式
+        page1Detail:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: page1_detail
+        page2Detail:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: page2_detail
+        page3Detail:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: page3_detail
+        page4Detail:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: page4_detail
+        page5Detail:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: page5_detail
+    lifecycleCallbacks: {  }

@@ -1,0 +1,42 @@
+SharedModel\TrjActivityFilmRaffle:
+    type: entity
+    repositoryClass: SharedModel\TrjActivityFilmRaffleRepository
+    table: trj_activity_film_raffle
+    uniqueConstraints:
+        ak_raffle_number_trj_activity_film_raffle:
+            columns:
+                - raffle_number
+        trj_activity_film_raffle_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户id
+            default: '0'
+            column: user_id
+        raffleNumber:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 抽奖抽到的数字，1到100之间，特等奖10000
+            default: '0'
+            column: raffle_number
+        raffleTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: raffle_time
+    lifecycleCallbacks: {  }

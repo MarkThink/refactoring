@@ -1,0 +1,85 @@
+SharedModel\TrjFormCategory:
+    type: entity
+    repositoryClass: SharedModel\TrjFormCategoryRepository
+    table: trj_form_category
+    id:
+        catId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: cat_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        catName:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 品类名称
+            default: ''
+            column: cat_name
+        catPid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 所属父类编号
+            default: '0'
+            column: cat_pid
+        catLevel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 品类级别
+            default: '0'
+            column: cat_level
+        catSort:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 排序
+            default: '0'
+            column: cat_sort
+        catType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '单选0 复选1'
+            default: '0::smallint'
+            column: cat_type
+        catStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 分类状态
+            default: '0::smallint'
+            column: cat_status
+        fcId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 'form_field_category 的ID'
+            default: '0'
+            column: fc_id
+        catFlagDisplay:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 展开显示状态
+            default: '0::smallint'
+            column: cat_flag_display
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 创建时间
+            default: '0'
+        updated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 修改时间
+            default: '0'
+    lifecycleCallbacks: {  }

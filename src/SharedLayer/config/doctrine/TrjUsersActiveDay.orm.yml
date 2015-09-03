@@ -1,0 +1,79 @@
+SharedModel\TrjUsersActiveDay:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersActiveDayRepository
+    table: trj_users_active_day
+    uniqueConstraints:
+        ak_created_trj_users_active_day:
+            columns:
+                - created
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 日期
+            default: '0'
+        login:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 登录
+        exchange:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 交换：付费|非付费|游客
+        toudi:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 投递
+        publish:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 发布
+        quick:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 快速
+        contact:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 查看联系方式
+        refresh:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 刷新
+        comment:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 评论
+        order:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 订单
+    lifecycleCallbacks: {  }

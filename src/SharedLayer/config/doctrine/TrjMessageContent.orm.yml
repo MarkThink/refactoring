@@ -1,0 +1,55 @@
+SharedModel\TrjMessageContent:
+    type: entity
+    repositoryClass: SharedModel\TrjMessageContentRepository
+    table: trj_message_content
+    uniqueConstraints:
+        ak_list_id_trj_message_content:
+            columns:
+                - list_id
+                - mtime
+    id:
+        messageId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '私信内对话ID'
+            id: true
+            column: message_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        listId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 私信ID
+            default: '0'
+            column: list_id
+        toUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: to_uid
+        fromUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '会话发布者UID'
+            default: '0'
+            column: from_uid
+        content:
+            type: string
+            nullable: false
+            length: 300
+            fixed: false
+            comment: '会话内容'
+            default: ''
+        mtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 会话发布时间
+            default: '0'
+    lifecycleCallbacks: {  }

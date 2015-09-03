@@ -1,0 +1,187 @@
+SharedModel\TrjTekan:
+    type: entity
+    repositoryClass: SharedModel\TrjTekanRepository
+    table: trj_tekan
+    uniqueConstraints:
+        ak_create_id_trj_tekan:
+            columns:
+                - create_id
+        ak_create_name_trj_tekan:
+            columns:
+                - create_name
+    id:
+        tkid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        createId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 操作人id
+            column: create_id
+        createName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 操作人账号
+            column: create_name
+        title:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '特刊标题'
+        title2:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '特刊副标题'
+        videoUrl:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '宣传视频url'
+            column: video_url
+        describe:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 描述
+        industryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 行业分类
+            column: industry_id
+        companyname:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '公司或单位名称'
+        linkname:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 联系人名称
+        linkUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 联系人账号
+            column: link_username
+        topBanner:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: '头部通栏图片'
+            column: top_banner
+        topBannerHeight:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 图片高度
+            default: '0'
+            column: top_banner_height
+        topBannerAid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: top_banner_aid
+        attachment:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 附件
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+        updatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 更新时间
+        sendtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发送时间
+        sendnum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发送次数
+            default: '0'
+        isQueue:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否已加入队列'
+            default: '0::smallint'
+            column: is_queue
+        isInit:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ' 是否初始化'
+            default: '0::smallint'
+            column: is_init
+        state:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '状态  0:未发送 1:已发送'
+            default: '0::smallint'
+        template:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 所属模板
+            default: '0::smallint'
+        topBannerType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: top_banner_type
+        createUrl:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 生成url
+            column: create_url
+        sendConfig:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 发送规则
+            column: send_config
+        sourceTopicId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '关联特刊同部专题id,0为非同步信息'
+            default: '0'
+            column: source_topic_id
+    lifecycleCallbacks: {  }

@@ -1,0 +1,109 @@
+SharedModel\TrjAttach:
+    type: entity
+    repositoryClass: SharedModel\TrjAttachRepository
+    table: trj_attach
+    uniqueConstraints:
+        ak_userid_trj_attach:
+            columns:
+                - uid
+    id:
+        attachId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 附件ID
+            id: true
+            column: attach_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        table:
+            type: string
+            nullable: true
+            length: 15
+            fixed: true
+            comment: 表名
+        rowId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '管理的内容ID'
+            column: row_id
+        attachType:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 附件所属类型
+            column: attach_type
+        uid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户UID
+            default: '0'
+        ctime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '上传时间'
+        name:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: 附件名称
+        type:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: '附件格式'
+        size:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: 附件大小
+        extension:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: 附件扩展名
+        isDel:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: 统一的is_del
+            default: '0::smallint'
+            column: is_del
+        savePath:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: 保存路径
+            column: save_path
+        saveName:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: 保存名称
+            column: save_name
+        saveDomain:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: 0：前台，1后台，...
+            default: '0::smallint'
+            column: save_domain
+        ip:
+            type: string
+            nullable: false
+            length: 16
+            fixed: false
+            comment: ''
+            default: ''
+    lifecycleCallbacks: {  }

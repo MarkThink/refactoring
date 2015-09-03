@@ -1,0 +1,200 @@
+SharedModel\TrjTrust:
+    type: entity
+    repositoryClass: SharedModel\TrjTrustRepository
+    table: trj_trust
+    id:
+        totId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: tot_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        totTitle:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: '产品全称'
+            default: ''
+            column: tot_title
+        totIssuingScale:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: 产品规模
+            default: '0.0000'
+            column: tot_issuing_scale
+        totInvestStart:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: 投资门槛
+            default: '0.0000'
+            column: tot_invest_start
+        totCycle:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 产品期限
+            default: '0::smallint'
+            column: tot_cycle
+        totRevenue:
+            type: decimal
+            nullable: false
+            precision: 10
+            scale: 4
+            comment: 预计年化收益
+            default: '0.0000'
+            column: tot_revenue
+        totOrg:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 发行机构
+            default: '0'
+            column: tot_org
+        totType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 产品类型
+            default: '0'
+            column: tot_type
+        totInvestType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 资金投向
+            default: '0'
+            column: tot_invest_type
+        totSaleState:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 产品状态
+            default: '0'
+            column: tot_sale_state
+        totInvestmentWay:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 投资方式
+            default: '0'
+            column: tot_investment_way
+        totRevenueType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 收益类型
+            default: '0'
+            column: tot_revenue_type
+        totRevenueAlloc:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '收益分配方式'
+            default: '0'
+            column: tot_revenue_alloc
+        totPublishArea:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 发行地区
+            default: '0'
+            column: tot_publish_area
+        totPublishDate:
+            type: string
+            nullable: false
+            length: 10
+            fixed: false
+            comment: 发售日期
+            column: tot_publish_date
+        totViewNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 浏览量
+            default: '0'
+            column: tot_view_num
+        totOrderNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 预约量
+            default: '0'
+            column: tot_order_num
+        totFollowNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '关注量'
+            default: '0'
+            column: tot_follow_num
+        totStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 销售状态
+            default: '0::smallint'
+            column: tot_status
+        provinceId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: province_id
+        cityId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: city_id
+        areaId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: area_id
+        memberId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 发布人
+            default: '0'
+            column: member_id
+        member:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 发布人
+        ctime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 创建时间
+            default: '0'
+        etime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 修改时间
+            default: '0'
+        ip:
+            type: string
+            nullable: false
+            length: 15
+            fixed: false
+            comment: ''
+            default: ''
+    lifecycleCallbacks: {  }

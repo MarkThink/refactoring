@@ -1,0 +1,51 @@
+SharedModel\TrjWebcastIntention:
+    type: entity
+    repositoryClass: SharedModel\TrjWebcastIntentionRepository
+    table: trj_webcast_intention
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 自动编号
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        showId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 路演ID
+            column: show_id
+        userId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 用户ID
+            column: user_id
+        company:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+            comment: 单位
+        job:
+            type: string
+            nullable: true
+            length: 32
+            fixed: false
+            comment: 身份
+        addTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 填写时间
+            column: add_time
+        isDel:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '是否删除'
+            column: is_del
+    lifecycleCallbacks: {  }

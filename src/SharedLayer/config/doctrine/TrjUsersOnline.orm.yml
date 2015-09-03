@@ -1,0 +1,24 @@
+SharedModel\TrjUsersOnline:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersOnlineRepository
+    table: trj_users_online
+    uniqueConstraints:
+        ak_uid_trj_users_online:
+            columns:
+                - uid
+    id:
+        uid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 户用UID
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        ctime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '最后一次操作动作时间戳，与当前时间相隔五分钟之内为在线'
+    lifecycleCallbacks: {  }

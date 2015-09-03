@@ -1,0 +1,53 @@
+SharedModel\TrjPriceRule:
+    type: entity
+    repositoryClass: SharedModel\TrjPriceRuleRepository
+    table: trj_price_rule
+    uniqueConstraints:
+        ak_fid_trj_price_rule:
+            columns:
+                - type
+                - fid
+                - unit
+                - num
+    id:
+        rid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1:投融产品'
+            default: '0'
+        fid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        price:
+            type: decimal
+            nullable: false
+            precision: 10
+            scale: 2
+            comment: ''
+            default: '0.00'
+        unit:
+            type: bigint
+            nullable: false
+            unsigned: false
+            comment: '1:年,2:月,3:天'
+            default: '0::bigint'
+        num:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

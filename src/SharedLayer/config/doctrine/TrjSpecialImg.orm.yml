@@ -1,0 +1,39 @@
+SharedModel\TrjSpecialImg:
+    type: entity
+    repositoryClass: SharedModel\TrjSpecialImgRepository
+    table: trj_special_img
+    uniqueConstraints:
+        ak_subject_id_trj_special_img:
+            columns:
+                - subject_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+            default: ''
+        thumb:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: ''
+        subjectId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: subject_id
+    lifecycleCallbacks: {  }

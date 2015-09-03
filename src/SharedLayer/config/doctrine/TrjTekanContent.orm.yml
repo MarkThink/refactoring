@@ -1,0 +1,62 @@
+SharedModel\TrjTekanContent:
+    type: entity
+    repositoryClass: SharedModel\TrjTekanContentRepository
+    table: trj_tekan_content
+    uniqueConstraints:
+        trj_tekan_content_pk:
+            columns:
+                - cid
+        ak_tkid_trj_tekan_content:
+            columns:
+                - tkid
+    id:
+        cid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        tkid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '关联特刊表tkid'
+        ctitle:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '内容标题'
+        content:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '相关内容'
+        imgpath:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 图片
+        imgplace:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '图片位置 1:左边  2:右边'
+            default: '0::smallint'
+        orders:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 排序
+            default: '0'
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+    lifecycleCallbacks: {  }

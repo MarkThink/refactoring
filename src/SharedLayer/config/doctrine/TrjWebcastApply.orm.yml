@@ -1,0 +1,81 @@
+SharedModel\TrjWebcastApply:
+    type: entity
+    repositoryClass: SharedModel\TrjWebcastApplyRepository
+    table: trj_webcast_apply
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 自动编号
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        showId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 路演ID
+            column: show_id
+        userId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 用户ID
+            column: user_id
+        applyTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 申请时间
+            column: apply_time
+        isFlow:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '是否关注'
+            column: is_flow
+        isFlowDel:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '关注移除'
+            column: is_flow_del
+        isWatch:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 是否观看
+            column: is_watch
+        isWatchDel:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 观看移除
+            column: is_watch_del
+        statusWatch:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '观看审核'
+            column: status_watch
+        isGoin:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 是否参与
+            column: is_goin
+        statusGoin:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '参与审核'
+            column: status_goin
+        isGoinDel:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 参与移除
+            column: is_goin_del
+    lifecycleCallbacks: {  }

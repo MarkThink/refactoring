@@ -1,0 +1,31 @@
+SharedModel\TrjUsersIndustry:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersIndustryRepository
+    table: trj_users_industry
+    uniqueConstraints:
+        ak_industry_id_trj_users_industry:
+            columns:
+                - industry_id
+        ak_user_id_trj_users_industry:
+            columns:
+                - user_id
+    id:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户ID
+            default: '0'
+            id: true
+            column: user_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        industryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 行业ID
+            default: '0'
+            column: industry_id
+    lifecycleCallbacks: {  }

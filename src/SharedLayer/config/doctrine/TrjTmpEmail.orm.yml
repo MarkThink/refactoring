@@ -1,0 +1,28 @@
+SharedModel\TrjTmpEmail:
+    type: entity
+    repositoryClass: SharedModel\TrjTmpEmailRepository
+    table: trj_tmp_email
+    id:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户id
+            id: true
+            column: user_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '发送email类型1:提醒 2:唤醒'
+            default: '0::smallint'
+        isdeal:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否处理0未处理 1:已处理'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

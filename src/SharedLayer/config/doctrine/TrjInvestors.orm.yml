@@ -1,0 +1,134 @@
+SharedModel\TrjInvestors:
+    type: entity
+    repositoryClass: SharedModel\TrjInvestorsRepository
+    table: trj_investors
+    uniqueConstraints:
+        ak_first_py_trj_investors:
+            columns:
+                - first_py
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        trueName:
+            type: string
+            nullable: false
+            length: 59
+            fixed: false
+            comment: 姓名
+            column: true_name
+        thumb:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 个人头像
+        firstPy:
+            type: string
+            nullable: false
+            length: 5
+            fixed: false
+            comment: 首字母拼音
+            column: first_py
+        keywords:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: '关联关键词'
+        companyName:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: '公司名称'
+            column: company_name
+        companyJob:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '公司职位'
+            column: company_job
+        introd:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 简介
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+        updatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 更新时间
+        posterUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发布人uid
+            column: poster_uid
+        posterUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 发布人账户名
+            column: poster_username
+        hitnum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 点击数
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '使用状态1启用 2停用'
+            default: '1::smallint'
+        isTuisong:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否推首0否 1是'
+            default: '0::smallint'
+            column: is_tuisong
+        isExe:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_exe
+        tzIndustry:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: ''
+            column: tz_industry
+        tzArea:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: ''
+            column: tz_area
+        tzPeriod:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: ''
+            column: tz_period
+    lifecycleCallbacks: {  }

@@ -1,0 +1,69 @@
+AppBundle\Entity\AclObjectIdentities:
+    type: entity
+    repositoryClass: AppBundle\Entity\AclObjectIdentitiesRepository
+    table: acl_object_identities
+    indexes:
+        idx_9407e54977fa751a:
+            columns:
+                - parent_object_identity_id
+    uniqueConstraints:
+        uniq_9407e5494b12ad6ea000b10:
+            columns:
+                - object_identifier
+                - class_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        classId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: class_id
+        objectIdentifier:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+            column: object_identifier
+        entriesInheriting:
+            type: boolean
+            nullable: false
+            comment: ''
+            column: entries_inheriting
+    manyToOne:
+        parentObjectentity:
+            targetEntity: AclObjectIdentities
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                parent_object_identity_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    manyToMany:
+        ancestor:
+            targetEntity: AclObjectIdentities
+            cascade: {  }
+            mappedBy: null
+            inversedBy: objectentity
+            joinTable:
+                name: acl_object_identity_ancestors
+                joinColumns:
+                    -
+                        name: object_identity_id
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    -
+                        name: ancestor_id
+                        referencedColumnName: id
+            orderBy: null
+    lifecycleCallbacks: {  }

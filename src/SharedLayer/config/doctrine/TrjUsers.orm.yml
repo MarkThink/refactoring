@@ -1,0 +1,794 @@
+SharedModel\TrjUsers:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersRepository
+    table: trj_users
+    uniqueConstraints:
+        ak_province_id_trj_users:
+            columns:
+                - province_id
+        ak_username_trj_users:
+            columns:
+                - username
+        ak_last_feed_time_trj_users:
+            columns:
+                - last_feed_time
+        ak_email_trj_users:
+            columns:
+                - email
+        ak_register_datetime_trj_users:
+            columns:
+                - register_datetime
+        ak_mobile_trj_users:
+            columns:
+                - mobile
+        ak_user_type_trj_users:
+            columns:
+                - user_type
+        ak_industry_id_trj_users:
+            columns:
+                - industry_id
+        trj_users_pk:
+            columns:
+                - id
+        ak_businesscard_num_trj_users:
+            columns:
+                - businesscard_num
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        siteId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 分站ID
+            default: '0'
+            column: site_id
+        userType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1项目,2:资金,3其它,4资金机构,5独立投资人'
+            default: '0::smallint'
+            column: user_type
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 1企业，2政府，3个人
+            default: '0::smallint'
+        email:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 用户邮箱
+        emailTrue:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否已验证
+            default: '0::smallint'
+            column: email_true
+        username:
+            type: string
+            nullable: false
+            length: 64
+            fixed: false
+            comment: 用户账号
+        passwd:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '用户密码'
+        passwdPlaintext:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 用户名密
+            column: passwd_plaintext
+        contactName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 用户姓名
+            default: ''
+            column: contact_name
+        contactSex:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1男,2女'
+            default: '0::smallint'
+            column: contact_sex
+        contactJob:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 工作职位
+            default: '0::smallint'
+            column: contact_job
+        contactJobName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 职务名称
+            default: ''
+            column: contact_job_name
+        contactAddress:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: 联系地址
+            default: ''
+            column: contact_address
+        phoneCr:
+            type: string
+            nullable: false
+            length: 3
+            fixed: false
+            comment: '国家代码'
+            default: ''
+            column: phone_cr
+        phoneQh:
+            type: string
+            nullable: false
+            length: 8
+            fixed: false
+            comment: 区号
+            default: ''
+            column: phone_qh
+        phone:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 固定电话
+            default: ''
+        phoneFjh:
+            type: string
+            nullable: false
+            length: 8
+            fixed: false
+            comment: 分机号
+            default: ''
+            column: phone_fjh
+        mobile:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '手机号码'
+            default: ''
+        mobileTrue:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '手机号码是否验证过'
+            default: '0::smallint'
+            column: mobile_true
+        company:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 所在单位
+            default: ''
+        companyTrue:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: company_true
+        countryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 国家ID
+            default: '0'
+            column: country_id
+        provinceId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 省
+            default: '0'
+            column: province_id
+        cityId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 市
+            default: '0'
+            column: city_id
+        areaId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 区
+            default: '0'
+            column: area_id
+        industryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 所属行业
+            default: '0'
+            column: industry_id
+        postalCode:
+            type: string
+            nullable: false
+            length: 6
+            fixed: false
+            comment: 邮编
+            default: ''
+            column: postal_code
+        faxCr:
+            type: string
+            nullable: true
+            length: 3
+            fixed: false
+            comment: '传真 国家代码'
+            column: fax_cr
+        faxQh:
+            type: string
+            nullable: false
+            length: 8
+            fixed: false
+            comment: '传真区号'
+            default: ''
+            column: fax_qh
+        fax:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '单位传真'
+            default: ''
+        qq:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            default: ''
+        loginNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 登陆次数
+            default: '1'
+            column: login_num
+        businesscardNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 明片数
+            default: '0'
+            column: businesscard_num
+        zjxmNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 项目数
+            default: '0'
+            column: zjxm_num
+        validZjxmNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '审核通过的信息数'
+            default: '0'
+            column: valid_zjxm_num
+        hitNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 点击量
+            default: '0'
+            column: hit_num
+        hitYestodayNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: hit_yestoday_num
+        hitTodayNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 今日点击量
+            default: '0'
+            column: hit_today_num
+        hitFlag:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '日期标识'
+            default: '0::smallint'
+            column: hit_flag
+        followNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '我的关注数'
+            default: '0'
+            column: follow_num
+        fansNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 粉丝数
+            default: '0'
+            column: fans_num
+        guestNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 留言数
+            default: '0'
+            column: guest_num
+        askNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ' 咨询数'
+            default: '0'
+            column: ask_num
+        collectNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 收藏数
+            default: '0'
+            column: collect_num
+        commentNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 项目评论数
+            default: '0'
+            column: comment_num
+        deliverNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 主动投递数
+            default: '0'
+            column: deliver_num
+        viewZjxmNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 项目查看数
+            default: '0'
+            column: view_zjxm_num
+        viewBusinesscardNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 名片查看次数
+            default: '0'
+            column: view_businesscard_num
+        messageNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 私信数
+            default: '0'
+            column: message_num
+        reportNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 举报数
+            default: '0'
+            column: report_num
+        toreportNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 被举报数
+            default: '0'
+            column: toreport_num
+        validMessageNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: valid_message_num
+        viewRefuseNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '展厅拒绝浏览数'
+            default: '0'
+            column: view_refuse_num
+        publishFlag:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 发布信息权限
+            default: '1::smallint'
+            column: publish_flag
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '会员状态,1为可用'
+            default: '0::smallint'
+        lastDatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 最后登陆时间
+            default: '0'
+            column: last_datetime
+        lastIp:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 最后登陆IP
+            default: '0'
+            column: last_ip
+        registerDatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 注册时间
+            default: '0'
+            column: register_datetime
+        registerIp:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 注册IP
+            default: '0'
+            column: register_ip
+        securityCode:
+            type: string
+            nullable: false
+            length: 32
+            fixed: false
+            comment: ''
+            default: ''
+            column: security_code
+        userRank:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 用户头衔
+            default: '0::smallint'
+            column: user_rank
+        userLevel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 会员等级
+            default: '0'
+            column: user_level
+        userLevelStart:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 服务开始时间
+            default: '0'
+            column: user_level_start
+        userLevelEnd:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 会员到期时间
+            default: '0'
+            column: user_level_end
+        userLevelUpdated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 更新时间
+            default: '0'
+            column: user_level_updated
+        userLevelTry:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 会员试用
+            default: '0::smallint'
+            column: user_level_try
+        userLogo:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: 用户头像
+            default: ''
+            column: user_logo
+        userCredit:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: '用户认证通过后的图片标识,号分隔'
+            default: ''
+            column: user_credit
+        maxPublishNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 可发信息数量
+            default: '0'
+            column: max_publish_num
+        maxDeliverNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '默认最大投递次数，付费不计算在内'
+            default: '0'
+            column: max_deliver_num
+        maxCommentNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 每天最大信息评论数
+            default: '0'
+            column: max_comment_num
+        maxRefreshNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 每天信息刷新数
+            default: '0'
+            column: max_refresh_num
+        maxEntrustRefreshNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '[待删除]每天委托刷新数'
+            default: '0'
+            column: max_entrust_refresh_num
+        maxMadeselNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 行业/资金定制个数
+            default: '0'
+            column: max_madesel_num
+        maxSendmsgNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 私信最大可发送量
+            default: '0'
+            column: max_sendmsg_num
+        maxFriendNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 名片交换最大商友数
+            default: '0'
+            column: max_friend_num
+        maxFollowNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '名片关注最大数'
+            default: '0'
+            column: max_follow_num
+        maxBusinesscardViewnum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '默认最大名片查看数,付费不计算在内'
+            default: '0'
+            column: max_businesscard_viewnum
+        isVipIdent:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '高级会员标识'
+            default: '0::smallint'
+            column: is_vip_ident
+        isVipHomepage:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 'VIP展厅'
+            default: '0::smallint'
+            column: is_vip_homepage
+        isDeliverTop:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否投递置顶
+            default: '0::smallint'
+            column: is_deliver_top
+        isPrivacySet:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否可用权限设置
+            default: '0::smallint'
+            column: is_privacy_set
+        isImport:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否已导入客户管理'
+            default: '0::smallint'
+            column: is_import
+        isOrder:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否在订购页面注册
+            default: '0::smallint'
+            column: is_order
+        isLimitBusinesscard:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_limit_businesscard
+        limitDatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 不是会员期限一个月交换名片
+            default: '0'
+            column: limit_datetime
+        fromId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1:后台注册'
+            default: '0::smallint'
+            column: from_id
+        isCredit:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否认证会员
+            default: '0::smallint'
+            column: is_credit
+        initial:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 初始化
+            default: '0::smallint'
+        initialSteptwo:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: initial_steptwo
+        isGuide:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_guide
+        fundsBody:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 您所属的资金主体
+            default: '0'
+            column: funds_body
+        infoPercent:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 信息完整度
+            default: '0::smallint'
+            column: info_percent
+        updated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 最后更新时间
+            default: '0'
+        companyAnonym:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '公司匿名'
+            column: company_anonym
+        iAreaName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+            column: i_area_name
+        lastFeedId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 户用最后的动态ID
+            default: '0'
+            column: last_feed_id
+        lastFeedTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 户用最后的动态时间
+            default: '0'
+            column: last_feed_time
+        sendEmailType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '发送email类型1:提醒 2:唤醒'
+            default: '0::smallint'
+            column: send_email_type
+        lastEmailTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 邮件提醒最后发送时间
+            default: '0'
+            column: last_email_time
+        allowUserLogo:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '允许设为会员头像1:是 2:否'
+            default: '0::smallint'
+            column: allow_user_logo
+        goodPercent:
+            type: decimal
+            nullable: false
+            precision: 6
+            scale: 2
+            comment: 好评率
+            default: '100.00'
+            column: good_percent
+        userQuality:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: user_quality
+        infoPercentSort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 信息完整度排名
+            default: '0'
+            column: info_percent_sort
+        setPersonPulse:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 人脉动态-推送设置
+            default: '0::smallint'
+            column: set_person_pulse
+        setMailRemind:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 收件提醒-推送设置
+            default: '0::smallint'
+            column: set_mail_remind
+    lifecycleCallbacks: {  }

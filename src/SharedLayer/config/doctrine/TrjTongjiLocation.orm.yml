@@ -1,0 +1,41 @@
+SharedModel\TrjTongjiLocation:
+    type: entity
+    repositoryClass: SharedModel\TrjTongjiLocationRepository
+    table: trj_tongji_location
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        homepageId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 'VIP展厅ID'
+            default: '0'
+            column: homepage_id
+        label:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            default: ''
+        date:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 日期
+            default: '0'
+        count:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

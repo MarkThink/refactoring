@@ -1,0 +1,122 @@
+SharedModel\TrjAsk:
+    type: entity
+    repositoryClass: SharedModel\TrjAskRepository
+    table: trj_ask
+    uniqueConstraints:
+        ak_user_id_trj_ask:
+            columns:
+                - user_id
+        trj_ask_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        cateId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 分类
+            default: '0'
+            column: cate_id
+        title:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '标题'
+        content:
+            type: string
+            nullable: false
+            length: 3000
+            fixed: false
+            comment: '内容'
+        labels:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: '关键字'
+        contentAdd:
+            type: string
+            nullable: false
+            length: 3000
+            fixed: false
+            comment: '问题补充'
+            default: ''
+            column: content_add
+        hitNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: hit_num
+        answerNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核通过回答数'
+            default: '0'
+            column: answer_num
+        allAnswerNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 所有回答数
+            default: '0'
+            column: all_answer_num
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        userUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+            column: user_username
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '审核状态'
+            default: '0::smallint'
+        shenheUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核人id'
+            column: shenhe_uid
+        shenheUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '审核人账号'
+            column: shenhe_username
+        isdel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否删除0正常 1:删除'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

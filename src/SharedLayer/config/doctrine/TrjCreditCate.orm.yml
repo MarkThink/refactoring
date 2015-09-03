@@ -1,0 +1,58 @@
+SharedModel\TrjCreditCate:
+    type: entity
+    repositoryClass: SharedModel\TrjCreditCateRepository
+    table: trj_credit_cate
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        typeName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 认证分类名称
+            default: ''
+            column: type_name
+        itemType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 分类的大类
+            default: '0'
+            column: item_type
+        userType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 用户分类（0所有1企业2政府）
+            default: '0::smallint'
+            column: user_type
+        type:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '认证代码'
+            default: ''
+        typeSort:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 排序
+            default: '0'
+            column: type_sort
+        desc:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 认证描述
+            default: ''
+    lifecycleCallbacks: {  }

@@ -1,0 +1,53 @@
+SharedModel\TrjUsersMessageSetting:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersMessageSettingRepository
+    table: trj_users_message_setting
+    uniqueConstraints:
+        ak_action_trj_users_message_setting:
+            columns:
+                - action
+                - type
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        action:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+        type:
+            type: string
+            nullable: false
+            length: 10
+            fixed: false
+            comment: ''
+        message:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: ''
+        updatetime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+        creattime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0使用  1禁用'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

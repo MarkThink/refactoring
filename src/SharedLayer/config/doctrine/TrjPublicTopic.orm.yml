@@ -1,0 +1,144 @@
+SharedModel\TrjPublicTopic:
+    type: entity
+    repositoryClass: SharedModel\TrjPublicTopicRepository
+    table: trj_public_topic
+    uniqueConstraints:
+        trj_public_topic_pk:
+            columns:
+                - tid
+    id:
+        tid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 专题id
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '标题'
+        seoTitle:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 'seo标题'
+            column: seo_title
+        seoKeywords:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: 'seo关键词'
+            column: seo_keywords
+        seoDescription:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: seo描述
+            column: seo_description
+        topBanner:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 顶部图片
+            column: top_banner
+        topBannerAid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 附件表编号
+            default: '0'
+            column: top_banner_aid
+        topBannerText:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 导语
+            column: top_banner_text
+        isTopShow:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否隐藏顶部  0:不隐藏 1:隐藏'
+            default: '0::smallint'
+            column: is_top_show
+        isTopBannerImage:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否隐藏顶部图片  0:不隐藏 1:隐藏'
+            default: '0::smallint'
+            column: is_top_banner_image
+        isTopBannerText:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否隐藏顶部导语  0:不隐藏 1:隐藏'
+            default: '0::smallint'
+            column: is_top_banner_text
+        isGoodZjxm:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否推送优质项目
+            default: '0::smallint'
+            column: is_good_zjxm
+        goodTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 推送时间
+            default: '0'
+            column: good_time
+        hitsNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 点击数
+            column: hits_num
+        viewNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 查看数
+            default: '0'
+            column: view_num
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+        updatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 更新时间
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发布人id
+            column: poster_id
+        posterName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 发布人用户名
+            column: poster_name
+        isImport:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: is_import
+    lifecycleCallbacks: {  }

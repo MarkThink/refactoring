@@ -1,0 +1,47 @@
+SharedModel\TrjTmpNewSite:
+    type: entity
+    repositoryClass: SharedModel\TrjTmpNewSiteRepository
+    table: trj_tmp_new_site
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        uid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户id
+            default: '0'
+        contactName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 用户姓名
+            default: ''
+            column: contact_name
+        mobile:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 用户手机
+            default: ''
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 报名时间
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ip
+            default: '0'
+    lifecycleCallbacks: {  }

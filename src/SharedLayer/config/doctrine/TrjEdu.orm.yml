@@ -1,0 +1,57 @@
+SharedModel\TrjEdu:
+    type: entity
+    repositoryClass: SharedModel\TrjEduRepository
+    table: trj_edu
+    uniqueConstraints:
+        trj_edu_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: ''
+            default: ''
+        article:
+            type: string
+            nullable: false
+            length: 5000
+            fixed: false
+            comment: '相关文章 json格式'
+        read:
+            type: string
+            nullable: false
+            length: 5000
+            fixed: false
+            comment: '延展阅读'
+        pic:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 图片
+            default: ''
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '审核状态'
+            default: '0::smallint'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

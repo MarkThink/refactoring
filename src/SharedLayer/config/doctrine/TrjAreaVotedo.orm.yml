@@ -1,0 +1,47 @@
+SharedModel\TrjAreaVotedo:
+    type: entity
+    repositoryClass: SharedModel\TrjAreaVotedoRepository
+    table: trj_area_votedo
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        cid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        result:
+            type: string
+            nullable: false
+            length: 2000
+            fixed: false
+            comment: ''
+            default: ''
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

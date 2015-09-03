@@ -1,0 +1,61 @@
+SharedModel\TrjUsersConsultant:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersConsultantRepository
+    table: trj_users_consultant
+    id:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            id: true
+            column: user_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        rankName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 专家-头衔
+            default: ''
+            column: rank_name
+        speciality:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 专家-专长
+            default: ''
+        intro:
+            type: string
+            nullable: false
+            length: 2000
+            fixed: false
+            comment: 专家-个人简介
+            default: ''
+        cateIds:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '分类多个,号隔开'
+            default: ''
+            column: cate_ids
+        answerNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 已回复数
+            default: '0'
+            column: answer_num
+        acceptNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被咨询
+            default: '0'
+            column: accept_num
+    lifecycleCallbacks: {  }

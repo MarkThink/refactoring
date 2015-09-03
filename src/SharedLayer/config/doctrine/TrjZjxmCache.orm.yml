@@ -1,0 +1,195 @@
+SharedModel\TrjZjxmCache:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmCacheRepository
+    table: trj_zjxm_cache
+    uniqueConstraints:
+        ak_id_trj_zjxm_cache:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        cat:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 分类名称
+            default: ''
+        area:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 所在地区
+            default: ''
+        industry:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 所属行业
+            default: ''
+        amount:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '资金-投资金额,政府招商-投资估算,资产交易-资产估价,项目融资-融资金额,投资理财-投资门槛'
+            default: ''
+        method:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '资金-投资方式,项目融资-融资方式'
+            default: ''
+        fundbody:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 资金-资金主体
+            default: ''
+        equityinversttype:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 资金-股权投资类型
+            default: ''
+        period:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '资金-投资阶段,项目融资-股权融资-项目阶段'
+            default: ''
+        investindustry:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 资金-投资行业
+            default: ''
+        investarea:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 资金-投资地区
+            default: ''
+        investproducttype:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 投资理财-产品类型
+            default: ''
+        investtimelimit:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 投资理财-投资期限
+            default: ''
+        fundway:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 政府招商-招商方式
+            default: ''
+        tradetype:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 资产交易-交易类别
+            default: ''
+        tradeway:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 资产交易-交易方式
+            default: ''
+        transferamount:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '资产交易-转让价格'
+            default: ''
+        accountedunit:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '项目融资-股权融资-资金方占股比例'
+            default: ''
+        exitminyear:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 项目融资-股权融资-最短退出年限
+            default: ''
+        exitway:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 项目融资-股权融资-投资退出方式
+            default: ''
+        canhighestinterest:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '项目融资-债权融资-可承担最高利息'
+            default: ''
+        fundtaketime:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '项目融资-债权融资-资金占用时长'
+            default: ''
+        riskcontrol:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 项目融资-债权融资-可提供风控
+            default: ''
+        ikeywords:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: '关键词'
+            default: ''
+        repaysource:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 项目融资-债权融资-还款来源
+            default: ''
+        matchdata:
+            type: string
+            nullable: false
+            length: 3000
+            fixed: false
+            comment: '匹配度字段缓存'
+            default: ''
+    lifecycleCallbacks: {  }

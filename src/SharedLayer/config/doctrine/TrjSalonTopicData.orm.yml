@@ -1,0 +1,64 @@
+SharedModel\TrjSalonTopicData:
+    type: entity
+    repositoryClass: SharedModel\TrjSalonTopicDataRepository
+    table: trj_salon_topic_data
+    uniqueConstraints:
+        ak_bkid_trj_salon_topic_data:
+            columns:
+                - bkid
+        ak_sid_trj_salon_topic_data:
+            columns:
+                - sid
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        sid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 沙龙专题id
+            default: '0'
+        bkid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 板块id
+            default: '0'
+        title:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: '标题'
+        des:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 描述
+        url:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: 链接
+        img:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: 图片地址
+        sort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 排序
+            default: '0'
+    lifecycleCallbacks: {  }

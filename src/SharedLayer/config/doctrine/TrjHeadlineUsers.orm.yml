@@ -1,0 +1,60 @@
+SharedModel\TrjHeadlineUsers:
+    type: entity
+    repositoryClass: SharedModel\TrjHeadlineUsersRepository
+    table: trj_headline_users
+    uniqueConstraints:
+        ak_user_id_trj_headline_users:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户id
+            default: '0'
+            column: user_id
+        selectMoney:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 项目金额
+            column: select_money
+        selectIndustry:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 项目行业
+            column: select_industry
+        selectProvince:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 项目所属地区
+            column: select_province
+        selectText:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 项目特色
+            column: select_text
+        addItemTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 填写项目时间
+            column: add_item_time
+    lifecycleCallbacks: {  }

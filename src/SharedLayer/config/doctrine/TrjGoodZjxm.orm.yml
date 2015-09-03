@@ -1,0 +1,97 @@
+SharedModel\TrjGoodZjxm:
+    type: entity
+    repositoryClass: SharedModel\TrjGoodZjxmRepository
+    table: trj_good_zjxm
+    uniqueConstraints:
+        trj_good_zjxm_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        url:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 项目url
+        uid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 项目所属用户ID
+        file:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        fileAid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 附件表编号
+            default: '0'
+            column: file_aid
+        fileYun:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否上传云'
+            default: '0::smallint'
+            column: file_yun
+        sort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0启用 1禁用'
+        content:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 备注
+        industryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 行业
+            default: '0'
+            column: industry_id
+        times:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        topicId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 推送专题id
+            column: topic_id
+        isNofollow:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否
+            default: '0::smallint'
+            column: is_nofollow
+    lifecycleCallbacks: {  }

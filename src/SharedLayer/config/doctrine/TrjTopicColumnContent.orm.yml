@@ -1,0 +1,67 @@
+SharedModel\TrjTopicColumnContent:
+    type: entity
+    repositoryClass: SharedModel\TrjTopicColumnContentRepository
+    table: trj_topic_column_content
+    uniqueConstraints:
+        ak_column_id_trj_topic_column_content:
+            columns:
+                - column_id
+        ak_topic_id_trj_topic_column_content:
+            columns:
+                - topic_id
+    id:
+        cid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        topicId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 专题id
+            default: '0'
+            column: topic_id
+        columnId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '栏目id'
+            default: '0'
+            column: column_id
+        ctitle:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '内容标题'
+        showCtitle:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否显示标题 1:显示 2:不显示'
+            column: show_ctitle
+        topicContent:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '内容'
+            column: topic_content
+        orders:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 排序
+            default: '0'
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

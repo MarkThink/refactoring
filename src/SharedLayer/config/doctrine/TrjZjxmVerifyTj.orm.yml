@@ -1,0 +1,75 @@
+SharedModel\TrjZjxmVerifyTj:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmVerifyTjRepository
+    table: trj_zjxm_verify_tj
+    uniqueConstraints:
+        ak_created_trj_zjxm_verify_tj:
+            columns:
+                - created
+        trj_zjxm_verify_tj_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 统计时间
+            default: '0'
+        createId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: create_id
+        zjxmId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: id
+            default: '0'
+            column: zjxm_id
+        zjxmType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 1项目2资金
+            default: '0::smallint'
+            column: zjxm_type
+        verifyState:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 1初审2复审
+            default: '0::smallint'
+            column: verify_state
+        source:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 1前台2后台
+            default: '0::smallint'
+        publisherType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '发布者类型1前台用户2员工代发布'
+            default: '1::smallint'
+            column: publisher_type
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '审核结果'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

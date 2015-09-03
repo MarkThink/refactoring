@@ -1,0 +1,41 @@
+SharedModel\TrjVoteResult:
+    type: entity
+    repositoryClass: SharedModel\TrjVoteResultRepository
+    table: trj_vote_result
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        voteId:
+            type: string
+            nullable: false
+            length: 10
+            fixed: false
+            comment: ''
+            default: ''
+            column: vote_id
+        content:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

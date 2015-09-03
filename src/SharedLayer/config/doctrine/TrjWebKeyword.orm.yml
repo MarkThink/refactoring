@@ -1,0 +1,132 @@
+SharedModel\TrjWebKeyword:
+    type: entity
+    repositoryClass: SharedModel\TrjWebKeywordRepository
+    table: trj_web_keyword
+    uniqueConstraints:
+        ak_keyname_trj_web_keyword:
+            columns:
+                - keyname
+        ak_status_trj_web_keyword:
+            columns:
+                - status
+        ak_info_type_trj_web_keyword:
+            columns:
+                - info_type
+    id:
+        kid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        keyname:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '关键词名称'
+        firstPy:
+            type: string
+            nullable: false
+            length: 1
+            fixed: true
+            comment: 第一个汉字拼音首字母
+            column: first_py
+        keywords:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: '关键词分词'
+        seoTitle:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 'seo标题'
+            column: seo_title
+        seoKeywords:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 'seo关键词'
+            column: seo_keywords
+        seoDescription:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: seo描述
+            column: seo_description
+        infoType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '类型1:资金 2:项目'
+            default: '0::smallint'
+            column: info_type
+        matchNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '匹配数'
+            column: match_num
+        searchNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 搜索数
+            column: search_num
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '状态1:使用 2:停用'
+            default: '1::smallint'
+        isexe:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否批量处理
+            default: '0::smallint'
+        addUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加人uid'
+            column: add_uid
+        addUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '添加人账号名'
+            column: add_username
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+        updatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 更新时间
+        isdel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '删除标记0:正常 1:已删除'
+            default: '0::smallint'
+        infoTablename:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '关联信息表'
+            column: info_tablename
+    lifecycleCallbacks: {  }

@@ -1,0 +1,79 @@
+SharedModel\TrjZjxmListDetail:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmListDetailRepository
+    table: trj_zjxm_list_detail
+    id:
+        iid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        iIntroduce:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+            column: i_introduce
+        iOtherRemark:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+            column: i_other_remark
+        iKeywords:
+            type: string
+            nullable: true
+            length: 500
+            fixed: false
+            comment: '关键词'
+            column: i_keywords
+        iOverview:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: 概述
+            column: i_overview
+        iData:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: 详细数据
+            column: i_data
+        iAtt:
+            type: string
+            nullable: true
+            length: 500
+            fixed: false
+            comment: 附件
+            column: i_att
+        iPic:
+            type: string
+            nullable: true
+            length: 500
+            fixed: false
+            comment: 图片
+            column: i_pic
+        searchCtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 搜索字段更新时间
+            default: '0'
+            column: search_ctime
+        searchKey:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: 搜索字段
+            column: search_key
+    lifecycleCallbacks: {  }

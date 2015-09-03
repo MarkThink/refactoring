@@ -1,0 +1,75 @@
+SharedModel\TrjWorkNote:
+    type: entity
+    repositoryClass: SharedModel\TrjWorkNoteRepository
+    table: trj_work_note
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        department:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '部门1:技术2:推广3:运营'
+        noteDate:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 日期
+            column: note_date
+        weekName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '星期几'
+            column: week_name
+        holidayName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 节日名
+            column: holiday_name
+        noteType:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 类别
+            column: note_type
+        noteContent:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '日志内容'
+            column: note_content
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '添加时间'
+        updatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 修改时间
+        uid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户id
+        username:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 用户账户名
+    lifecycleCallbacks: {  }

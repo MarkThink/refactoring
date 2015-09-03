@@ -1,0 +1,61 @@
+SharedModel\TrjFormVer:
+    type: entity
+    repositoryClass: SharedModel\TrjFormVerRepository
+    table: trj_form_ver
+    uniqueConstraints:
+        trj_form_ver_pk:
+            columns:
+                - ver_id
+    id:
+        verId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: ver_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        modId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 所属品类
+            default: '0'
+            column: mod_id
+        formFieldset:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 表单最终生成的结构
+            column: form_fieldset
+        formVer:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 表单版本号
+            default: '0'
+            column: form_ver
+        verStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 版本状态
+            default: '0::smallint'
+            column: ver_status
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        zjxmCatId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 资金项目分类
+            default: '0'
+            column: zjxm_cat_id
+    lifecycleCallbacks: {  }

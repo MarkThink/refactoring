@@ -1,0 +1,44 @@
+SharedModel\TrjStatDay:
+    type: entity
+    repositoryClass: SharedModel\TrjStatDayRepository
+    table: trj_stat_day
+    uniqueConstraints:
+        ak_stat_day_trj_stat_day:
+            columns:
+                - stat_day
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        statDay:
+            type: date
+            nullable: false
+            comment: ''
+            column: stat_day
+        nums:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        validNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: valid_num
+        totalNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: total_num
+    lifecycleCallbacks: {  }

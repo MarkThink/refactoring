@@ -1,0 +1,93 @@
+SharedModel\TrjUsersEggs:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersEggsRepository
+    table: trj_users_eggs
+    uniqueConstraints:
+        ak_username_trj_users_eggs:
+            columns:
+                - username
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userType:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: '1项目,2:资金,3其它'
+            column: user_type
+        type:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: 1企业，2政府，3个人
+        email:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: 用户邮箱
+        username:
+            type: string
+            nullable: true
+            length: 64
+            fixed: false
+            comment: 用户账号
+        contactName:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: 用户姓名
+            column: contact_name
+        phone:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: 固定电话
+        mobile:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: '手机号码'
+        ip:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: IP地址
+        isEggs:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: 是否已经参与活动
+            column: is_eggs
+        addTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 创建时间
+            column: add_time
+        eggType:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: '1微信砸金蛋'
+            default: '0::smallint'
+            column: egg_type
+        userId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 用户id
+            default: '0'
+            column: user_id
+    lifecycleCallbacks: {  }

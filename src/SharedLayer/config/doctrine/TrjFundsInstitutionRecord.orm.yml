@@ -1,0 +1,55 @@
+SharedModel\TrjFundsInstitutionRecord:
+    type: entity
+    repositoryClass: SharedModel\TrjFundsInstitutionRecordRepository
+    table: trj_funds_institution_record
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        institutId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: institut_id
+        company:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+            default: ''
+        amount:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+        industry:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 涉及行业
+            default: ''
+        dtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        weight:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 权重
+            default: '0'
+    lifecycleCallbacks: {  }

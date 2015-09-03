@@ -1,0 +1,69 @@
+SharedModel\TrjUsersCollect:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersCollectRepository
+    table: trj_users_collect
+    uniqueConstraints:
+        ak_homepage_id_trj_users_collect:
+            columns:
+                - homepage_id
+        ak_user_id_trj_users_collect:
+            columns:
+                - type
+                - user_id
+                - item_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        itemId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 收藏对像
+            default: '0'
+            column: item_id
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '1:资讯,2:项目,3：展厅,4展厅动态,5智库,6活动'
+            default: '0::smallint'
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        homepageId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被收藏对像的所属账户
+            default: '0'
+            column: homepage_id
+        flag:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否已查看
+            default: '0::smallint'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

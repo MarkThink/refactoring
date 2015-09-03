@@ -1,0 +1,36 @@
+SharedModel\TrjSetting:
+    type: entity
+    repositoryClass: SharedModel\TrjSettingRepository
+    table: trj_setting
+    uniqueConstraints:
+        ak_type_trj_setting:
+            columns:
+                - type
+    id:
+        name:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '配置名称'
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        type:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '配置代号'
+        content:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '配置内容'
+        created:
+            type: date
+            nullable: false
+            comment: ''
+    lifecycleCallbacks: {  }

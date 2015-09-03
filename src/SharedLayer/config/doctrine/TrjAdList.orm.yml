@@ -1,0 +1,124 @@
+SharedModel\TrjAdList:
+    type: entity
+    repositoryClass: SharedModel\TrjAdListRepository
+    table: trj_ad_list
+    uniqueConstraints:
+        ak_enabled_trj_ad_list:
+            columns:
+                - enabled
+        ak_position_id_trj_ad_list:
+            columns:
+                - position_id
+    id:
+        adId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: ad_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        positionId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 广告位置
+            default: '0'
+            column: position_id
+        mediaType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 媒介类型
+            default: '0::smallint'
+            column: media_type
+        adName:
+            type: string
+            nullable: false
+            length: 60
+            fixed: false
+            comment: 点击此处查看提示信息广告名称
+            default: ''
+            column: ad_name
+        adLink:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 广告链接
+            default: ''
+            column: ad_link
+        adCode:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '广告代码'
+            column: ad_code
+        adSort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: ad_sort
+        startTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 开始日期
+            default: '0'
+            column: start_time
+        endTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 结束日期
+            default: '0'
+            column: end_time
+        linkMan:
+            type: string
+            nullable: false
+            length: 60
+            fixed: false
+            comment: 广告联系人
+            default: ''
+            column: link_man
+        linkEmail:
+            type: string
+            nullable: false
+            length: 60
+            fixed: false
+            comment: 广告联系人邮箱
+            default: ''
+            column: link_email
+        linkPhone:
+            type: string
+            nullable: false
+            length: 60
+            fixed: false
+            comment: 广告联系人手机
+            default: ''
+            column: link_phone
+        clickNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 点击量
+            default: '0'
+            column: click_num
+        enabled:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否启用
+            default: '1::smallint'
+        speed:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,64 @@
+SharedModel\TrjHomepageModuel:
+    type: entity
+    repositoryClass: SharedModel\TrjHomepageModuelRepository
+    table: trj_homepage_moduel
+    uniqueConstraints:
+        trj_homepage_moduel_pk:
+            columns:
+                - id
+        ak_user_id_trj_homepage_moduel:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        moduelId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: moduel_id
+        moduelName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 名称
+            column: moduel_name
+        moduelFlag:
+            type: string
+            nullable: false
+            length: 10
+            fixed: false
+            comment: ''
+            column: moduel_flag
+        moduelType:
+            type: string
+            nullable: false
+            length: 10
+            fixed: false
+            comment: ''
+            column: moduel_type
+        moduelContent:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: moduel_content
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+    lifecycleCallbacks: {  }

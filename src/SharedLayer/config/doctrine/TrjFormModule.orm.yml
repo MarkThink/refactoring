@@ -1,0 +1,77 @@
+SharedModel\TrjFormModule:
+    type: entity
+    repositoryClass: SharedModel\TrjFormModuleRepository
+    table: trj_form_module
+    uniqueConstraints:
+        trj_form_module_pk:
+            columns:
+                - mod_id
+    id:
+        modId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: mod_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        modName:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 模块名称
+            default: ''
+            column: mod_name
+        modBaseCatId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 项目资金分类
+            default: '0'
+            column: mod_base_cat_id
+        modIsBase:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否级别性模块
+            default: '0::smallint'
+            column: mod_is_base
+        modModules:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: ''
+            default: ''
+            column: mod_modules
+        modStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: mod_status
+        modDesc:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 模块注释
+            default: ''
+            column: mod_desc
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        updated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

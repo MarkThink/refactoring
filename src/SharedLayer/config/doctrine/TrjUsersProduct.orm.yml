@@ -1,0 +1,324 @@
+SharedModel\TrjUsersProduct:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersProductRepository
+    table: trj_users_product
+    uniqueConstraints:
+        ak_order_id_trj_users_product:
+            columns:
+                - order_id
+                - order_id_n
+                - user_id
+        trj_users_product_pk:
+            columns:
+                - rid
+        ak_user_id_trj_users_product:
+            columns:
+                - user_id
+    id:
+        rid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        productId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 产品编号
+            default: '0'
+            column: product_id
+        productName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 产品名称
+            default: ''
+            column: product_name
+        productType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 产品类型
+            default: '0::smallint'
+            column: product_type
+        orderId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 订单表id
+            default: '0'
+            column: order_id
+        orderIdN:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: order_id_n
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户id
+            default: '0'
+            column: user_id
+        startTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 开始时间
+            default: '0'
+            column: start_time
+        endTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 结束时间
+            default: '0'
+            column: end_time
+        a100:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 信息发布
+            default: '0'
+        a101:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 申请投递条
+            default: '0'
+        a101use:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 已用申请投递
+            default: '0'
+        a102:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 浏览记录查看
+            default: '0::smallint'
+        a103:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '信息优先展示'
+            default: '0::smallint'
+        a104:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 信息精编展示推送
+            default: '0::smallint'
+        a111:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 信息精编推送
+            default: '0::smallint'
+        a112:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 投融特刊
+            default: '0::smallint'
+        a105:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 信息精选
+            default: '0::smallint'
+        a106:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '信息评论 条/天'
+            default: '0'
+        a107:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 信息投递置顶
+            default: '0::smallint'
+        a108:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 委托投递
+            default: '0::smallint'
+        a109:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '信息刷新 次/天'
+            default: '0'
+        a110:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '委托刷新 次/天'
+            default: '0'
+        a110use:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 刷新使用次数
+            default: '0'
+        a113:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 权限设置
+            default: '0::smallint'
+        a114:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 委托刷新周期
+            default: '0'
+        a115:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '无限查看名片'
+            default: '0::smallint'
+        a200:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '行业/资金定制 个'
+            default: '0'
+        a201:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 联系方式查看条数
+            default: '0'
+        a201use:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 已用联系方式查看条数
+            default: '0'
+        a202:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 私信发送条数
+            default: '0'
+        a202use:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 已用私信发送条数
+            default: '0'
+        a203:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '名片优先展示'
+            default: '0::smallint'
+        a204:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '名片关注张数'
+            default: '0'
+        a205:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '名片交换张数'
+            default: '0'
+        a205use:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 已使用
+            default: '0'
+        a300:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 'VIP展厅'
+            default: '0::smallint'
+        a301:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '高级会员标识'
+            default: '0::smallint'
+        a302:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 专题制作
+            default: '0::smallint'
+        a303:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 商业计划书编写
+            default: '0::smallint'
+        a304:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+        a400:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 邮件通知
+            default: '0::smallint'
+        a401:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 邮件信息推送
+            default: '0::smallint'
+        a402:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 短信通知
+            default: '0'
+        a500:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 固定广告位
+            default: '0::smallint'
+        a501:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 信息列表陈列
+            default: '0::smallint'
+        a502:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '投融展播专栏 条/周'
+            default: '0::smallint'
+        a503:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '投融广播专栏 天/条'
+            default: '0::smallint'
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 1有效
+            default: '1::smallint'
+    lifecycleCallbacks: {  }

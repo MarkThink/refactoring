@@ -1,0 +1,219 @@
+SharedModel\TrjZjxmInvite:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmInviteRepository
+    table: trj_zjxm_invite
+    uniqueConstraints:
+        ak_invite_user_id_trj_zjxm_invite:
+            columns:
+                - invite_user_id
+        ak_accept_user_id_trj_zjxm_invite:
+            columns:
+                - accept_user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        serialNumber:
+            type: string
+            nullable: false
+            length: 12
+            fixed: false
+            comment: 投递或项目编号
+            default: '0'
+            column: serial_number
+        acceptUserId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 接受方用户id
+            default: '0'
+            column: accept_user_id
+        acceptUserName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 接受方
+            column: accept_user_name
+        acceptFromType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '来源:1用户,2项目信息,3资金信息'
+            default: '0::smallint'
+            column: accept_from_type
+        acceptFromTitle:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 来源对象的名称
+            column: accept_from_title
+        acceptFromId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 来源对象的id
+            default: '0'
+            column: accept_from_id
+        acceptTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 同意接受时间
+            default: '0'
+            column: accept_time
+        acceptDel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '接受方删除标志'
+            default: '0::smallint'
+            column: accept_del
+        inviteType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0:邀约,1:投递'
+            default: '0::smallint'
+            column: invite_type
+        inviteUserId:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 发起人id
+            column: invite_user_id
+        inviteUserName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 发起人
+            column: invite_user_name
+        inviteUserType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '来源用户类型,trj_users的user_type'
+            default: '0::smallint'
+            column: invite_user_type
+        inviteHasView:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否直接查看了联系方式
+            default: '0::smallint'
+            column: invite_has_view
+        inviteStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0等待约谈,1约谈成功,2约谈中,3拒绝约谈'
+            default: '0::smallint'
+            column: invite_status
+        inviteId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发起的项目id
+            default: '0'
+            column: invite_id
+        inviteTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发起约谈时间
+            default: '0'
+            column: invite_time
+        inviteTitle:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '发起投递标题'
+            default: ''
+            column: invite_title
+        inviteContent:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: '发起约谈内容'
+            default: ''
+            column: invite_content
+        inviteAttach:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 发起附件
+            default: ''
+            column: invite_attach
+        inviteDel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '发起方删除标志'
+            default: '0::smallint'
+            column: invite_del
+        handleTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 处理时间
+            default: '0'
+            column: handle_time
+        evaluate:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0:未评价,1满意,2不满意'
+        evaluateTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 评价时间
+            default: '0'
+            column: evaluate_time
+        evaluateNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 评价修改次数
+            default: '0::smallint'
+            column: evaluate_num
+        evaluateContent:
+            type: string
+            nullable: true
+            length: 500
+            fixed: false
+            comment: '评价内容'
+            column: evaluate_content
+        rejectReason:
+            type: string
+            nullable: true
+            length: 500
+            fixed: false
+            comment: '拒绝原因'
+            column: reject_reason
+        isView:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否已查看 0未查看 1已查看'
+            default: '0::smallint'
+            column: is_view
+        verifyStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '审核状态,0:待审,1审核成功,2审核不通过'
+            column: verify_status
+    lifecycleCallbacks: {  }

@@ -1,0 +1,189 @@
+SharedModel\TrjUsersVerify:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersVerifyRepository
+    table: trj_users_verify
+    id:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户ID
+            id: true
+            column: user_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        pics:
+            type: string
+            nullable: true
+            length: 500
+            fixed: false
+            comment: '上传图片列表'
+        userLogo:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: 用户头像
+            column: user_logo
+        isUserLogo:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '是否处理 0 未处理 1已处理'
+            column: is_user_logo
+        userLogoRid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: user_logo_rid
+        userLogoResult:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: '用户头像审核结果'
+            column: user_logo_result
+        userName:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            comment: 用户姓名
+            default: ''
+            column: user_name
+        isUserName:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            comment: '是否处理 0 未处理 1已处理'
+            default: ''
+            column: is_user_name
+        userNameRid:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            comment: ''
+            default: ''
+            column: user_name_rid
+        userNameResult:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            comment: ''
+            default: ''
+            column: user_name_result
+        company:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: '公司名称'
+        isCompany:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: is_company
+        companyRid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: company_rid
+        companyResult:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: '公司名称审核结果'
+            column: company_result
+        introduce:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: '公司简介'
+        isIntroduce:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: is_introduce
+        introduceRid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: introduce_rid
+        introduceResult:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: '公司简介审核结果'
+            column: introduce_result
+        personalIntroduce:
+            type: string
+            nullable: true
+            length: 500
+            fixed: false
+            comment: 个人简介
+            default: ''
+            column: personal_introduce
+        isPersonalIntroduce:
+            type: smallint
+            nullable: true
+            unsigned: false
+            comment: '是否审核'
+            column: is_personal_introduce
+        personalIntroduceRid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: personal_introduce_rid
+        personalIntroduceResult:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: '审核结果'
+            column: personal_introduce_result
+        submitTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: 提交时间
+            column: submit_time
+        verifyTime:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '审核时间'
+            column: verify_time
+        verifyUserid:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '审核人'
+            column: verify_userid
+        verifyUsername:
+            type: string
+            nullable: true
+            length: 30
+            fixed: false
+            comment: '审核人名称'
+            column: verify_username
+        isFullVerify:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: '全部审核通过'
+            default: '0'
+            column: is_full_verify
+    lifecycleCallbacks: {  }

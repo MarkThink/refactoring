@@ -1,0 +1,52 @@
+SharedModel\TrjTravelRaffleResult:
+    type: entity
+    repositoryClass: SharedModel\TrjTravelRaffleResultRepository
+    table: trj_travel_raffle_result
+    uniqueConstraints:
+        ak_user_type_trj_travel_raffle_result:
+            columns:
+                - user_type
+        trj_travel_raffle_result_pk:
+            columns:
+                - id
+        ak_raffle_number_trj_travel_raffle_result:
+            columns:
+                - raffle_number
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 用户id
+            default: '0'
+            column: user_id
+        userType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '抽奖用户类型：1,pc端;2,wap端;3,老用户'
+            default: '0::smallint'
+            column: user_type
+        raffleNumber:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 抽奖抽到的数字，各类用户都从1开始
+            default: '0'
+            column: raffle_number
+        raffleTime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: raffle_time
+    lifecycleCallbacks: {  }

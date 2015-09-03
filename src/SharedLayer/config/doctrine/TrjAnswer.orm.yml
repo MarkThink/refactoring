@@ -1,0 +1,89 @@
+SharedModel\TrjAnswer:
+    type: entity
+    repositoryClass: SharedModel\TrjAnswerRepository
+    table: trj_answer
+    uniqueConstraints:
+        ak_ask_id_trj_answer:
+            columns:
+                - ask_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        askId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被评论对象
+            default: '0'
+            column: ask_id
+        content:
+            type: string
+            nullable: false
+            length: 3000
+            fixed: false
+            comment: 回答
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '评论者'
+            default: '0'
+            column: user_id
+        userUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '评论者'
+            column: user_username
+        specialist:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否专家回复1:是 0:否'
+            default: '0::smallint'
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 发布时间
+            default: '0'
+        ip:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ip
+            default: '0'
+        shenhe:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '审核状态0:待审核 1:审核通过 2:审核不通过'
+            default: '0::smallint'
+        shenheUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '审核人ID'
+            column: shenhe_uid
+        shenheUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '审核人账号'
+            column: shenhe_username
+        isdel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '删除标记0:正常 1:删除'
+            default: '0::smallint'
+    lifecycleCallbacks: {  }

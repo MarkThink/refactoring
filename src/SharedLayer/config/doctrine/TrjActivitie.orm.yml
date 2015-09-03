@@ -1,0 +1,265 @@
+SharedModel\TrjActivitie:
+    type: entity
+    repositoryClass: SharedModel\TrjActivitieRepository
+    table: trj_activitie
+    uniqueConstraints:
+        ak_activitie_type_trj_activitie:
+            columns:
+                - activitie_type
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: '标题'
+        activitieType:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 活动类型
+            default: '0'
+            column: activitie_type
+        pageType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 页面类型
+            default: '0::smallint'
+            column: page_type
+        provinceId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 省
+            default: '0'
+            column: province_id
+        cityId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 市
+            default: '0'
+            column: city_id
+        areaId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 区
+            default: '0'
+            column: area_id
+        address:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: 详细地址
+        bStart:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 报名开始
+            default: '0'
+            column: b_start
+        bEnd:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 报名结束
+            default: '0'
+            column: b_end
+        aStart:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 活动开始
+            default: '0'
+            column: a_start
+        aEnd:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 活动结束
+            default: '0'
+            column: a_end
+        isOpen:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否开放
+            default: '1::smallint'
+            column: is_open
+        isDjs:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否倒计时
+            default: '1::smallint'
+            column: is_djs
+        isBaoming:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否开通报名
+            default: '1::smallint'
+            column: is_baoming
+        isReview:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否回顾
+            default: '0::smallint'
+            column: is_review
+        listImg:
+            type: string
+            nullable: false
+            length: 256
+            fixed: false
+            comment: 缩略图片
+            column: list_img
+        cost:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '参加费用'
+            default: '0'
+        iImg:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: '上传图片'
+            column: i_img
+        iAtt:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: '上传附件'
+            column: i_att
+        iAttName:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 附件名称
+            column: i_att_name
+        contactName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 联系人
+            column: contact_name
+        contactMobile:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '电话号码'
+            column: contact_mobile
+        contactFax:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '传真'
+            column: contact_fax
+        contactEmail:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 邮件
+            column: contact_email
+        tags:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: '标签'
+        content:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: '详情'
+        createId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 创建人
+            default: '0'
+            column: create_id
+        createName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 创建人名称
+            column: create_name
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        baomingNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 报名数
+            default: '0'
+            column: baoming_num
+        clickNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 点击量
+            default: '0'
+            column: click_num
+        goodNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 赞
+            default: '0'
+            column: good_num
+        isDel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_del
+        isPage:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否推首
+            default: '0::smallint'
+            column: is_page
+        trjFlag:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '投融界讯标志'
+            default: '0::smallint'
+            column: trj_flag
+        isTouch:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 推到touch
+            default: '0::smallint'
+            column: is_touch
+    lifecycleCallbacks: {  }

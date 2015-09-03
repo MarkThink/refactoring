@@ -1,0 +1,47 @@
+SharedModel\TrjOrgColumn:
+    type: entity
+    repositoryClass: SharedModel\TrjOrgColumnRepository
+    table: trj_org_column
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        oId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: o_id
+        columnTitle:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: column_title
+        columnContent:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: column_content
+        columnSort:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '100'
+            column: column_sort
+        isdel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+    lifecycleCallbacks: {  }

@@ -1,0 +1,38 @@
+SharedModel\TrjAutocomplete:
+    type: entity
+    repositoryClass: SharedModel\TrjAutocompleteRepository
+    table: trj_autocomplete
+    uniqueConstraints:
+        ak_keyword_trj_autocomplete:
+            columns:
+                - keyword
+                - type
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        keyword:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: '关键字'
+        type:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '类型：1,职位'
+            default: '0::smallint'
+        count:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 次数
+            default: '0'
+    lifecycleCallbacks: {  }

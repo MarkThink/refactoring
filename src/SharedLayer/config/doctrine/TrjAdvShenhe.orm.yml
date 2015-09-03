@@ -1,0 +1,192 @@
+SharedModel\TrjAdvShenhe:
+    type: entity
+    repositoryClass: SharedModel\TrjAdvShenheRepository
+    table: trj_adv_shenhe
+    id:
+        sid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 广告申请表主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        createId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 提交人id
+            default: '0'
+            column: create_id
+        createName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 提交人名称
+            column: create_name
+        createTruename:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 创建人姓名
+            column: create_truename
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 提交时间
+            default: '0'
+        number:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 编号
+            default: '0'
+        pid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 广告页
+            default: '0'
+        qid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 广告区域
+            default: '0'
+        aid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '关联广告位aid'
+            default: '0'
+        advType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '广告形式,1:图片 2:文字'
+            default: '0::smallint'
+            column: adv_type
+        adSdate:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 广告开始时间
+            default: '0'
+            column: ad_sdate
+        adEdate:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 广告结束时间
+            default: '0'
+            column: ad_edate
+        adDaynum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 广告天数
+            default: '0'
+            column: ad_daynum
+        orderPrice:
+            type: decimal
+            nullable: false
+            precision: 10
+            scale: 2
+            comment: 订单金额
+            column: order_price
+        orderType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '订单类型1:购买 2:赠送'
+            default: '0::smallint'
+            column: order_type
+        adSource:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 广告来源1网站2销售3合作4外部订单
+            default: '0::smallint'
+            column: ad_source
+        adTitle:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '广告标题'
+            column: ad_title
+        adDes:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: '广告内容'
+            column: ad_des
+        adAsk:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 广告要求
+            column: ad_ask
+        adUrl:
+            type: string
+            nullable: false
+            length: 300
+            fixed: false
+            comment: 广告链接
+            column: ad_url
+        adAtt:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 广告附件
+            column: ad_att
+        minfoCompany:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 客户名称
+            column: minfo_company
+        minfoName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 联系人
+            column: minfo_name
+        minfoMobile:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: '联系人手机号码'
+            column: minfo_mobile
+        adImages:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 广告效果图
+            column: ad_images
+        fromType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '申请来源1:内部系统 2:外部订单'
+            default: '1::smallint'
+            column: from_type
+        fromAdid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '关联广告表adid'
+            default: '0'
+            column: from_adid
+    lifecycleCallbacks: {  }

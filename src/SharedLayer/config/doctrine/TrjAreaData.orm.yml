@@ -1,0 +1,70 @@
+SharedModel\TrjAreaData:
+    type: entity
+    repositoryClass: SharedModel\TrjAreaDataRepository
+    table: trj_area_data
+    uniqueConstraints:
+        trj_area_data_pk:
+            columns:
+                - id
+        ak_cid_trj_area_data:
+            columns:
+                - cid
+        ak_menus_trj_area_data:
+            columns:
+                - menus
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        cid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 城市ID
+            default: '0'
+        menus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '展厅菜单栏目'
+            default: '0::smallint'
+        type:
+            type: string
+            nullable: false
+            length: 16
+            fixed: false
+            comment: ''
+            default: ''
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        content:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        username:
+            type: string
+            nullable: false
+            length: 16
+            fixed: false
+            comment: ''
+            default: ''
+    lifecycleCallbacks: {  }

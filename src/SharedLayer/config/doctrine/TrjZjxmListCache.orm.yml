@@ -1,0 +1,167 @@
+SharedModel\TrjZjxmListCache:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmListCacheRepository
+    table: trj_zjxm_list_cache
+    uniqueConstraints:
+        ak_user_id_trj_zjxm_list_cache:
+            columns:
+                - user_id
+        ak_cat_id_trj_zjxm_list_cache:
+            columns:
+                - cat_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '标题'
+            default: ''
+        catPid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 顶级分类
+            default: '0'
+            column: cat_pid
+        catId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 分类id
+            default: '0'
+            column: cat_id
+        provinceId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 所在区域（省id）
+            default: '0'
+            column: province_id
+        cityId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 所在区域（市id）
+            default: '0'
+            column: city_id
+        industryId:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '公用-所属行业'
+            default: '0'
+            column: industry_id
+        amountIntervalMin:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: 最小项目融资/转让金额/投资金额
+            default: '0.0000'
+            column: amount_interval_min
+        amountIntervalMax:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: 最小项目融资/转让金额/投资金额
+            default: '0.0000'
+            column: amount_interval_max
+        amount:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: 项目总投金额
+            default: '0.0000'
+        shortOverview:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 短简介
+            default: ''
+            column: short_overview
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 前台用户id
+            default: '0'
+            column: user_id
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '审核状态,0-等待发布,1-已发布,2-等待审核,3-审核未通过'
+            default: '0::smallint'
+        tzIndustry:
+            type: string
+            nullable: true
+            length: 256
+            fixed: false
+            comment: '投资行业,单个也需以，号分割'
+            default: ''
+            column: tz_industry
+        tzArea:
+            type: string
+            nullable: true
+            length: 256
+            fixed: false
+            comment: '投资地区,规则同上'
+            default: ''
+            column: tz_area
+        clickNum:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: click_num
+        xmzcAssass:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: ''
+            default: '0.0000'
+            column: xmzc_assass
+        transferPrice:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            comment: ''
+            default: '0.0000'
+            column: transfer_price
+        xmlcTzmk:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: xmlc_tzmk
+        fundsBody:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: funds_body
+        iOverview:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: i_overview
+    lifecycleCallbacks: {  }

@@ -1,0 +1,27 @@
+SharedModel\TrjBusinessPlanKeyword:
+    type: entity
+    repositoryClass: SharedModel\TrjBusinessPlanKeywordRepository
+    table: trj_business_plan_keyword
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: 名称
+        url:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: 网址
+    lifecycleCallbacks: {  }

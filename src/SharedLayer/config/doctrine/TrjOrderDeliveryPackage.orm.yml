@@ -1,0 +1,75 @@
+SharedModel\TrjOrderDeliveryPackage:
+    type: entity
+    repositoryClass: SharedModel\TrjOrderDeliveryPackageRepository
+    table: trj_order_delivery_package
+    uniqueConstraints:
+        ak_user_id_trj_order_delivery_package:
+            columns:
+                - user_id
+        ak_order_id_trj_order_delivery_package:
+            columns:
+                - order_id
+    id:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            id: true
+            column: user_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        orderId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: order_id
+        productName:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: product_name
+        productPrice:
+            type: decimal
+            nullable: false
+            precision: 10
+            scale: 2
+            comment: '套餐价格'
+            default: '0.00'
+            column: product_price
+        productUnit:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 套餐里的投递条数
+            default: '0'
+            column: product_unit
+        productNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 购买套餐数量
+            default: '0'
+            column: product_num
+        productId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 套餐的产品编号
+            default: '0'
+            column: product_id
+        totalAmount:
+            type: decimal
+            nullable: false
+            precision: 10
+            scale: 2
+            comment: 总金额
+            default: '0.00'
+            column: total_amount
+    lifecycleCallbacks: {  }

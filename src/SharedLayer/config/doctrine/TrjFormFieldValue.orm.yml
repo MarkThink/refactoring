@@ -1,0 +1,83 @@
+SharedModel\TrjFormFieldValue:
+    type: entity
+    repositoryClass: SharedModel\TrjFormFieldValueRepository
+    table: trj_form_field_value
+    uniqueConstraints:
+        ak_field_id_trj_form_field_value:
+            columns:
+                - field_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        attrId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 属性值id
+            default: '0'
+            column: attr_id
+        fieldId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '属性id 对应 表单字段结构表 的 所属id'
+            default: '0'
+            column: field_id
+        fieldValue:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: '属性包含的属性值'
+            default: ''
+            column: field_value
+        fieldValueSort:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 排序
+            default: '1'
+            column: field_value_sort
+        fieldValueExtra:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '其他'
+            default: '0::smallint'
+            column: field_value_extra
+        haveRelative:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '属性值是否有关联属性'
+            default: '0::smallint'
+            column: have_relative
+        fieldValueBelong:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 属性值所属。用于多级
+            default: '0'
+            column: field_value_belong
+        formCategoryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '关联表单'
+            default: '0'
+            column: form_category_id
+        fieldValueUnique:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 'checkbox唯一，其他取消选中'
+            default: '0::smallint'
+            column: field_value_unique
+    lifecycleCallbacks: {  }

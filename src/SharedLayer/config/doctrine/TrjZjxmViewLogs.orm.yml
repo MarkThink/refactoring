@@ -1,0 +1,112 @@
+SharedModel\TrjZjxmViewLogs:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmViewLogsRepository
+    table: trj_zjxm_view_logs
+    uniqueConstraints:
+        ak_send_uid_trj_zjxm_view_logs:
+            columns:
+                - send_uid
+        ak_unique_id_trj_zjxm_view_logs:
+            columns:
+                - view_uid
+                - infotype
+                - infoid
+        ak_infoid_trj_zjxm_view_logs:
+            columns:
+                - infoid
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        infotype:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 0项目，1用户
+            default: '0::smallint'
+        infotitle:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '查看信息标题或用户名'
+            default: ''
+        infoid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 被查看对象id
+            default: '0'
+        infovalid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否可评价
+            default: '0::smallint'
+        catPid:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: cat_pid
+        sendUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 信息记录发布人id
+            column: send_uid
+        viewUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '查看者id'
+            column: view_uid
+        viewUsername:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            default: ''
+            column: view_username
+        evaluateStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 评价状态，1-已评价，0-未评价
+            default: '0::smallint'
+            column: evaluate_status
+        viewIp:
+            type: string
+            nullable: false
+            length: 15
+            fixed: false
+            comment: ''
+            column: view_ip
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        viewTrash:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0-删除，1-正常'
+            default: '1::smallint'
+            column: view_trash
+        sendTrash:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '0-删除，1-正常'
+            default: '1::smallint'
+            column: send_trash
+    lifecycleCallbacks: {  }

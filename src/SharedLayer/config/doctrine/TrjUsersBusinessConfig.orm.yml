@@ -1,0 +1,122 @@
+SharedModel\TrjUsersBusinessConfig:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersBusinessConfigRepository
+    table: trj_users_business_config
+    uniqueConstraints:
+        trj_users_business_config_pk:
+            columns:
+                - id
+        ak_user_id_trj_users_business_config:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        fundsBodyFrom:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 您期望的资金来源
+            default: ''
+            column: funds_body_from
+        fundTypes:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: ''
+            column: fund_types
+        stage:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: ''
+        investMode:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: ''
+            column: invest_mode
+        tzindustrys:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 资金所投行业
+        industrysParent:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: ''
+            column: industrys_parent
+        industrys:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: '您感兴趣的行业范围'
+        areas:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: '您感兴趣的地区范围'
+        cats:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 信息类型
+        utypes:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: 信息发布类型
+            default: '0'
+        isEmail:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否邮箱订阅'
+            default: '0::smallint'
+            column: is_email
+        sendDate:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: send_date
+        publishDay:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 发布多少天
+            default: '0'
+            column: publish_day
+        cycle:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

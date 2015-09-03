@@ -1,0 +1,83 @@
+SharedModel\TrjUsersMessageReport:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersMessageReportRepository
+    table: trj_users_message_report
+    uniqueConstraints:
+        ak_asid_trj_users_message_report:
+            columns:
+                - asid
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ID
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        asid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 对应留言id
+            default: '0'
+        poster:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            default: ''
+        posterId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: poster_id
+        title:
+            type: string
+            nullable: false
+            length: 128
+            fixed: false
+            comment: ''
+        message:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        reply:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: 回复
+        state:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否已处理
+            default: '0::smallint'
+        status:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 状态
+            default: '1::smallint'
+        posttime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 举报时间
+            default: '0'
+        ipAddress:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ip
+            default: ''
+            column: ip_address
+    lifecycleCallbacks: {  }

@@ -1,0 +1,67 @@
+SharedModel\TrjUsersWapTmp:
+    type: entity
+    repositoryClass: SharedModel\TrjUsersWapTmpRepository
+    table: trj_users_wap_tmp
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        page:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 1发布名片2快速发布3交换名片
+            default: '0::smallint'
+        type:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        userType:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_type
+        mobile:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+        content:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: '快速发布内容'
+        zjxmId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: zjxm_id
+        contactName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            column: contact_name
+        isInsert:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否已插入'
+            default: '0::smallint'
+            column: is_insert
+    lifecycleCallbacks: {  }

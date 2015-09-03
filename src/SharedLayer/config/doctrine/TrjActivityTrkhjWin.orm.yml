@@ -1,0 +1,34 @@
+SharedModel\TrjActivityTrkhjWin:
+    type: entity
+    repositoryClass: SharedModel\TrjActivityTrkhjWinRepository
+    table: trj_activity_trkhj_win
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        area:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+        addTime:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            column: add_time
+        mobile:
+            type: string
+            nullable: false
+            length: 15
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

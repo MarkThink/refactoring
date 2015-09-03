@@ -1,0 +1,58 @@
+SharedModel\TrjAdvShenheLog:
+    type: entity
+    repositoryClass: SharedModel\TrjAdvShenheLogRepository
+    table: trj_adv_shenhe_log
+    uniqueConstraints:
+        ak_sid_trj_adv_shenhe_log:
+            columns:
+                - sid
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        sid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 申请表主键
+            default: '0'
+        shenhe:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '审核状态1、通过2、驳回'
+            default: '0::smallint'
+        shenheType:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 那个角色的领导审批
+            default: '0'
+            column: shenhe_type
+        shenheUid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 审批人的id
+            default: '0'
+            column: shenhe_uid
+        shenheDate:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 审批日期
+            default: '0'
+            column: shenhe_date
+        content:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 批示
+    lifecycleCallbacks: {  }

@@ -1,0 +1,28 @@
+SharedModel\TrjTgxxRead:
+    type: entity
+    repositoryClass: SharedModel\TrjTgxxReadRepository
+    table: trj_tgxx_read
+    id:
+        tgxxId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            id: true
+            column: tgxx_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        ctime:
+            type: date
+            nullable: true
+            comment: ''
+    lifecycleCallbacks: {  }

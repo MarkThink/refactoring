@@ -1,0 +1,50 @@
+SharedModel\TrjFormFieldCategory:
+    type: entity
+    repositoryClass: SharedModel\TrjFormFieldCategoryRepository
+    table: trj_form_field_category
+    id:
+        fcId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: fc_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        fcName:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: 名称
+            default: ''
+            column: fc_name
+        fcSort:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 排序
+            default: '0'
+            column: fc_sort
+        fcStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: fc_status
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        updated:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

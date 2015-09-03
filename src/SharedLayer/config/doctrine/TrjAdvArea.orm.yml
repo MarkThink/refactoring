@@ -1,0 +1,129 @@
+SharedModel\TrjAdvArea:
+    type: entity
+    repositoryClass: SharedModel\TrjAdvAreaRepository
+    table: trj_adv_area
+    uniqueConstraints:
+        trj_adv_area_pk:
+            columns:
+                - qid
+        ak_pid_trj_adv_area:
+            columns:
+                - pid
+    id:
+        qid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 主键
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        pid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: '关联广告页表pid'
+            default: '0'
+        areaname:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 区域名称
+            default: ''
+        areaurl:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        enname:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 英文附名
+            default: ''
+        ennum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 广告数量
+            default: '0'
+        islimit:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 是否限制数量
+            default: '1::smallint'
+        iswap:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '是否wap公用'
+            default: '0::smallint'
+        advType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '类型 1:图片 2:文字'
+            default: '0::smallint'
+            column: adv_type
+        advSize:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: '广告规格'
+            default: ''
+            column: adv_size
+        memo:
+            type: string
+            nullable: false
+            length: 1000
+            fixed: false
+            comment: 备注
+            default: ''
+        placeNum:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 广告位数量
+            default: '0::smallint'
+            column: place_num
+        orders:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 排序
+            default: '0'
+        areaType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: '区域类型1:广告 2:推荐位'
+            default: '1::smallint'
+            column: area_type
+        addtime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        updatePoster:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: 操作人
+            default: ''
+            column: update_poster
+        updateDatetime:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: update_datetime
+    lifecycleCallbacks: {  }

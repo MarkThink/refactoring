@@ -1,0 +1,169 @@
+SharedModel\TrjActivityRoadshow:
+    type: entity
+    repositoryClass: SharedModel\TrjActivityRoadshowRepository
+    table: trj_activity_roadshow
+    uniqueConstraints:
+        ak_user_id_trj_activity_roadshow:
+            columns:
+                - user_id
+        trj_activity_roadshow_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: user_id
+        userType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: user_type
+        projectName:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: project_name
+        abstract:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        provinceId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: province_id
+        cityId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: city_id
+        areaId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: area_id
+        contactAddress:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: contact_address
+        industryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: industry_id
+        keywords:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        rongziLunci:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: rongzi_lunci
+        itemStatus:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: item_status
+        companyScale:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: company_scale
+        projectUrl:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: project_url
+        projectWeibo:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: project_weibo
+        contactName:
+            type: string
+            nullable: false
+            length: 50
+            fixed: false
+            comment: ''
+            column: contact_name
+        mobile:
+            type: string
+            nullable: false
+            length: 11
+            fixed: false
+            comment: ''
+        job:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+        successCase:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+            column: success_case
+        itemDoc:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: item_doc
+        isNew:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: is_new
+        isWap:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: is_wap
+        roadshowType:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: roadshow_type
+    lifecycleCallbacks: {  }

@@ -1,0 +1,77 @@
+SharedModel\TrjTongbao:
+    type: entity
+    repositoryClass: SharedModel\TrjTongbaoRepository
+    table: trj_tongbao
+    uniqueConstraints:
+        trj_tongbao_pk:
+            columns:
+                - id
+        ak_user_id_trj_tongbao:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: user_id
+        userLevel:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0::smallint'
+            column: user_level
+        price:
+            type: decimal
+            nullable: false
+            precision: 10
+            scale: 0
+            comment: ''
+            default: '0'
+        startDate:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 有效日期开始
+            default: '0'
+            column: start_date
+        stopDate:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 有效日期结束
+            default: '0'
+            column: stop_date
+        isTry:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: 试用
+            default: '0::smallint'
+            column: is_try
+        prodauth:
+            type: string
+            nullable: false
+            length: 500
+            fixed: false
+            comment: 权限
+            default: ''
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }

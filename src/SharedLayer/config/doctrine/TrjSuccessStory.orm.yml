@@ -1,0 +1,60 @@
+SharedModel\TrjSuccessStory:
+    type: entity
+    repositoryClass: SharedModel\TrjSuccessStoryRepository
+    table: trj_success_story
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        contactName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            column: contact_name
+        mobile:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+        content:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        created:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+        createId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: create_id
+        createName:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            column: create_name
+        ip:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

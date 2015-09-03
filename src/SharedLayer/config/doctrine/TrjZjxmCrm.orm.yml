@@ -1,0 +1,39 @@
+SharedModel\TrjZjxmCrm:
+    type: entity
+    repositoryClass: SharedModel\TrjZjxmCrmRepository
+    table: trj_zjxm_crm
+    uniqueConstraints:
+        ak_mobile_trj_zjxm_crm:
+            columns:
+                - mobile
+        ak_zjxm_id_trj_zjxm_crm:
+            columns:
+                - zjxm_id
+        trj_zjxm_crm_pk:
+            columns:
+                - id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: SEQUENCE
+    fields:
+        zjxmId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            column: zjxm_id
+        mobile:
+            type: string
+            nullable: false
+            length: 11
+            fixed: false
+            comment: ''
+            default: ''
+    lifecycleCallbacks: {  }

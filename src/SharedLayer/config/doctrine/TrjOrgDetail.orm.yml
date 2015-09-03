@@ -1,0 +1,77 @@
+SharedModel\TrjOrgDetail:
+    type: entity
+    repositoryClass: SharedModel\TrjOrgDetailRepository
+    table: trj_org_detail
+    id:
+        orgId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+            id: true
+            column: org_id
+            generator:
+                strategy: SEQUENCE
+    fields:
+        title:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        keywords:
+            type: string
+            nullable: true
+            length: 500
+            fixed: false
+            comment: ''
+        contentA:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 机构介绍
+            column: content_a
+        contentB:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 机构概况
+            column: content_b
+        contentC:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 品牌优势
+            column: content_c
+        contentD:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 管理优势
+            column: content_d
+        contentE:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 资源优势
+            column: content_e
+        contentF:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: content_f
+        contact:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: 联系方式
+    lifecycleCallbacks: {  }
