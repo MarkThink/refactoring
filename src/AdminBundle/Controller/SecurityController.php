@@ -155,6 +155,10 @@ class SecurityController extends Controller
         return new JsonResponse($data);
     }
 
+    public function menu()
+    {
+        return true;
+    }
     /*
      * 生成验证码
      */
