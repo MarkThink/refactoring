@@ -1,6 +1,6 @@
 SharedModel\TrjTongjiLocation:
     type: entity
-    repositoryClass: SharedModel\TrjTongjiLocationRepository
+    repositoryClass: SharedModel\Repository\TrjTongjiLocationRepository
     table: trj_tongji_location
     id:
         id:

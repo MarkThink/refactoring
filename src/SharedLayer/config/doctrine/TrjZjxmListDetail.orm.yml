@@ -1,6 +1,6 @@
 SharedModel\TrjZjxmListDetail:
     type: entity
-    repositoryClass: SharedModel\TrjZjxmListDetailRepository
+    repositoryClass: SharedModel\Repository\TrjZjxmListDetailRepository
     table: trj_zjxm_list_detail
     id:
         iid:

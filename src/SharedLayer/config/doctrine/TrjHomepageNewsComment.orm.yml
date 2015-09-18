@@ -1,6 +1,6 @@
 SharedModel\TrjHomepageNewsComment:
     type: entity
-    repositoryClass: SharedModel\TrjHomepageNewsCommentRepository
+    repositoryClass: SharedModel\Repository\TrjHomepageNewsCommentRepository
     table: trj_homepage_news_comment
     uniqueConstraints:
         ak_news_id_trj_homepage_news_comment:

@@ -1,6 +1,6 @@
 SharedModel\TrjFundsInstitution:
     type: entity
-    repositoryClass: SharedModel\TrjFundsInstitutionRepository
+    repositoryClass: SharedModel\Repository\TrjFundsInstitutionRepository
     table: trj_funds_institution
     id:
         id:

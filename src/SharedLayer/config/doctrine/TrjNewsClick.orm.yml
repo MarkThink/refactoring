@@ -1,6 +1,6 @@
 SharedModel\TrjNewsClick:
     type: entity
-    repositoryClass: SharedModel\TrjNewsClickRepository
+    repositoryClass: SharedModel\Repository\TrjNewsClickRepository
     table: trj_news_click
     uniqueConstraints:
         ak_news_id_trj_news_click:

@@ -1,6 +1,6 @@
 SharedModel\TrjHomepageModuel:
     type: entity
-    repositoryClass: SharedModel\TrjHomepageModuelRepository
+    repositoryClass: SharedModel\Repository\TrjHomepageModuelRepository
     table: trj_homepage_moduel
     uniqueConstraints:
         trj_homepage_moduel_pk:

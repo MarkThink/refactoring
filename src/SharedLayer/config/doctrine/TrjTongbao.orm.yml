@@ -1,6 +1,6 @@
 SharedModel\TrjTongbao:
     type: entity
-    repositoryClass: SharedModel\TrjTongbaoRepository
+    repositoryClass: SharedModel\Repository\TrjTongbaoRepository
     table: trj_tongbao
     uniqueConstraints:
         trj_tongbao_pk:

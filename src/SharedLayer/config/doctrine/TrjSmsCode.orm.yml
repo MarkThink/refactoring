@@ -1,6 +1,6 @@
 SharedModel\TrjSmsCode:
     type: entity
-    repositoryClass: SharedModel\TrjSmsCodeRepository
+    repositoryClass: SharedModel\Repository\TrjSmsCodeRepository
     table: trj_sms_code
     uniqueConstraints:
         ak_mobile_trj_sms_code:

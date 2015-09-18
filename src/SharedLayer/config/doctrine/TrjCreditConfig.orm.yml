@@ -1,6 +1,6 @@
 SharedModel\TrjCreditConfig:
     type: entity
-    repositoryClass: SharedModel\TrjCreditConfigRepository
+    repositoryClass: SharedModel\Repository\TrjCreditConfigRepository
     table: trj_credit_config
     id:
         id:

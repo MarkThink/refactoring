@@ -1,6 +1,6 @@
 SharedModel\TrjMobileBlacklist:
     type: entity
-    repositoryClass: SharedModel\TrjMobileBlacklistRepository
+    repositoryClass: SharedModel\Repository\TrjMobileBlacklistRepository
     table: trj_mobile_blacklist
     uniqueConstraints:
         ak_mobile_trj_mobile_blacklist:

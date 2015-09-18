@@ -1,6 +1,6 @@
 SharedModel\TrjSiteBroadcast:
     type: entity
-    repositoryClass: SharedModel\TrjSiteBroadcastRepository
+    repositoryClass: SharedModel\Repository\TrjSiteBroadcastRepository
     table: trj_site_broadcast
     uniqueConstraints:
         ak_listorder_trj_site_broadcast:

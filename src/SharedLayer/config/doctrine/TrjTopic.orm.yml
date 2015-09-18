@@ -1,6 +1,6 @@
 SharedModel\TrjTopic:
     type: entity
-    repositoryClass: SharedModel\TrjTopicRepository
+    repositoryClass: SharedModel\Repository\TrjTopicRepository
     table: trj_topic
     uniqueConstraints:
         ak_status_trj_topic:

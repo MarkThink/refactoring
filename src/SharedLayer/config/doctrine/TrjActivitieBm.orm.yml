@@ -1,6 +1,6 @@
 SharedModel\TrjActivitieBm:
     type: entity
-    repositoryClass: SharedModel\TrjActivitieBmRepository
+    repositoryClass: SharedModel\Repository\TrjActivitieBmRepository
     table: trj_activitie_bm
     uniqueConstraints:
         ak_aid_trj_activitie_bm:

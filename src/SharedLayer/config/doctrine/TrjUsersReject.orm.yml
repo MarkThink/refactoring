@@ -1,6 +1,6 @@
 SharedModel\TrjUsersReject:
     type: entity
-    repositoryClass: SharedModel\TrjUsersRejectRepository
+    repositoryClass: SharedModel\Repository\TrjUsersRejectRepository
     table: trj_users_reject
     id:
         id:

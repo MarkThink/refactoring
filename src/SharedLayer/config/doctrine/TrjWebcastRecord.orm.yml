@@ -1,6 +1,6 @@
 SharedModel\TrjWebcastRecord:
     type: entity
-    repositoryClass: SharedModel\TrjWebcastRecordRepository
+    repositoryClass: SharedModel\Repository\TrjWebcastRecordRepository
     table: trj_webcast_record
     id:
         id:

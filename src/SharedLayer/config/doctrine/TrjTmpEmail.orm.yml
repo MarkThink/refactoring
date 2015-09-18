@@ -1,6 +1,6 @@
 SharedModel\TrjTmpEmail:
     type: entity
-    repositoryClass: SharedModel\TrjTmpEmailRepository
+    repositoryClass: SharedModel\Repository\TrjTmpEmailRepository
     table: trj_tmp_email
     id:
         userId:

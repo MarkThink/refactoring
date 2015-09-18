@@ -1,6 +1,6 @@
 SharedModel\TrjCwnUsers:
     type: entity
-    repositoryClass: SharedModel\TrjCwnUsersRepository
+    repositoryClass: SharedModel\Repository\TrjCwnUsersRepository
     table: trj_cwn_users
     uniqueConstraints:
         ak_user_id_trj_cwn_users:

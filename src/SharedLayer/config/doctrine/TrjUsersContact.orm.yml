@@ -1,6 +1,6 @@
 SharedModel\TrjUsersContact:
     type: entity
-    repositoryClass: SharedModel\TrjUsersContactRepository
+    repositoryClass: SharedModel\Repository\TrjUsersContactRepository
     table: trj_users_contact
     uniqueConstraints:
         ak_email_trj_users_contact:

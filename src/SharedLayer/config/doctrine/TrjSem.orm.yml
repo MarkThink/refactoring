@@ -1,6 +1,6 @@
 SharedModel\TrjSem:
     type: entity
-    repositoryClass: SharedModel\TrjSemRepository
+    repositoryClass: SharedModel\Repository\TrjSemRepository
     table: trj_sem
     uniqueConstraints:
         ak_isdel_trj_sem:

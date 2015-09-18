@@ -1,6 +1,6 @@
 SharedModel\TrjZjxmContact:
     type: entity
-    repositoryClass: SharedModel\TrjZjxmContactRepository
+    repositoryClass: SharedModel\Repository\TrjZjxmContactRepository
     table: trj_zjxm_contact
     uniqueConstraints:
         trj_zjxm_contact_pk:

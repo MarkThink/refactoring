@@ -1,6 +1,6 @@
 SharedModel\TrjGuest:
     type: entity
-    repositoryClass: SharedModel\TrjGuestRepository
+    repositoryClass: SharedModel\Repository\TrjGuestRepository
     table: trj_guest
     uniqueConstraints:
         trj_guest_pk:

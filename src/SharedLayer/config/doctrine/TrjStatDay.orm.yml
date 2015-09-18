@@ -1,6 +1,6 @@
 SharedModel\TrjStatDay:
     type: entity
-    repositoryClass: SharedModel\TrjStatDayRepository
+    repositoryClass: SharedModel\Repository\TrjStatDayRepository
     table: trj_stat_day
     uniqueConstraints:
         ak_stat_day_trj_stat_day:

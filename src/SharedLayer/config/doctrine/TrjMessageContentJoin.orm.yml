@@ -1,6 +1,6 @@
 SharedModel\TrjMessageContentJoin:
     type: entity
-    repositoryClass: SharedModel\TrjMessageContentJoinRepository
+    repositoryClass: SharedModel\Repository\TrjMessageContentJoinRepository
     table: trj_message_content_join
     uniqueConstraints:
         ak_list_id_trj_message_content_join:

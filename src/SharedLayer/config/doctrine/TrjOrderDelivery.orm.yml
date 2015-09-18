@@ -1,6 +1,6 @@
 SharedModel\TrjOrderDelivery:
     type: entity
-    repositoryClass: SharedModel\TrjOrderDeliveryRepository
+    repositoryClass: SharedModel\Repository\TrjOrderDeliveryRepository
     table: trj_order_delivery
     uniqueConstraints:
         ak_order_id_trj_order_delivery:

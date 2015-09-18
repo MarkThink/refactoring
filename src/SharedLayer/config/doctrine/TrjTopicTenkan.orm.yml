@@ -1,6 +1,6 @@
 SharedModel\TrjTopicTenkan:
     type: entity
-    repositoryClass: SharedModel\TrjTopicTenkanRepository
+    repositoryClass: SharedModel\Repository\TrjTopicTenkanRepository
     table: trj_topic_tenkan
     uniqueConstraints:
         ak_topic_id_trj_topic_tenkan:

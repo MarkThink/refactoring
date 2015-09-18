@@ -1,6 +1,6 @@
 SharedModel\TrjCityNews:
     type: entity
-    repositoryClass: SharedModel\TrjCityNewsRepository
+    repositoryClass: SharedModel\Repository\TrjCityNewsRepository
     table: trj_city_news
     id:
         id:

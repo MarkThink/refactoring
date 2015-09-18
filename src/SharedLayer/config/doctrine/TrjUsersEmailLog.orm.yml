@@ -1,6 +1,6 @@
 SharedModel\TrjUsersEmailLog:
     type: entity
-    repositoryClass: SharedModel\TrjUsersEmailLogRepository
+    repositoryClass: SharedModel\Repository\TrjUsersEmailLogRepository
     table: trj_users_email_log
     uniqueConstraints:
         ak_send_type_trj_users_email_log:

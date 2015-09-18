@@ -1,6 +1,6 @@
 SharedModel\TrjUsersWapBusinesscard:
     type: entity
-    repositoryClass: SharedModel\TrjUsersWapBusinesscardRepository
+    repositoryClass: SharedModel\Repository\TrjUsersWapBusinesscardRepository
     table: trj_users_wap_businesscard
     id:
         id:

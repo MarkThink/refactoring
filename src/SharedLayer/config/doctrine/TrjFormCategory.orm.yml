@@ -1,6 +1,6 @@
 SharedModel\TrjFormCategory:
     type: entity
-    repositoryClass: SharedModel\TrjFormCategoryRepository
+    repositoryClass: SharedModel\Repository\TrjFormCategoryRepository
     table: trj_form_category
     id:
         catId:

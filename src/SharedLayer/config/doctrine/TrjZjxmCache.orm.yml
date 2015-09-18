@@ -1,6 +1,6 @@
 SharedModel\TrjZjxmCache:
     type: entity
-    repositoryClass: SharedModel\TrjZjxmCacheRepository
+    repositoryClass: SharedModel\Repository\TrjZjxmCacheRepository
     table: trj_zjxm_cache
     uniqueConstraints:
         ak_id_trj_zjxm_cache:

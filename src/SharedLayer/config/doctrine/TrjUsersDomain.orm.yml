@@ -1,6 +1,6 @@
 SharedModel\TrjUsersDomain:
     type: entity
-    repositoryClass: SharedModel\TrjUsersDomainRepository
+    repositoryClass: SharedModel\Repository\TrjUsersDomainRepository
     table: trj_users_domain
     uniqueConstraints:
         trj_users_domain_pk:

@@ -1,6 +1,6 @@
 SharedModel\TrjConfigProduct:
     type: entity
-    repositoryClass: SharedModel\TrjConfigProductRepository
+    repositoryClass: SharedModel\Repository\TrjConfigProductRepository
     table: trj_config_product
     id:
         id:

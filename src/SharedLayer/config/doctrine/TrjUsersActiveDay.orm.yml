@@ -1,6 +1,6 @@
 SharedModel\TrjUsersActiveDay:
     type: entity
-    repositoryClass: SharedModel\TrjUsersActiveDayRepository
+    repositoryClass: SharedModel\Repository\TrjUsersActiveDayRepository
     table: trj_users_active_day
     uniqueConstraints:
         ak_created_trj_users_active_day:

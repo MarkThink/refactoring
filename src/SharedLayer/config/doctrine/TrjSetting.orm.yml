@@ -1,6 +1,6 @@
 SharedModel\TrjSetting:
     type: entity
-    repositoryClass: SharedModel\TrjSettingRepository
+    repositoryClass: SharedModel\Repository\TrjSettingRepository
     table: trj_setting
     uniqueConstraints:
         ak_type_trj_setting:

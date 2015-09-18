@@ -1,6 +1,6 @@
 SharedModel\TrjUsersWapTmp:
     type: entity
-    repositoryClass: SharedModel\TrjUsersWapTmpRepository
+    repositoryClass: SharedModel\Repository\TrjUsersWapTmpRepository
     table: trj_users_wap_tmp
     id:
         id:

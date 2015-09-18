@@ -1,6 +1,6 @@
 SharedModel\TrjUsersRss:
     type: entity
-    repositoryClass: SharedModel\TrjUsersRssRepository
+    repositoryClass: SharedModel\Repository\TrjUsersRssRepository
     table: trj_users_rss
     uniqueConstraints:
         trj_users_rss_pk:

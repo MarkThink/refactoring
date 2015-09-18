@@ -1,6 +1,6 @@
 SharedModel\TrjUsersMessageIndex:
     type: entity
-    repositoryClass: SharedModel\TrjUsersMessageIndexRepository
+    repositoryClass: SharedModel\Repository\TrjUsersMessageIndexRepository
     table: trj_users_message_index
     id:
         userId:

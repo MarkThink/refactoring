@@ -1,6 +1,6 @@
 SharedModel\TrjRczgTopicContent:
     type: entity
-    repositoryClass: SharedModel\TrjRczgTopicContentRepository
+    repositoryClass: SharedModel\Repository\TrjRczgTopicContentRepository
     table: trj_rczg_topic_content
     id:
         id:

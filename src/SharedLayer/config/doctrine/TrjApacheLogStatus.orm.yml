@@ -1,6 +1,6 @@
 SharedModel\TrjApacheLogStatus:
     type: entity
-    repositoryClass: SharedModel\TrjApacheLogStatusRepository
+    repositoryClass: SharedModel\Repository\TrjApacheLogStatusRepository
     table: trj_apache_log_status
     id:
         id:

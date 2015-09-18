@@ -1,6 +1,6 @@
 SharedModel\TrjActivityFilmTicket:
     type: entity
-    repositoryClass: SharedModel\TrjActivityFilmTicketRepository
+    repositoryClass: SharedModel\Repository\TrjActivityFilmTicketRepository
     table: trj_activity_film_ticket
     uniqueConstraints:
         trj_activity_film_ticket_pk:

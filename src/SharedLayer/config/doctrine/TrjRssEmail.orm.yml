@@ -1,6 +1,6 @@
 SharedModel\TrjRssEmail:
     type: entity
-    repositoryClass: SharedModel\TrjRssEmailRepository
+    repositoryClass: SharedModel\Repository\TrjRssEmailRepository
     table: trj_rss_email
     uniqueConstraints:
         ak_email_trj_rss_email:

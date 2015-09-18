@@ -1,6 +1,6 @@
 SharedModel\TrjAdList:
     type: entity
-    repositoryClass: SharedModel\TrjAdListRepository
+    repositoryClass: SharedModel\Repository\TrjAdListRepository
     table: trj_ad_list
     uniqueConstraints:
         ak_enabled_trj_ad_list:

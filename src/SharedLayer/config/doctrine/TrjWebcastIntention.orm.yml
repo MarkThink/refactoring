@@ -1,6 +1,6 @@
 SharedModel\TrjWebcastIntention:
     type: entity
-    repositoryClass: SharedModel\TrjWebcastIntentionRepository
+    repositoryClass: SharedModel\Repository\TrjWebcastIntentionRepository
     table: trj_webcast_intention
     id:
         id:

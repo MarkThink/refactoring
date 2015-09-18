@@ -1,6 +1,6 @@
 SharedModel\TrjAdmins:
     type: entity
-    repositoryClass: SharedModel\TrjAdminsRepository
+    repositoryClass: SharedModel\Repository\TrjAdminsRepository
     table: trj_admins
     id:
         id:

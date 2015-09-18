@@ -1,6 +1,6 @@
 SharedModel\TrjInvestors:
     type: entity
-    repositoryClass: SharedModel\TrjInvestorsRepository
+    repositoryClass: SharedModel\Repository\TrjInvestorsRepository
     table: trj_investors
     uniqueConstraints:
         ak_first_py_trj_investors:

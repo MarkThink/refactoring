@@ -41,6 +41,11 @@ Constant:
   USER_PASSWD_ERROR: '用户名或密码错误'
   USER_ROLE_STOP: '对不起，该账号所在权限组已停止使用'
 
+  NO_CAPTCHA_ERR: '点击验证码校验错误'
+  CAPTCHA_ERR: '验证码校验错误'
+  CAPTCHA_TOKEN_ERR: '验证码参数校验错误'
+  CAPTCHA_TYPE_ERR: '未知的验证类型'
+
   PARAM_ERROR: '参数错误'
   SIGNATURE_ERROR: '签名错误'
   ACCESS_RESTRICTED: '访问受限'

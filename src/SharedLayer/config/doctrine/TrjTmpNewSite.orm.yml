@@ -1,6 +1,6 @@
 SharedModel\TrjTmpNewSite:
     type: entity
-    repositoryClass: SharedModel\TrjTmpNewSiteRepository
+    repositoryClass: SharedModel\Repository\TrjTmpNewSiteRepository
     table: trj_tmp_new_site
     id:
         id:

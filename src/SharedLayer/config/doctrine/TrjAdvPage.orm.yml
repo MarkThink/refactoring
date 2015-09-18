@@ -1,6 +1,6 @@
 SharedModel\TrjAdvPage:
     type: entity
-    repositoryClass: SharedModel\TrjAdvPageRepository
+    repositoryClass: SharedModel\Repository\TrjAdvPageRepository
     table: trj_adv_page
     uniqueConstraints:
         ak_code_trj_adv_page:

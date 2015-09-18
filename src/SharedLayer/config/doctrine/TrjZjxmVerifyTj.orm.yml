@@ -1,6 +1,6 @@
 SharedModel\TrjZjxmVerifyTj:
     type: entity
-    repositoryClass: SharedModel\TrjZjxmVerifyTjRepository
+    repositoryClass: SharedModel\Repository\TrjZjxmVerifyTjRepository
     table: trj_zjxm_verify_tj
     uniqueConstraints:
         ak_created_trj_zjxm_verify_tj:

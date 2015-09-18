@@ -1,6 +1,6 @@
 SharedModel\TrjUsersReward:
     type: entity
-    repositoryClass: SharedModel\TrjUsersRewardRepository
+    repositoryClass: SharedModel\Repository\TrjUsersRewardRepository
     table: trj_users_reward
     id:
         id:

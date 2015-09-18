@@ -1,6 +1,6 @@
 SharedModel\TrjThinktank:
     type: entity
-    repositoryClass: SharedModel\TrjThinktankRepository
+    repositoryClass: SharedModel\Repository\TrjThinktankRepository
     table: trj_thinktank
     id:
         id:

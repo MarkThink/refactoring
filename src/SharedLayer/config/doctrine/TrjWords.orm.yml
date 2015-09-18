@@ -1,6 +1,6 @@
 SharedModel\TrjWords:
     type: entity
-    repositoryClass: SharedModel\TrjWordsRepository
+    repositoryClass: SharedModel\Repository\TrjWordsRepository
     table: trj_words
     uniqueConstraints:
         trj_words_pk:

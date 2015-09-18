@@ -1,6 +1,6 @@
 SharedModel\TrjActivityTrkhjWin:
     type: entity
-    repositoryClass: SharedModel\TrjActivityTrkhjWinRepository
+    repositoryClass: SharedModel\Repository\TrjActivityTrkhjWinRepository
     table: trj_activity_trkhj_win
     id:
         id:

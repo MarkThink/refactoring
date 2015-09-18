@@ -1,6 +1,6 @@
 SharedModel\TrjOrgSettleCase:
     type: entity
-    repositoryClass: SharedModel\TrjOrgSettleCaseRepository
+    repositoryClass: SharedModel\Repository\TrjOrgSettleCaseRepository
     table: trj_org_settle_case
     uniqueConstraints:
         ak_settle_id_trj_org_settle_case:

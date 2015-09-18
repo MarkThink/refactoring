@@ -1,6 +1,6 @@
 SharedModel\TrjUsersLevel:
     type: entity
-    repositoryClass: SharedModel\TrjUsersLevelRepository
+    repositoryClass: SharedModel\Repository\TrjUsersLevelRepository
     table: trj_users_level
     id:
         id:

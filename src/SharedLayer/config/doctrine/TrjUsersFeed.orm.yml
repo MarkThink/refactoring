@@ -1,6 +1,6 @@
 SharedModel\TrjUsersFeed:
     type: entity
-    repositoryClass: SharedModel\TrjUsersFeedRepository
+    repositoryClass: SharedModel\Repository\TrjUsersFeedRepository
     table: trj_users_feed
     uniqueConstraints:
         ak_user_id_trj_users_feed:

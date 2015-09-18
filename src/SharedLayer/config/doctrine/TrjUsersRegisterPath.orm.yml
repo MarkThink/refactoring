@@ -1,6 +1,6 @@
 SharedModel\TrjUsersRegisterPath:
     type: entity
-    repositoryClass: SharedModel\TrjUsersRegisterPathRepository
+    repositoryClass: SharedModel\Repository\TrjUsersRegisterPathRepository
     table: trj_users_register_path
     uniqueConstraints:
         ak_poster_id_trj_users_register_path:

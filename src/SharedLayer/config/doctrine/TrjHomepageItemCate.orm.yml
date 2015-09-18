@@ -1,6 +1,6 @@
 SharedModel\TrjHomepageItemCate:
     type: entity
-    repositoryClass: SharedModel\TrjHomepageItemCateRepository
+    repositoryClass: SharedModel\Repository\TrjHomepageItemCateRepository
     table: trj_homepage_item_cate
     uniqueConstraints:
         ak_user_id_trj_homepage_item_cate:

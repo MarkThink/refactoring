@@ -1,6 +1,6 @@
 SharedModel\TrjIndustryNew:
     type: entity
-    repositoryClass: SharedModel\TrjIndustryNewRepository
+    repositoryClass: SharedModel\Repository\TrjIndustryNewRepository
     table: trj_industry_new
     id:
         id:

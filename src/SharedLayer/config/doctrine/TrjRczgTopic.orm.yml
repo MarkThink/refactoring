@@ -1,6 +1,6 @@
 SharedModel\TrjRczgTopic:
     type: entity
-    repositoryClass: SharedModel\TrjRczgTopicRepository
+    repositoryClass: SharedModel\Repository\TrjRczgTopicRepository
     table: trj_rczg_topic
     uniqueConstraints:
         ak_url_name_trj_rczg_topic:

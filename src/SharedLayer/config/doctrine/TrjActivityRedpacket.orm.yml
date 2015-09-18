@@ -1,6 +1,6 @@
 SharedModel\TrjActivityRedpacket:
     type: entity
-    repositoryClass: SharedModel\TrjActivityRedpacketRepository
+    repositoryClass: SharedModel\Repository\TrjActivityRedpacketRepository
     table: trj_activity_redpacket
     uniqueConstraints:
         ak_mobile_trj_activity_redpacket:

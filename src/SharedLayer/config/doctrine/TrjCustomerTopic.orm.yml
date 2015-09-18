@@ -1,6 +1,6 @@
 SharedModel\TrjCustomerTopic:
     type: entity
-    repositoryClass: SharedModel\TrjCustomerTopicRepository
+    repositoryClass: SharedModel\Repository\TrjCustomerTopicRepository
     table: trj_customer_topic
     id:
         id:

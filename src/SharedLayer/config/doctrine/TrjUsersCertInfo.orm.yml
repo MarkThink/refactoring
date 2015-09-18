@@ -1,6 +1,6 @@
 SharedModel\TrjUsersCertInfo:
     type: entity
-    repositoryClass: SharedModel\TrjUsersCertInfoRepository
+    repositoryClass: SharedModel\Repository\TrjUsersCertInfoRepository
     table: trj_users_cert_info
     uniqueConstraints:
         ak_cert_code_trj_users_cert_info:

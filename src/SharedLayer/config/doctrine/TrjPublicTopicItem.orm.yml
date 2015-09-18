@@ -1,6 +1,6 @@
 SharedModel\TrjPublicTopicItem:
     type: entity
-    repositoryClass: SharedModel\TrjPublicTopicItemRepository
+    repositoryClass: SharedModel\Repository\TrjPublicTopicItemRepository
     table: trj_public_topic_item
     uniqueConstraints:
         ak_tid_trj_public_topic_item:

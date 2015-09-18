@@ -1,6 +1,6 @@
 SharedModel\TrjAdvArea:
     type: entity
-    repositoryClass: SharedModel\TrjAdvAreaRepository
+    repositoryClass: SharedModel\Repository\TrjAdvAreaRepository
     table: trj_adv_area
     uniqueConstraints:
         trj_adv_area_pk:

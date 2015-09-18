@@ -1,6 +1,6 @@
 SharedModel\TrjOrgSettle:
     type: entity
-    repositoryClass: SharedModel\TrjOrgSettleRepository
+    repositoryClass: SharedModel\Repository\TrjOrgSettleRepository
     table: trj_org_settle
     uniqueConstraints:
         ak_mobile_trj_org_settle:

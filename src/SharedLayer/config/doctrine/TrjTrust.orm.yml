@@ -1,6 +1,6 @@
 SharedModel\TrjTrust:
     type: entity
-    repositoryClass: SharedModel\TrjTrustRepository
+    repositoryClass: SharedModel\Repository\TrjTrustRepository
     table: trj_trust
     id:
         totId:

@@ -1,6 +1,6 @@
 SharedModel\TrjActivityHeadlineWechat:
     type: entity
-    repositoryClass: SharedModel\TrjActivityHeadlineWechatRepository
+    repositoryClass: SharedModel\Repository\TrjActivityHeadlineWechatRepository
     table: trj_activity_headline_wechat
     uniqueConstraints:
         ak_user_id_trj_activity_headline_wechat:

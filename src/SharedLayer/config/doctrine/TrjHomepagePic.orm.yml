@@ -1,6 +1,6 @@
 SharedModel\TrjHomepagePic:
     type: entity
-    repositoryClass: SharedModel\TrjHomepagePicRepository
+    repositoryClass: SharedModel\Repository\TrjHomepagePicRepository
     table: trj_homepage_pic
     uniqueConstraints:
         ak_user_id_trj_homepage_pic:

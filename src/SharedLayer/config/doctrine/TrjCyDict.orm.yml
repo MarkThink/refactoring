@@ -1,0 +1,27 @@
+SharedModel\TrjCyDict:
+    type: entity
+    table: trj_cy_dict
+    repositoryClass: SharedModel\Repository\TrjCyDictRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        chengyu:
+            type: string
+            length: '200'
+        pinyin:
+            type: string
+            length: '800'
+        jieshi:
+            type: text
+        chuchu:
+            type: text
+        lizi:
+            type: text
+        spinyin:
+            type: string
+            length: '10'
+    lifecycleCallbacks: {  }

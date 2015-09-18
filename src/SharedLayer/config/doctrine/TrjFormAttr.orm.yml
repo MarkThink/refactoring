@@ -1,6 +1,6 @@
 SharedModel\TrjFormAttr:
     type: entity
-    repositoryClass: SharedModel\TrjFormAttrRepository
+    repositoryClass: SharedModel\Repository\TrjFormAttrRepository
     table: trj_form_attr
     uniqueConstraints:
         ak_cat_id_trj_form_attr:

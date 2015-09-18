@@ -1,6 +1,6 @@
 SharedModel\TrjSeoManageCategory:
     type: entity
-    repositoryClass: SharedModel\TrjSeoManageCategoryRepository
+    repositoryClass: SharedModel\Repository\TrjSeoManageCategoryRepository
     table: trj_seo_manage_category
     uniqueConstraints:
         trj_seo_manage_category_pk:

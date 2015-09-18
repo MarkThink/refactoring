@@ -1,6 +1,6 @@
 SharedModel\TrjOrderTrack:
     type: entity
-    repositoryClass: SharedModel\TrjOrderTrackRepository
+    repositoryClass: SharedModel\Repository\TrjOrderTrackRepository
     table: trj_order_track
     uniqueConstraints:
         ak_order_id_trj_order_track:

@@ -1,6 +1,6 @@
 SharedModel\TrjSuccessCase:
     type: entity
-    repositoryClass: SharedModel\TrjSuccessCaseRepository
+    repositoryClass: SharedModel\Repository\TrjSuccessCaseRepository
     table: trj_success_case
     id:
         id:

@@ -1,6 +1,6 @@
 SharedModel\TrjTagRelevance:
     type: entity
-    repositoryClass: SharedModel\TrjTagRelevanceRepository
+    repositoryClass: SharedModel\Repository\TrjTagRelevanceRepository
     table: trj_tag_relevance
     uniqueConstraints:
         ak_tid_trj_tag_relevance:

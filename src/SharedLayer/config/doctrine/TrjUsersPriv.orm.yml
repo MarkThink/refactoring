@@ -1,6 +1,6 @@
 SharedModel\TrjUsersPriv:
     type: entity
-    repositoryClass: SharedModel\TrjUsersPrivRepository
+    repositoryClass: SharedModel\Repository\TrjUsersPrivRepository
     table: trj_users_priv
     uniqueConstraints:
         ak_user_id_trj_users_priv:

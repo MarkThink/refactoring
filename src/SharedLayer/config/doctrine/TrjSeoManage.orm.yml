@@ -1,6 +1,6 @@
 SharedModel\TrjSeoManage:
     type: entity
-    repositoryClass: SharedModel\TrjSeoManageRepository
+    repositoryClass: SharedModel\Repository\TrjSeoManageRepository
     table: trj_seo_manage
     id:
         id:

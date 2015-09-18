@@ -1,6 +1,6 @@
 SharedModel\TrjCart:
     type: entity
-    repositoryClass: SharedModel\TrjCartRepository
+    repositoryClass: SharedModel\Repository\TrjCartRepository
     table: trj_cart
     uniqueConstraints:
         ak_session_id_trj_cart:

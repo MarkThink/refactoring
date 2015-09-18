@@ -1,6 +1,6 @@
 SharedModel\TrjAdPosition:
     type: entity
-    repositoryClass: SharedModel\TrjAdPositionRepository
+    repositoryClass: SharedModel\Repository\TrjAdPositionRepository
     table: trj_ad_position
     id:
         positionId:

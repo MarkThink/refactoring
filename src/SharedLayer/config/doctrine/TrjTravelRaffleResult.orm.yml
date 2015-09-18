@@ -1,6 +1,6 @@
 SharedModel\TrjTravelRaffleResult:
     type: entity
-    repositoryClass: SharedModel\TrjTravelRaffleResultRepository
+    repositoryClass: SharedModel\Repository\TrjTravelRaffleResultRepository
     table: trj_travel_raffle_result
     uniqueConstraints:
         ak_user_type_trj_travel_raffle_result:

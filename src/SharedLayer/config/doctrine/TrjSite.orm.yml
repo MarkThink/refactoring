@@ -1,6 +1,6 @@
 SharedModel\TrjSite:
     type: entity
-    repositoryClass: SharedModel\TrjSiteRepository
+    repositoryClass: SharedModel\Repository\TrjSiteRepository
     table: trj_site
     uniqueConstraints:
         trj_site_pk:

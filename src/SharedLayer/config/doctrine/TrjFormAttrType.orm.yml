@@ -1,6 +1,6 @@
 SharedModel\TrjFormAttrType:
     type: entity
-    repositoryClass: SharedModel\TrjFormAttrTypeRepository
+    repositoryClass: SharedModel\Repository\TrjFormAttrTypeRepository
     table: trj_form_attr_type
     id:
         catId:

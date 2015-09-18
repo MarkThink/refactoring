@@ -1,6 +1,6 @@
 SharedModel\TrjUsersDetail:
     type: entity
-    repositoryClass: SharedModel\TrjUsersDetailRepository
+    repositoryClass: SharedModel\Repository\TrjUsersDetailRepository
     table: trj_users_detail
     id:
         userId:

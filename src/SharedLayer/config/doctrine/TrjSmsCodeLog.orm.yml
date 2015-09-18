@@ -1,6 +1,6 @@
 SharedModel\TrjSmsCodeLog:
     type: entity
-    repositoryClass: SharedModel\TrjSmsCodeLogRepository
+    repositoryClass: SharedModel\Repository\TrjSmsCodeLogRepository
     table: trj_sms_code_log
     uniqueConstraints:
         ak_is_reg_trj_sms_code_log:

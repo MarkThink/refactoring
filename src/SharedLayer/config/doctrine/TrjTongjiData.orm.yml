@@ -1,6 +1,6 @@
 SharedModel\TrjTongjiData:
     type: entity
-    repositoryClass: SharedModel\TrjTongjiDataRepository
+    repositoryClass: SharedModel\Repository\TrjTongjiDataRepository
     table: trj_tongji_data
     uniqueConstraints:
         ak_homepage_id_trj_tongji_data:

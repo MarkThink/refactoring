@@ -1,6 +1,6 @@
 SharedModel\TrjUsersInteractionStatisticsHours:
     type: entity
-    repositoryClass: SharedModel\TrjUsersInteractionStatisticsHoursRepository
+    repositoryClass: SharedModel\Repository\TrjUsersInteractionStatisticsHoursRepository
     table: trj_users_interaction_statistics_hours
     id:
         id:

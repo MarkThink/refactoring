@@ -1,6 +1,6 @@
 SharedModel\TrjTestUsers:
     type: entity
-    repositoryClass: SharedModel\TrjTestUsersRepository
+    repositoryClass: SharedModel\Repository\TrjTestUsersRepository
     table: trj_test_users
     uniqueConstraints:
         ak_username_trj_test_users:

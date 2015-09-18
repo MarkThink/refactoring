@@ -1,6 +1,6 @@
 SharedModel\TrjActivityVshowLog:
     type: entity
-    repositoryClass: SharedModel\TrjActivityVshowLogRepository
+    repositoryClass: SharedModel\Repository\TrjActivityVshowLogRepository
     table: trj_activity_vshow_log
     id:
         id:

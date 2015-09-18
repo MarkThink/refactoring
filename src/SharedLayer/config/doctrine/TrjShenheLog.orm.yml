@@ -1,6 +1,6 @@
 SharedModel\TrjShenheLog:
     type: entity
-    repositoryClass: SharedModel\TrjShenheLogRepository
+    repositoryClass: SharedModel\Repository\TrjShenheLogRepository
     table: trj_shenhe_log
     uniqueConstraints:
         ak_shen_type_trj_shenhe_log:

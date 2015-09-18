@@ -1,6 +1,6 @@
 SharedModel\TrjTongjiPages:
     type: entity
-    repositoryClass: SharedModel\TrjTongjiPagesRepository
+    repositoryClass: SharedModel\Repository\TrjTongjiPagesRepository
     table: trj_tongji_pages
     uniqueConstraints:
         ak_homepage_id_trj_tongji_pages:

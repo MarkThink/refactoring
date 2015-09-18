@@ -1,6 +1,6 @@
 SharedModel\TrjMessageMember:
     type: entity
-    repositoryClass: SharedModel\TrjMessageMemberRepository
+    repositoryClass: SharedModel\Repository\TrjMessageMemberRepository
     table: trj_message_member
     uniqueConstraints:
         ak_to_uid_trj_message_member:

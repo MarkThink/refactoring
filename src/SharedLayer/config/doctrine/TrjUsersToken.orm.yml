@@ -1,6 +1,6 @@
 SharedModel\TrjUsersToken:
     type: entity
-    repositoryClass: SharedModel\TrjUsersTokenRepository
+    repositoryClass: SharedModel\Repository\TrjUsersTokenRepository
     table: trj_users_token
     uniqueConstraints:
         trj_users_token_pk:

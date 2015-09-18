@@ -1,6 +1,6 @@
 SharedModel\TrjNotice:
     type: entity
-    repositoryClass: SharedModel\TrjNoticeRepository
+    repositoryClass: SharedModel\Repository\TrjNoticeRepository
     table: trj_notice
     uniqueConstraints:
         trj_notice_pk:

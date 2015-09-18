@@ -4,14 +4,49 @@
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('assets/admin/src/css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/admin/src/css/plugins/iCheck/custom.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/admin/src/css/ncat.css') }}">
 {% endblock %}
 
 {% block javascripts %}
     <script>
-        var path = '{{ asset('assets/admin/')}}';
-        var image_url="{{ path('admin_captcha') }}" + "?"+Math.random();
-        var login_check='{{ path('admin_login') }}';
-        seajs.use(['component/iCheck/icheck.min.js','module/login']);
+//        验证码服务KEY+TOKEN
+        var nc_appkey = '{{ app.request.get('nc_appkey') }}';
+        var nc_token = '{{ app.request.get('nc_token') }}';
+
+        var path = '{{ asset('assets/admin/')}}';//验证码资源路径
+        //client js call
+        var analyze_url="{{ path('admin_analyze') }}";//服务器校验证
+        var get_image = "{{ path('admin_nocaptcha') }}";//返回成语图片
+        var get_captcha = "{{ path('admin_captcha') }}";//返回验证码
+        var check_code = "{{ path('admin_check_code') }}";//检测验证码
+
+        var login_check = '{{ path('admin_login') }}';
+        seajs.use(['component/iCheck/icheck.min.js', 'module/login']);
+    </script>
+    <script src="{{ asset('assets/admin/src/modules/ncat.js') }}"></script>
+    <script>
+        //成语图形验证码-start
+        var nc = new noCaptcha();
+        var opt = {
+            renderTo: 'register_no_captcha',
+            appkey: nc_appkey,
+            token: nc_token,
+            elementID: ["J_Mobile"],
+            is_Opt: 0,
+            callback: function (data) {
+                console.log(data.csessionid);
+                $("input[name='nc_sig']").attr('value',data.sig);
+                $("input[name='nc_sessionid']").attr('value',data.csessionid);
+                $("input[name='nc_ua']").attr('value',data.value);
+            },
+            error: function (s) {
+            },
+            language: 'cn',
+            isEnabled: true,
+            foreign: 0
+        }
+        nc.init(opt);
+        //成语图形验证码-End
     </script>
 {% endblock %}
 
@@ -43,22 +78,20 @@
 
                 <form method="post" id="login_form">
                     <h4 class="no-margins">登录：</h4>
-                    <p class="m-t-md">登录到H+后台主题UI框架</p>
-                    <input type="text" class="form-control uname" name="username" placeholder="用户名" />
-                    <input type="password" class="form-control pword" name="password" placeholder="密码" />
 
-                    <div class="row">
-                        <div class="col-sm-7">
-                        <input type="text" class="form-control m-b" name="letters_code" placeholder="校验码"/>
-                        </div>
-                        <div class="col-sm-5" style="padding-left: 0px;">
-                            <span id="captchaimg"><img src=""></span>
-                        </div>
-                    </div>
+                    <p class="m-t-md">登录到H+后台主题UI框架</p>
+                    <input type="text" class="form-control uname" name="username" placeholder="用户名"/>
+                    <input type="password" class="form-control pword" name="password" placeholder="密码"/>
+
+                    <div id="register_no_captcha" style="margin-top: 15px;" class="m-b"></div>
 
                     <label class="i-checks"><input type="checkbox" name="is_auto_login"><i></i> 记住密码</label>
                     <a href="login_v2.html">忘记密码了？</a>
                     <button class="btn btn-success btn-block">登录</button>
+
+                    <input type="hidden" name="nc_sig">
+                    <input type="hidden" name="nc_sessionid">
+                    <input type="hidden" name="nc_ua">
                 </form>
 
             </div>

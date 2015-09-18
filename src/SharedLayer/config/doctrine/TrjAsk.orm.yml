@@ -1,6 +1,6 @@
 SharedModel\TrjAsk:
     type: entity
-    repositoryClass: SharedModel\TrjAskRepository
+    repositoryClass: SharedModel\Repository\TrjAskRepository
     table: trj_ask
     uniqueConstraints:
         ak_user_id_trj_ask:

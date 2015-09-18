@@ -1,6 +1,6 @@
 SharedModel\TrjUsersMessageReport:
     type: entity
-    repositoryClass: SharedModel\TrjUsersMessageReportRepository
+    repositoryClass: SharedModel\Repository\TrjUsersMessageReportRepository
     table: trj_users_message_report
     uniqueConstraints:
         ak_asid_trj_users_message_report:

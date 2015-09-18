@@ -1,6 +1,6 @@
 SharedModel\TrjZjxmCollect:
     type: entity
-    repositoryClass: SharedModel\TrjZjxmCollectRepository
+    repositoryClass: SharedModel\Repository\TrjZjxmCollectRepository
     table: trj_zjxm_collect
     id:
         id:

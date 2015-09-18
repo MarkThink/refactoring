@@ -1,6 +1,6 @@
 SharedModel\TrjZjxmEntrust:
     type: entity
-    repositoryClass: SharedModel\TrjZjxmEntrustRepository
+    repositoryClass: SharedModel\Repository\TrjZjxmEntrustRepository
     table: trj_zjxm_entrust
     uniqueConstraints:
         ak_zjxm_id_trj_zjxm_entrust:

@@ -1,6 +1,6 @@
 SharedModel\TrjInnerWordsRelevance:
     type: entity
-    repositoryClass: SharedModel\TrjInnerWordsRelevanceRepository
+    repositoryClass: SharedModel\Repository\TrjInnerWordsRelevanceRepository
     table: trj_inner_words_relevance
     uniqueConstraints:
         ak_iid_trj_inner_words_relevance:

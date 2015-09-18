@@ -1,6 +1,6 @@
 SharedModel\TrjGoodZjxm:
     type: entity
-    repositoryClass: SharedModel\TrjGoodZjxmRepository
+    repositoryClass: SharedModel\Repository\TrjGoodZjxmRepository
     table: trj_good_zjxm
     uniqueConstraints:
         trj_good_zjxm_pk:

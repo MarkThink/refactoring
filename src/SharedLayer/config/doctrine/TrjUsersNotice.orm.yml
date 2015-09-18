@@ -1,6 +1,6 @@
 SharedModel\TrjUsersNotice:
     type: entity
-    repositoryClass: SharedModel\TrjUsersNoticeRepository
+    repositoryClass: SharedModel\Repository\TrjUsersNoticeRepository
     table: trj_users_notice
     uniqueConstraints:
         ak_to_uid_trj_users_notice:

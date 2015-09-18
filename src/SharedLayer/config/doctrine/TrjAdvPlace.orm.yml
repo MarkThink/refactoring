@@ -1,6 +1,6 @@
 SharedModel\TrjAdvPlace:
     type: entity
-    repositoryClass: SharedModel\TrjAdvPlaceRepository
+    repositoryClass: SharedModel\Repository\TrjAdvPlaceRepository
     table: trj_adv_place
     uniqueConstraints:
         ak_enname_no_trj_adv_place:

@@ -1,6 +1,6 @@
 SharedModel\TrjWebcastComment:
     type: entity
-    repositoryClass: SharedModel\TrjWebcastCommentRepository
+    repositoryClass: SharedModel\Repository\TrjWebcastCommentRepository
     table: trj_webcast_comment
     id:
         showId:

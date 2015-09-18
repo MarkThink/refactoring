@@ -1,6 +1,6 @@
 SharedModel\TrjBlueBookZhengding:
     type: entity
-    repositoryClass: SharedModel\TrjBlueBookZhengdingRepository
+    repositoryClass: SharedModel\Repository\TrjBlueBookZhengdingRepository
     table: trj_blue_book_zhengding
     uniqueConstraints:
         trj_blue_book_zhengding_pk:

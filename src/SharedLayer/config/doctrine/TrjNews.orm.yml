@@ -1,6 +1,6 @@
 SharedModel\TrjNews:
     type: entity
-    repositoryClass: SharedModel\TrjNewsRepository
+    repositoryClass: SharedModel\Repository\TrjNewsRepository
     table: trj_news
     uniqueConstraints:
         ak_addtime_trj_news:

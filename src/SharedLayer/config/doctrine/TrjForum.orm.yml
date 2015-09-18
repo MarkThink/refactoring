@@ -1,6 +1,6 @@
 SharedModel\TrjForum:
     type: entity
-    repositoryClass: SharedModel\TrjForumRepository
+    repositoryClass: SharedModel\Repository\TrjForumRepository
     table: trj_forum
     id:
         id:

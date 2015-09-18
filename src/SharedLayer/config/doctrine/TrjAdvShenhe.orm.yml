@@ -1,6 +1,6 @@
 SharedModel\TrjAdvShenhe:
     type: entity
-    repositoryClass: SharedModel\TrjAdvShenheRepository
+    repositoryClass: SharedModel\Repository\TrjAdvShenheRepository
     table: trj_adv_shenhe
     id:
         sid:

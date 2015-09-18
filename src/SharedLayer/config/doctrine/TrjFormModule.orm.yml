@@ -1,6 +1,6 @@
 SharedModel\TrjFormModule:
     type: entity
-    repositoryClass: SharedModel\TrjFormModuleRepository
+    repositoryClass: SharedModel\Repository\TrjFormModuleRepository
     table: trj_form_module
     uniqueConstraints:
         trj_form_module_pk:

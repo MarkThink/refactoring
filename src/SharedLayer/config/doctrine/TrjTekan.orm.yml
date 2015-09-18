@@ -1,6 +1,6 @@
 SharedModel\TrjTekan:
     type: entity
-    repositoryClass: SharedModel\TrjTekanRepository
+    repositoryClass: SharedModel\Repository\TrjTekanRepository
     table: trj_tekan
     uniqueConstraints:
         ak_create_id_trj_tekan:

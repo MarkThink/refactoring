@@ -1,6 +1,6 @@
 SharedModel\TrjFundsInstitutionManager:
     type: entity
-    repositoryClass: SharedModel\TrjFundsInstitutionManagerRepository
+    repositoryClass: SharedModel\Repository\TrjFundsInstitutionManagerRepository
     table: trj_funds_institution_manager
     uniqueConstraints:
         trj_funds_institution_manager_pk:

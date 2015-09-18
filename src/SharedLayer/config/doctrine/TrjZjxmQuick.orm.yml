@@ -1,6 +1,6 @@
 SharedModel\TrjZjxmQuick:
     type: entity
-    repositoryClass: SharedModel\TrjZjxmQuickRepository
+    repositoryClass: SharedModel\Repository\TrjZjxmQuickRepository
     table: trj_zjxm_quick
     uniqueConstraints:
         ak_cat_trj_zjxm_quick:

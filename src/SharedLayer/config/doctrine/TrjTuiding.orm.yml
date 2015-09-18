@@ -1,6 +1,6 @@
 SharedModel\TrjTuiding:
     type: entity
-    repositoryClass: SharedModel\TrjTuidingRepository
+    repositoryClass: SharedModel\Repository\TrjTuidingRepository
     table: trj_tuiding
     uniqueConstraints:
         trj_tuiding_pk:

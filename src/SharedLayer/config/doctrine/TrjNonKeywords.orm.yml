@@ -1,6 +1,6 @@
 SharedModel\TrjNonKeywords:
     type: entity
-    repositoryClass: SharedModel\TrjNonKeywordsRepository
+    repositoryClass: SharedModel\Repository\TrjNonKeywordsRepository
     table: trj_non_keywords
     uniqueConstraints:
         trj_non_keywords_pk:

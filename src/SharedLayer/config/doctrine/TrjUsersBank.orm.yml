@@ -1,6 +1,6 @@
 SharedModel\TrjUsersBank:
     type: entity
-    repositoryClass: SharedModel\TrjUsersBankRepository
+    repositoryClass: SharedModel\Repository\TrjUsersBankRepository
     table: trj_users_bank
     uniqueConstraints:
         ak_user_id_trj_users_bank:

@@ -1,6 +1,6 @@
 SharedModel\TrjUsersMessageSetting:
     type: entity
-    repositoryClass: SharedModel\TrjUsersMessageSettingRepository
+    repositoryClass: SharedModel\Repository\TrjUsersMessageSettingRepository
     table: trj_users_message_setting
     uniqueConstraints:
         ak_action_trj_users_message_setting:

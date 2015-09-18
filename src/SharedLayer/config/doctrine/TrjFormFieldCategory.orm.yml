@@ -1,6 +1,6 @@
 SharedModel\TrjFormFieldCategory:
     type: entity
-    repositoryClass: SharedModel\TrjFormFieldCategoryRepository
+    repositoryClass: SharedModel\Repository\TrjFormFieldCategoryRepository
     table: trj_form_field_category
     id:
         fcId:

@@ -1,6 +1,6 @@
 SharedModel\TrjLink:
     type: entity
-    repositoryClass: SharedModel\TrjLinkRepository
+    repositoryClass: SharedModel\Repository\TrjLinkRepository
     table: trj_link
     id:
         id:

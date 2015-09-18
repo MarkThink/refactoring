@@ -1,6 +1,6 @@
 SharedModel\TrjRemindEmailLog:
     type: entity
-    repositoryClass: SharedModel\TrjRemindEmailLogRepository
+    repositoryClass: SharedModel\Repository\TrjRemindEmailLogRepository
     table: trj_remind_email_log
     uniqueConstraints:
         ak_from_uid_trj_remind_email_log:

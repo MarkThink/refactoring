@@ -1,6 +1,6 @@
 SharedModel\TrjAdminsOptions:
     type: entity
-    repositoryClass: SharedModel\TrjAdminsOptionsRepository
+    repositoryClass: SharedModel\Repository\TrjAdminsOptionsRepository
     table: trj_admins_options
     uniqueConstraints:
         ak_item_id_trj_admins_options:

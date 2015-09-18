@@ -1,6 +1,6 @@
 SharedModel\TrjTempComment:
     type: entity
-    repositoryClass: SharedModel\TrjTempCommentRepository
+    repositoryClass: SharedModel\Repository\TrjTempCommentRepository
     table: trj_temp_comment
     uniqueConstraints:
         ak_item_id_trj_temp_comment:

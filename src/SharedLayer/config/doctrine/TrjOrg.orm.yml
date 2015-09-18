@@ -1,6 +1,6 @@
 SharedModel\TrjOrg:
     type: entity
-    repositoryClass: SharedModel\TrjOrgRepository
+    repositoryClass: SharedModel\Repository\TrjOrgRepository
     table: trj_org
     id:
         orgId:

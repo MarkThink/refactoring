@@ -1,6 +1,6 @@
 SharedModel\TrjTopicColumnContent:
     type: entity
-    repositoryClass: SharedModel\TrjTopicColumnContentRepository
+    repositoryClass: SharedModel\Repository\TrjTopicColumnContentRepository
     table: trj_topic_column_content
     uniqueConstraints:
         ak_column_id_trj_topic_column_content:

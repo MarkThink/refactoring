@@ -1,6 +1,6 @@
 SharedModel\TrjUsersEggs:
     type: entity
-    repositoryClass: SharedModel\TrjUsersEggsRepository
+    repositoryClass: SharedModel\Repository\TrjUsersEggsRepository
     table: trj_users_eggs
     uniqueConstraints:
         ak_username_trj_users_eggs:

@@ -1,6 +1,6 @@
 SharedModel\TrjSalesReport:
     type: entity
-    repositoryClass: SharedModel\TrjSalesReportRepository
+    repositoryClass: SharedModel\Repository\TrjSalesReportRepository
     table: trj_sales_report
     uniqueConstraints:
         ak_member_id_trj_sales_report:

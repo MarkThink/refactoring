@@ -1,6 +1,6 @@
 SharedModel\TrjZjxmList:
     type: entity
-    repositoryClass: SharedModel\TrjZjxmListRepository
+    repositoryClass: SharedModel\Repository\TrjZjxmListRepository
     table: trj_zjxm_list
     uniqueConstraints:
         ak_crm_uid_trj_zjxm_list:

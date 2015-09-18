@@ -1,6 +1,6 @@
 SharedModel\TrjUsersConsultant:
     type: entity
-    repositoryClass: SharedModel\TrjUsersConsultantRepository
+    repositoryClass: SharedModel\Repository\TrjUsersConsultantRepository
     table: trj_users_consultant
     id:
         userId:

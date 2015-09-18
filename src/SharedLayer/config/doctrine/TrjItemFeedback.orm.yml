@@ -1,6 +1,6 @@
 SharedModel\TrjItemFeedback:
     type: entity
-    repositoryClass: SharedModel\TrjItemFeedbackRepository
+    repositoryClass: SharedModel\Repository\TrjItemFeedbackRepository
     table: trj_item_feedback
     uniqueConstraints:
         ak_item_id_2_trj_item_feedback:

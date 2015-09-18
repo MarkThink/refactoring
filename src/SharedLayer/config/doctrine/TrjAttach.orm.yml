@@ -1,6 +1,6 @@
 SharedModel\TrjAttach:
     type: entity
-    repositoryClass: SharedModel\TrjAttachRepository
+    repositoryClass: SharedModel\Repository\TrjAttachRepository
     table: trj_attach
     uniqueConstraints:
         ak_userid_trj_attach:

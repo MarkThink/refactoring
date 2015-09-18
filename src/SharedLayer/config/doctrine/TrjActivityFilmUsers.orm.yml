@@ -1,6 +1,6 @@
 SharedModel\TrjActivityFilmUsers:
     type: entity
-    repositoryClass: SharedModel\TrjActivityFilmUsersRepository
+    repositoryClass: SharedModel\Repository\TrjActivityFilmUsersRepository
     table: trj_activity_film_users
     uniqueConstraints:
         ak_user_id_trj_activity_film_users:

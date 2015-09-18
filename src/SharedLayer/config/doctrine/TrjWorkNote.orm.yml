@@ -1,6 +1,6 @@
 SharedModel\TrjWorkNote:
     type: entity
-    repositoryClass: SharedModel\TrjWorkNoteRepository
+    repositoryClass: SharedModel\Repository\TrjWorkNoteRepository
     table: trj_work_note
     id:
         id:

@@ -1,6 +1,6 @@
 SharedModel\TrjUsersCapital:
     type: entity
-    repositoryClass: SharedModel\TrjUsersCapitalRepository
+    repositoryClass: SharedModel\Repository\TrjUsersCapitalRepository
     table: trj_users_capital
     uniqueConstraints:
         ak_user_id_trj_users_capital:

@@ -1,6 +1,6 @@
 SharedModel\TrjAreaVotedo:
     type: entity
-    repositoryClass: SharedModel\TrjAreaVotedoRepository
+    repositoryClass: SharedModel\Repository\TrjAreaVotedoRepository
     table: trj_area_votedo
     id:
         id:

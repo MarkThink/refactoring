@@ -1,6 +1,6 @@
 SharedModel\TrjZjxmSms:
     type: entity
-    repositoryClass: SharedModel\TrjZjxmSmsRepository
+    repositoryClass: SharedModel\Repository\TrjZjxmSmsRepository
     table: trj_zjxm_sms
     uniqueConstraints:
         ak_m_c_trj_zjxm_sms:

@@ -1,6 +1,6 @@
 SharedModel\TrjAdv:
     type: entity
-    repositoryClass: SharedModel\TrjAdvRepository
+    repositoryClass: SharedModel\Repository\TrjAdvRepository
     table: trj_adv
     uniqueConstraints:
         ak_status_trj_adv:

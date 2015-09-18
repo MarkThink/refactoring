@@ -1,6 +1,6 @@
 SharedModel\TrjHomepageGuest:
     type: entity
-    repositoryClass: SharedModel\TrjHomepageGuestRepository
+    repositoryClass: SharedModel\Repository\TrjHomepageGuestRepository
     table: trj_homepage_guest
     uniqueConstraints:
         ak_user_id_trj_homepage_guest:

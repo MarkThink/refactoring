@@ -1,6 +1,6 @@
 SharedModel\TrjHelp:
     type: entity
-    repositoryClass: SharedModel\TrjHelpRepository
+    repositoryClass: SharedModel\Repository\TrjHelpRepository
     table: trj_help
     id:
         id:

@@ -1,6 +1,6 @@
 SharedModel\TrjInvestorsColumn:
     type: entity
-    repositoryClass: SharedModel\TrjInvestorsColumnRepository
+    repositoryClass: SharedModel\Repository\TrjInvestorsColumnRepository
     table: trj_investors_column
     id:
         id:

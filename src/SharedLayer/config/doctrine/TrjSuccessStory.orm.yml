@@ -1,6 +1,6 @@
 SharedModel\TrjSuccessStory:
     type: entity
-    repositoryClass: SharedModel\TrjSuccessStoryRepository
+    repositoryClass: SharedModel\Repository\TrjSuccessStoryRepository
     table: trj_success_story
     id:
         id:

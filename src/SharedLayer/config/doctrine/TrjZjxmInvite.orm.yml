@@ -1,6 +1,6 @@
 SharedModel\TrjZjxmInvite:
     type: entity
-    repositoryClass: SharedModel\TrjZjxmInviteRepository
+    repositoryClass: SharedModel\Repository\TrjZjxmInviteRepository
     table: trj_zjxm_invite
     uniqueConstraints:
         ak_invite_user_id_trj_zjxm_invite:

@@ -1,6 +1,6 @@
 SharedModel\TrjTravelRaffle:
     type: entity
-    repositoryClass: SharedModel\TrjTravelRaffleRepository
+    repositoryClass: SharedModel\Repository\TrjTravelRaffleRepository
     table: trj_travel_raffle
     id:
         id:

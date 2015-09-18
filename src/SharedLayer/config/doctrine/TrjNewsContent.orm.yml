@@ -1,6 +1,6 @@
 SharedModel\TrjNewsContent:
     type: entity
-    repositoryClass: SharedModel\TrjNewsContentRepository
+    repositoryClass: SharedModel\Repository\TrjNewsContentRepository
     table: trj_news_content
     uniqueConstraints:
         trj_news_content_pk:

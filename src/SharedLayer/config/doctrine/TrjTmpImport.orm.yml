@@ -1,6 +1,6 @@
 SharedModel\TrjTmpImport:
     type: entity
-    repositoryClass: SharedModel\TrjTmpImportRepository
+    repositoryClass: SharedModel\Repository\TrjTmpImportRepository
     table: trj_tmp_import
     id:
         importId:

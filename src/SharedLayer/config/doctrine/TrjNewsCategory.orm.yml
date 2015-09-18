@@ -1,6 +1,6 @@
 SharedModel\TrjNewsCategory:
     type: entity
-    repositoryClass: SharedModel\TrjNewsCategoryRepository
+    repositoryClass: SharedModel\Repository\TrjNewsCategoryRepository
     table: trj_news_category
     uniqueConstraints:
         ak_catcode_trj_news_category:

@@ -1,6 +1,6 @@
 SharedModel\TrjTgxxRead:
     type: entity
-    repositoryClass: SharedModel\TrjTgxxReadRepository
+    repositoryClass: SharedModel\Repository\TrjTgxxReadRepository
     table: trj_tgxx_read
     id:
         tgxxId:

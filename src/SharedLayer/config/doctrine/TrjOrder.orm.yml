@@ -1,6 +1,6 @@
 SharedModel\TrjOrder:
     type: entity
-    repositoryClass: SharedModel\TrjOrderRepository
+    repositoryClass: SharedModel\Repository\TrjOrderRepository
     table: trj_order
     uniqueConstraints:
         ak_mobile_trj_order:

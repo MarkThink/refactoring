@@ -1,6 +1,6 @@
 SharedModel\TrjUsersComplaints:
     type: entity
-    repositoryClass: SharedModel\TrjUsersComplaintsRepository
+    repositoryClass: SharedModel\Repository\TrjUsersComplaintsRepository
     table: trj_users_complaints
     id:
         tid:

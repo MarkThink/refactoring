@@ -1,6 +1,6 @@
 SharedModel\TrjZjxmFeedbackList:
     type: entity
-    repositoryClass: SharedModel\TrjZjxmFeedbackListRepository
+    repositoryClass: SharedModel\Repository\TrjZjxmFeedbackListRepository
     table: trj_zjxm_feedback_list
     uniqueConstraints:
         ak_session_id_trj_zjxm_feedback_list:

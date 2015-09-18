@@ -1,6 +1,6 @@
 SharedModel\TrjUsersExprule:
     type: entity
-    repositoryClass: SharedModel\TrjUsersExpruleRepository
+    repositoryClass: SharedModel\Repository\TrjUsersExpruleRepository
     table: trj_users_exprule
     uniqueConstraints:
         trj_users_exprule_pk:

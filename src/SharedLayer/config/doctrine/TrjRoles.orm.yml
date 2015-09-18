@@ -1,6 +1,6 @@
 SharedModel\TrjRoles:
     type: entity
-    repositoryClass: SharedModel\TrjRolesRepository
+    repositoryClass: SharedModel\Repository\TrjRolesRepository
     table: trj_roles
     id:
         roleid:

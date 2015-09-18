@@ -1,6 +1,6 @@
 SharedModel\TrjTongjiHost:
     type: entity
-    repositoryClass: SharedModel\TrjTongjiHostRepository
+    repositoryClass: SharedModel\Repository\TrjTongjiHostRepository
     table: trj_tongji_host
     uniqueConstraints:
         ak_ip_trj_tongji_host:

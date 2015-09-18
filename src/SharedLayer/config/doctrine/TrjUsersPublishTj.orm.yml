@@ -1,6 +1,6 @@
 SharedModel\TrjUsersPublishTj:
     type: entity
-    repositoryClass: SharedModel\TrjUsersPublishTjRepository
+    repositoryClass: SharedModel\Repository\TrjUsersPublishTjRepository
     table: trj_users_publish_tj
     uniqueConstraints:
         ak_created_trj_users_publish_tj:

@@ -1,6 +1,6 @@
 SharedModel\TrjLoginLog:
     type: entity
-    repositoryClass: SharedModel\TrjLoginLogRepository
+    repositoryClass: SharedModel\Repository\TrjLoginLogRepository
     table: trj_login_log
     uniqueConstraints:
         ak_ip_trj_login_log:

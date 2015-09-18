@@ -1,6 +1,6 @@
 SharedModel\TrjUsersEvaluate:
     type: entity
-    repositoryClass: SharedModel\TrjUsersEvaluateRepository
+    repositoryClass: SharedModel\Repository\TrjUsersEvaluateRepository
     table: trj_users_evaluate
     uniqueConstraints:
         ak_oid_trj_users_evaluate:

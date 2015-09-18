@@ -1,6 +1,6 @@
 SharedModel\TrjUsersVerify:
     type: entity
-    repositoryClass: SharedModel\TrjUsersVerifyRepository
+    repositoryClass: SharedModel\Repository\TrjUsersVerifyRepository
     table: trj_users_verify
     id:
         userId:

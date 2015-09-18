@@ -1,6 +1,6 @@
 SharedModel\TrjNewsView:
     type: entity
-    repositoryClass: SharedModel\TrjNewsViewRepository
+    repositoryClass: SharedModel\Repository\TrjNewsViewRepository
     table: trj_news_view
     id:
         id:

@@ -1,6 +1,6 @@
 SharedModel\TrjTrustContent:
     type: entity
-    repositoryClass: SharedModel\TrjTrustContentRepository
+    repositoryClass: SharedModel\Repository\TrjTrustContentRepository
     table: trj_trust_content
     uniqueConstraints:
         trj_trust_content_pk:

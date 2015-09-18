@@ -1,6 +1,6 @@
 SharedModel\TrjHomepageItem:
     type: entity
-    repositoryClass: SharedModel\TrjHomepageItemRepository
+    repositoryClass: SharedModel\Repository\TrjHomepageItemRepository
     table: trj_homepage_item
     uniqueConstraints:
         ak_item_id_trj_homepage_item:

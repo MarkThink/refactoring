@@ -1,6 +1,6 @@
 SharedModel\TrjUsersHelp:
     type: entity
-    repositoryClass: SharedModel\TrjUsersHelpRepository
+    repositoryClass: SharedModel\Repository\TrjUsersHelpRepository
     table: trj_users_help
     uniqueConstraints:
         ak_user_id_trj_users_help:

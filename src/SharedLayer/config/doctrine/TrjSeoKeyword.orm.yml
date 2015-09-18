@@ -1,6 +1,6 @@
 SharedModel\TrjSeoKeyword:
     type: entity
-    repositoryClass: SharedModel\TrjSeoKeywordRepository
+    repositoryClass: SharedModel\Repository\TrjSeoKeywordRepository
     table: trj_seo_keyword
     uniqueConstraints:
         ak_keyname_trj_seo_keyword:

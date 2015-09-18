@@ -1,6 +1,6 @@
 SharedModel\TrjBusinessPlanKeyword:
     type: entity
-    repositoryClass: SharedModel\TrjBusinessPlanKeywordRepository
+    repositoryClass: SharedModel\Repository\TrjBusinessPlanKeywordRepository
     table: trj_business_plan_keyword
     id:
         id:

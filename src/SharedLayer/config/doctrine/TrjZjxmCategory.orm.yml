@@ -1,6 +1,6 @@
 SharedModel\TrjZjxmCategory:
     type: entity
-    repositoryClass: SharedModel\TrjZjxmCategoryRepository
+    repositoryClass: SharedModel\Repository\TrjZjxmCategoryRepository
     table: trj_zjxm_category
     id:
         catId:

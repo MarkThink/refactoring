@@ -1,6 +1,6 @@
 SharedModel\TrjUsersCapitalCase:
     type: entity
-    repositoryClass: SharedModel\TrjUsersCapitalCaseRepository
+    repositoryClass: SharedModel\Repository\TrjUsersCapitalCaseRepository
     table: trj_users_capital_case
     uniqueConstraints:
         ak_settle_id_trj_users_capital_case:

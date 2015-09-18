@@ -1,6 +1,6 @@
 SharedModel\TrjUsersFollow:
     type: entity
-    repositoryClass: SharedModel\TrjUsersFollowRepository
+    repositoryClass: SharedModel\Repository\TrjUsersFollowRepository
     table: trj_users_follow
     uniqueConstraints:
         ak_type_trj_users_follow:

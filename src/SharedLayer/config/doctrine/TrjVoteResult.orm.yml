@@ -1,6 +1,6 @@
 SharedModel\TrjVoteResult:
     type: entity
-    repositoryClass: SharedModel\TrjVoteResultRepository
+    repositoryClass: SharedModel\Repository\TrjVoteResultRepository
     table: trj_vote_result
     id:
         id:

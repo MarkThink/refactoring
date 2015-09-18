@@ -1,6 +1,6 @@
 SharedModel\TrjSpecialSubject:
     type: entity
-    repositoryClass: SharedModel\TrjSpecialSubjectRepository
+    repositoryClass: SharedModel\Repository\TrjSpecialSubjectRepository
     table: trj_special_subject
     id:
         sid:

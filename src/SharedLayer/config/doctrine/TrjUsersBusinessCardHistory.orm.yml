@@ -1,6 +1,6 @@
 SharedModel\TrjUsersBusinessCardHistory:
     type: entity
-    repositoryClass: SharedModel\TrjUsersBusinessCardHistoryRepository
+    repositoryClass: SharedModel\Repository\TrjUsersBusinessCardHistoryRepository
     table: trj_users_business_card_history
     uniqueConstraints:
         ak_created_trj_users_business_card_history:

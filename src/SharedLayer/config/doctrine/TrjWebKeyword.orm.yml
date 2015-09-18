@@ -1,6 +1,6 @@
 SharedModel\TrjWebKeyword:
     type: entity
-    repositoryClass: SharedModel\TrjWebKeywordRepository
+    repositoryClass: SharedModel\Repository\TrjWebKeywordRepository
     table: trj_web_keyword
     uniqueConstraints:
         ak_keyname_trj_web_keyword:

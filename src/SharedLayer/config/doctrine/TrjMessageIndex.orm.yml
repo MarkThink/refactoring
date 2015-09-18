@@ -1,6 +1,6 @@
 SharedModel\TrjMessageIndex:
     type: entity
-    repositoryClass: SharedModel\TrjMessageIndexRepository
+    repositoryClass: SharedModel\Repository\TrjMessageIndexRepository
     table: trj_message_index
     uniqueConstraints:
         ak_idx_message_type_trj_message_index:

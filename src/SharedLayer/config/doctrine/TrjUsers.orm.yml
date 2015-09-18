@@ -1,6 +1,6 @@
 SharedModel\TrjUsers:
     type: entity
-    repositoryClass: SharedModel\TrjUsersRepository
+    repositoryClass: SharedModel\Repository\TrjUsersRepository
     table: trj_users
     uniqueConstraints:
         ak_province_id_trj_users:

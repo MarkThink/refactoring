@@ -1,6 +1,6 @@
 SharedModel\TrjUsersProduct:
     type: entity
-    repositoryClass: SharedModel\TrjUsersProductRepository
+    repositoryClass: SharedModel\Repository\TrjUsersProductRepository
     table: trj_users_product
     uniqueConstraints:
         ak_order_id_trj_users_product:

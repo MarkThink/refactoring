@@ -1,6 +1,6 @@
 SharedModel\TrjShenheReason:
     type: entity
-    repositoryClass: SharedModel\TrjShenheReasonRepository
+    repositoryClass: SharedModel\Repository\TrjShenheReasonRepository
     table: trj_shenhe_reason
     uniqueConstraints:
         ak_catid_trj_shenhe_reason:

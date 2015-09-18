@@ -1,6 +1,6 @@
 SharedModel\TrjUsersCollect:
     type: entity
-    repositoryClass: SharedModel\TrjUsersCollectRepository
+    repositoryClass: SharedModel\Repository\TrjUsersCollectRepository
     table: trj_users_collect
     uniqueConstraints:
         ak_homepage_id_trj_users_collect:

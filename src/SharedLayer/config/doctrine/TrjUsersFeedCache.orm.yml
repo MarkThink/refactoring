@@ -1,6 +1,6 @@
 SharedModel\TrjUsersFeedCache:
     type: entity
-    repositoryClass: SharedModel\TrjUsersFeedCacheRepository
+    repositoryClass: SharedModel\Repository\TrjUsersFeedCacheRepository
     table: trj_users_feed_cache
     uniqueConstraints:
         ak_user_id_trj_users_feed_cache:

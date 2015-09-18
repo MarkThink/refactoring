@@ -1,6 +1,6 @@
 SharedModel\TrjAdvPriceRule:
     type: entity
-    repositoryClass: SharedModel\TrjAdvPriceRuleRepository
+    repositoryClass: SharedModel\Repository\TrjAdvPriceRuleRepository
     table: trj_adv_price_rule
     uniqueConstraints:
         trj_adv_price_rule_pk:

@@ -1,6 +1,6 @@
 SharedModel\TrjSemPlay:
     type: entity
-    repositoryClass: SharedModel\TrjSemPlayRepository
+    repositoryClass: SharedModel\Repository\TrjSemPlayRepository
     table: trj_sem_play
     uniqueConstraints:
         ak_isdel_trj_sem_play:

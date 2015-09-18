@@ -1,6 +1,6 @@
 SharedModel\TrjAnswerToUser:
     type: entity
-    repositoryClass: SharedModel\TrjAnswerToUserRepository
+    repositoryClass: SharedModel\Repository\TrjAnswerToUserRepository
     table: trj_answer_to_user
     uniqueConstraints:
         ak_ask_id_trj_answer_to_user:

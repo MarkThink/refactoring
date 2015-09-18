@@ -1,6 +1,6 @@
 SharedModel\TrjUsersIndustry:
     type: entity
-    repositoryClass: SharedModel\TrjUsersIndustryRepository
+    repositoryClass: SharedModel\Repository\TrjUsersIndustryRepository
     table: trj_users_industry
     uniqueConstraints:
         ak_industry_id_trj_users_industry:

@@ -1,6 +1,6 @@
 SharedModel\TrjAdvice:
     type: entity
-    repositoryClass: SharedModel\TrjAdviceRepository
+    repositoryClass: SharedModel\Repository\TrjAdviceRepository
     table: trj_advice
     id:
         id:

@@ -1,6 +1,6 @@
 SharedModel\TrjTekanContent:
     type: entity
-    repositoryClass: SharedModel\TrjTekanContentRepository
+    repositoryClass: SharedModel\Repository\TrjTekanContentRepository
     table: trj_tekan_content
     uniqueConstraints:
         trj_tekan_content_pk:

@@ -1,6 +1,6 @@
 SharedModel\TrjActivityFilmRaffle:
     type: entity
-    repositoryClass: SharedModel\TrjActivityFilmRaffleRepository
+    repositoryClass: SharedModel\Repository\TrjActivityFilmRaffleRepository
     table: trj_activity_film_raffle
     uniqueConstraints:
         ak_raffle_number_trj_activity_film_raffle:

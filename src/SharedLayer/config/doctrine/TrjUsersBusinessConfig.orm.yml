@@ -1,6 +1,6 @@
 SharedModel\TrjUsersBusinessConfig:
     type: entity
-    repositoryClass: SharedModel\TrjUsersBusinessConfigRepository
+    repositoryClass: SharedModel\Repository\TrjUsersBusinessConfigRepository
     table: trj_users_business_config
     uniqueConstraints:
         trj_users_business_config_pk:

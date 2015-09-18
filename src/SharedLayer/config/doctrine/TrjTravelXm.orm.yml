@@ -1,6 +1,6 @@
 SharedModel\TrjTravelXm:
     type: entity
-    repositoryClass: SharedModel\TrjTravelXmRepository
+    repositoryClass: SharedModel\Repository\TrjTravelXmRepository
     table: trj_travel_xm
     id:
         id:

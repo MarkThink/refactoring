@@ -1,6 +1,6 @@
 SharedModel\TrjClickLog:
     type: entity
-    repositoryClass: SharedModel\TrjClickLogRepository
+    repositoryClass: SharedModel\Repository\TrjClickLogRepository
     table: trj_click_log
     uniqueConstraints:
         trj_click_log_pk:

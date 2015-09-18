@@ -1,6 +1,6 @@
 SharedModel\TrjJob:
     type: entity
-    repositoryClass: SharedModel\TrjJobRepository
+    repositoryClass: SharedModel\Repository\TrjJobRepository
     table: trj_job
     uniqueConstraints:
         trj_job_pk:

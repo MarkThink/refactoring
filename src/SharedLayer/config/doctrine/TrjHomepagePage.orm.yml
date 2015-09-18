@@ -1,6 +1,6 @@
 SharedModel\TrjHomepagePage:
     type: entity
-    repositoryClass: SharedModel\TrjHomepagePageRepository
+    repositoryClass: SharedModel\Repository\TrjHomepagePageRepository
     table: trj_homepage_page
     uniqueConstraints:
         ak_navigation_id_trj_homepage_page:

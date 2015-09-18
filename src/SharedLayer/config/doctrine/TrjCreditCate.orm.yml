@@ -1,6 +1,6 @@
 SharedModel\TrjCreditCate:
     type: entity
-    repositoryClass: SharedModel\TrjCreditCateRepository
+    repositoryClass: SharedModel\Repository\TrjCreditCateRepository
     table: trj_credit_cate
     id:
         id:

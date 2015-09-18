@@ -1,6 +1,6 @@
 SharedModel\TrjActions:
     type: entity
-    repositoryClass: SharedModel\TrjActionsRepository
+    repositoryClass: SharedModel\Repository\TrjActionsRepository
     table: trj_actions
     id:
         actionid:

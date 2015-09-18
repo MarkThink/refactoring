@@ -1,6 +1,6 @@
 SharedModel\TrjSuccessfulCase:
     type: entity
-    repositoryClass: SharedModel\TrjSuccessfulCaseRepository
+    repositoryClass: SharedModel\Repository\TrjSuccessfulCaseRepository
     table: trj_successful_case
     uniqueConstraints:
         trj_successful_case_pk:

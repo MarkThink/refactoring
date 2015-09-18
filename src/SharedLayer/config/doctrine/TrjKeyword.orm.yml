@@ -1,6 +1,6 @@
 SharedModel\TrjKeyword:
     type: entity
-    repositoryClass: SharedModel\TrjKeywordRepository
+    repositoryClass: SharedModel\Repository\TrjKeywordRepository
     table: trj_keyword
     id:
         id:

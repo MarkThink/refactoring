@@ -1,6 +1,6 @@
 SharedModel\TrjInfoComment:
     type: entity
-    repositoryClass: SharedModel\TrjInfoCommentRepository
+    repositoryClass: SharedModel\Repository\TrjInfoCommentRepository
     table: trj_info_comment
     uniqueConstraints:
         ak_info_type_trj_info_comment:

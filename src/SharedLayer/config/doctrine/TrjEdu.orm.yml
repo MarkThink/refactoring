@@ -1,6 +1,6 @@
 SharedModel\TrjEdu:
     type: entity
-    repositoryClass: SharedModel\TrjEduRepository
+    repositoryClass: SharedModel\Repository\TrjEduRepository
     table: trj_edu
     uniqueConstraints:
         trj_edu_pk:

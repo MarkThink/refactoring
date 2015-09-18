@@ -1,6 +1,6 @@
 SharedModel\TrjAutocomplete:
     type: entity
-    repositoryClass: SharedModel\TrjAutocompleteRepository
+    repositoryClass: SharedModel\Repository\TrjAutocompleteRepository
     table: trj_autocomplete
     uniqueConstraints:
         ak_keyword_trj_autocomplete:

@@ -1,6 +1,6 @@
 SharedModel\TrjMessageList:
     type: entity
-    repositoryClass: SharedModel\TrjMessageListRepository
+    repositoryClass: SharedModel\Repository\TrjMessageListRepository
     table: trj_message_list
     uniqueConstraints:
         ak_min_max_trj_message_list:

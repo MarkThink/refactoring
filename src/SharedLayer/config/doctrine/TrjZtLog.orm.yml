@@ -1,6 +1,6 @@
 SharedModel\TrjZtLog:
     type: entity
-    repositoryClass: SharedModel\TrjZtLogRepository
+    repositoryClass: SharedModel\Repository\TrjZtLogRepository
     table: trj_zt_log
     uniqueConstraints:
         ak_unique_id_trj_zt_log:

@@ -1,6 +1,6 @@
 SharedModel\TrjCustomerTopicContent:
     type: entity
-    repositoryClass: SharedModel\TrjCustomerTopicContentRepository
+    repositoryClass: SharedModel\Repository\TrjCustomerTopicContentRepository
     table: trj_customer_topic_content
     uniqueConstraints:
         ak_topic_id_trj_customer_topic_content:

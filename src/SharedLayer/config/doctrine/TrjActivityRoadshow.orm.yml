@@ -1,6 +1,6 @@
 SharedModel\TrjActivityRoadshow:
     type: entity
-    repositoryClass: SharedModel\TrjActivityRoadshowRepository
+    repositoryClass: SharedModel\Repository\TrjActivityRoadshowRepository
     table: trj_activity_roadshow
     uniqueConstraints:
         ak_user_id_trj_activity_roadshow:

@@ -1,6 +1,6 @@
 SharedModel\TrjSeoRank:
     type: entity
-    repositoryClass: SharedModel\TrjSeoRankRepository
+    repositoryClass: SharedModel\Repository\TrjSeoRankRepository
     table: trj_seo_rank
     id:
         id:

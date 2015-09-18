@@ -1,6 +1,6 @@
 SharedModel\TrjFormField:
     type: entity
-    repositoryClass: SharedModel\TrjFormFieldRepository
+    repositoryClass: SharedModel\Repository\TrjFormFieldRepository
     table: trj_form_field
     uniqueConstraints:
         ak_cat_id_trj_form_field:

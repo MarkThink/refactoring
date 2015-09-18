@@ -1,6 +1,6 @@
 SharedModel\TrjPriceRule:
     type: entity
-    repositoryClass: SharedModel\TrjPriceRuleRepository
+    repositoryClass: SharedModel\Repository\TrjPriceRuleRepository
     table: trj_price_rule
     uniqueConstraints:
         ak_fid_trj_price_rule:

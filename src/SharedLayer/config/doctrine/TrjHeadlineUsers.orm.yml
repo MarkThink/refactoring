@@ -1,6 +1,6 @@
 SharedModel\TrjHeadlineUsers:
     type: entity
-    repositoryClass: SharedModel\TrjHeadlineUsersRepository
+    repositoryClass: SharedModel\Repository\TrjHeadlineUsersRepository
     table: trj_headline_users
     uniqueConstraints:
         ak_user_id_trj_headline_users:

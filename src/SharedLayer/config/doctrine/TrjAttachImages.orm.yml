@@ -1,6 +1,6 @@
 SharedModel\TrjAttachImages:
     type: entity
-    repositoryClass: SharedModel\TrjAttachImagesRepository
+    repositoryClass: SharedModel\Repository\TrjAttachImagesRepository
     table: trj_attach_images
     id:
         attachId:
