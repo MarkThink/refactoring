@@ -24,3 +24,8 @@ app/Resources/views/default
 app/Resources/views/lucky
 src/.htaccess
 src/BundleDesc.txt
+web/fill_mobile.htm
+web/info.php
+web/omeoclickimg.jpeg
+web/taobao_reg.html
+dump.rdb
